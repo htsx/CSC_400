@@ -1,5 +1,5 @@
 # CSC_400
-Flight Experience Feedback Analysis
+Flight Experience Feedback Analysis Project
 
 This project aims to:
   1.  Identify and categorize themes in passenger feedback to highlight common concerns and preferences.
