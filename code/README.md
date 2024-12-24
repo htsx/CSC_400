@@ -4,8 +4,7 @@ Make sure you have the following installed:
 
 Python 3.6 or higher
 pip (Python package manager)
-## Step 1: Create a Virtual Environment (Outside the Project Folder)
-Instead of creating the virtual environment inside the project folder, you will create it in a different directory on your system. This keeps your project folder clean and avoids syncing large files to GitHub.
+## Step 1: Create a Virtual Environment
 
 Create the Virtual Environment: Open a terminal or command prompt and run the following command (you can choose any directory to create the virtual environment):
 
