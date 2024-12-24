@@ -9,10 +9,9 @@ pip (Python package manager)
 Create the Virtual Environment: Open a terminal or command prompt and run the following command (you can choose any directory to create the virtual environment):
 
 On macOS/Linux:
-
 python3 -m venv ~/myenv
-On Windows:
 
+On Windows:
 python -m venv C:\path\to\myenv
 This creates a virtual environment in the specified location (e.g., ~/myenv on macOS/Linux or C:\path\to\myenv on Windows).
 
