@@ -1,54 +1,32 @@
-Follow these instructions to set up the virtual environment and install the necessary dependencies for this project.
+ Follow these instructions to set up the virtual environment and install the necessary dependencies for this project.
+
 Prerequisites
 Make sure you have the following installed:
 
 Python 3.6 or higher
 pip (Python package manager)
 ## Step 1: Create a Virtual Environment
+Open a terminal or command prompt.
 
-Create the Virtual Environment: Open a terminal or command prompt and run the following command (you can choose any directory to create the virtual environment):
+Navigate to the project folder where the reqs.txt file is located.
 
-On macOS/Linux:
-python3 -m venv ~/myenv
+Run the following command to create a virtual environment: python3 -m venv venv
 
-On Windows:
-python -m venv C:\path\to\myenv
-This creates a virtual environment in the specified location (e.g., ~/myenv on macOS/Linux or C:\path\to\myenv on Windows).
+Activate the virtual environment: #On macOS/Linux: source venv/bin/activate
 
-## Step 2: Activate the Virtual Environment
+On Windows: venv\Scripts\activate
 
-On macOS/Linux:
-source ~/myenv/bin/activate
+You’ll know the virtual environment is active when you see (venv) in your terminal prompt.
 
-On Windows:
-C:\path\to\myenv\Scripts\activate
-You’ll know the virtual environment is active when you see (myenv) in your terminal prompt.
+## Step 2: Install Dependencies
+Once the virtual environment is active, run the following command to install the required dependencies: pip install -r requirements.txt
 
-## Step 3: Install Dependencies
-Once the virtual environment is active, navigate to your project folder (where the requirements.txt file is located) and run the following command to install the required dependencies:
-pip install -r requirements.txt
-This will install the following Python libraries listed in the requirements.txt file:
+This will install the following Python libraries: pandas numpy matplotlib seaborn scikit-learn nltk beautifulsoup4 vaderSentiment textblob flask (for the interactive dashboard) dash (for dashboard creation)
 
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-nltk
-beautifulsoup4
-vaderSentiment
-textblob
-flask (for the interactive dashboard)
-dash (for dashboard creation)
-## Step 4: Verify Installation
-To ensure all dependencies are installed correctly, you can run:
+## Step 3: Verify Installation
+To ensure all dependencies are installed correctly, you can run: pip list
 
-pip list
 You should see all the listed libraries in the output.
 
-## Step 5: Deactivate the Virtual Environment (If needed)
-When you’re done working, deactivate the virtual environment by running:
-
-bash
-Copy code
-deactivate
+## Step 4: Deactivate the Virtual Environment (If needed)
+When you’re done working, deactivate the virtual environment by running: deactivate
