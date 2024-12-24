@@ -16,21 +16,16 @@ python -m venv C:\path\to\myenv
 This creates a virtual environment in the specified location (e.g., ~/myenv on macOS/Linux or C:\path\to\myenv on Windows).
 
 ## Step 2: Activate the Virtual Environment
+
 On macOS/Linux:
-bash
-Copy code
 source ~/myenv/bin/activate
+
 On Windows:
-bash
-Copy code
 C:\path\to\myenv\Scripts\activate
 You’ll know the virtual environment is active when you see (myenv) in your terminal prompt.
 
 ## Step 3: Install Dependencies
 Once the virtual environment is active, navigate to your project folder (where the requirements.txt file is located) and run the following command to install the required dependencies:
-
-bash
-Copy code
 pip install -r requirements.txt
 This will install the following Python libraries listed in the requirements.txt file:
 
@@ -48,8 +43,6 @@ dash (for dashboard creation)
 ## Step 4: Verify Installation
 To ensure all dependencies are installed correctly, you can run:
 
-bash
-Copy code
 pip list
 You should see all the listed libraries in the output.
 
