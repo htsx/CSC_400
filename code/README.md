@@ -10,13 +10,9 @@ Create the Virtual Environment: Open a terminal or command prompt and run the fo
 
 On macOS/Linux:
 
-bash
-Copy code
 python3 -m venv ~/myenv
 On Windows:
 
-bash
-Copy code
 python -m venv C:\path\to\myenv
 This creates a virtual environment in the specified location (e.g., ~/myenv on macOS/Linux or C:\path\to\myenv on Windows).
 
