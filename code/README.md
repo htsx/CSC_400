@@ -4,7 +4,7 @@ Make sure you have the following installed:
 
 Python 3.6 or higher
 pip (Python package manager)
-Step 1: Create a Virtual Environment (Outside the Project Folder)
+## Step 1: Create a Virtual Environment (Outside the Project Folder)
 Instead of creating the virtual environment inside the project folder, you will create it in a different directory on your system. This keeps your project folder clean and avoids syncing large files to GitHub.
 
 Create the Virtual Environment: Open a terminal or command prompt and run the following command (you can choose any directory to create the virtual environment):
@@ -21,7 +21,7 @@ Copy code
 python -m venv C:\path\to\myenv
 This creates a virtual environment in the specified location (e.g., ~/myenv on macOS/Linux or C:\path\to\myenv on Windows).
 
-Step 2: Activate the Virtual Environment
+## Step 2: Activate the Virtual Environment
 On macOS/Linux:
 bash
 Copy code
@@ -32,7 +32,7 @@ Copy code
 C:\path\to\myenv\Scripts\activate
 You’ll know the virtual environment is active when you see (myenv) in your terminal prompt.
 
-Step 3: Install Dependencies
+## Step 3: Install Dependencies
 Once the virtual environment is active, navigate to your project folder (where the requirements.txt file is located) and run the following command to install the required dependencies:
 
 bash
@@ -51,7 +51,7 @@ vaderSentiment
 textblob
 flask (for the interactive dashboard)
 dash (for dashboard creation)
-Step 4: Verify Installation
+## Step 4: Verify Installation
 To ensure all dependencies are installed correctly, you can run:
 
 bash
@@ -59,7 +59,7 @@ Copy code
 pip list
 You should see all the listed libraries in the output.
 
-Step 5: Deactivate the Virtual Environment (If needed)
+## Step 5: Deactivate the Virtual Environment (If needed)
 When you’re done working, deactivate the virtual environment by running:
 
 bash
