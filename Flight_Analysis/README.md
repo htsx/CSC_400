@@ -9,7 +9,7 @@ Make sure you have the following installed:
 ## Step 1: Create a Virtual Environment
 
 1. Open a terminal or command prompt.
-2. Navigate to the project folder where the `requirements.txt` file is located.
+2. Navigate to the project folder where the `reqs.txt` file is located.
 3. Run the following command to create a virtual environment:
 python3 -m venv venv
 
