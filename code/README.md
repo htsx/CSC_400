@@ -40,17 +40,17 @@ After that, run the following command to install the required dependencies:
 pip install -r requirements.txt
 
 2. This will install the following Python libraries:
-#    - pandas
-#    - numpy
-#    - matplotlib
-#    - seaborn
-#    - scikit-learn
-#    - nltk
-#    - beautifulsoup4
-#    - vaderSentiment
-#    - textblob
-#    - flask (for the interactive dashboard)
-#    - dash (for dashboard creation)
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- nltk
+- beautifulsoup4
+- vaderSentiment
+- textblob
+- flask (for the interactive dashboard)
+- dash (for dashboard creation)
 
 Step 3: Verify Installation
 1. To ensure all dependencies are installed correctly, you can run:
