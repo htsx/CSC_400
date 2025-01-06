@@ -21,7 +21,7 @@ venv\Scripts\activate
 You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
 
 ## Step 2: Install Dependencies
-1. Once the virtual environment is active, copy and past this list of depedencies into 'requirements.txt'.
+1. Once the virtual environment is active, copy and past this list of depedencies into requirements.txt:
    
 pandas               # For reading, processing, and manipulating datasets (e.g., CSV files).
 numpy                # For performing numerical operations and handling arrays.
