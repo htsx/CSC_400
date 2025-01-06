@@ -39,7 +39,7 @@ dash                 # For building interactive, web-based dashboards to visuali
 After that, run the following command to install the required dependencies:
 pip install -r requirements.txt
 
-2. This will install the following Python libraries:
+This will install the following Python libraries:
 - pandas
 - numpy
 - matplotlib
