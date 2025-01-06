@@ -20,7 +20,7 @@ venv\Scripts\activate
 
 You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
 
-Step 2: Install Dependencies
+## Step 2: Install Dependencies
 1. Once the virtual environment is active, copy and past this list of depedencies into 'requirements.txt'.
 '''
 pandas               # For reading, processing, and manipulating datasets (e.g., CSV files).
@@ -52,13 +52,13 @@ This will install the following Python libraries:
 - flask (for the interactive dashboard)
 - dash (for dashboard creation)
 
-Step 3: Verify Installation
+## Step 3: Verify Installation
 1. To ensure all dependencies are installed correctly, you can run:
 pip list
 
 2. You should see all the listed libraries in the output.
 
-Step 4: Deactivate the Virtual Environment (Optional)
+## Step 4: Deactivate the Virtual Environment (Optional)
 When you’re done working, deactivate the virtual environment by running:
 deactivate
 
