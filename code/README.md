@@ -22,7 +22,7 @@ You’ll know the virtual environment is active when you see `(venv)` in your te
 
 ## Step 2: Install Dependencies
 1. Once the virtual environment is active, copy and past this list of depedencies into requirements.txt:
-   
+
 pandas               # For reading, processing, and manipulating datasets (e.g., CSV files).
 numpy                # For performing numerical operations and handling arrays.
 matplotlib           # For creating static visualizations like line graphs, bar plots, and scatter plots.
@@ -34,7 +34,6 @@ vaderSentiment       # For analyzing text sentiment (positive, negative, or neut
 textblob             # For basic text analysis tasks like sentiment detection, spell checking, and text correction.
 flask                # For creating a lightweight web application or API backend.
 dash                 # For building interactive, web-based dashboards to visualize and explore data.
-
 
 After that, run the following command to install the required dependencies:
 pip install -r requirements.txt
