@@ -4,7 +4,7 @@ Make sure you have the following installed:
 - Python 3.6 or higher
 - `pip` (Python package manager)
 
-## *****Step 1: Create a Virtual Environment*****
+## Step 1: Create a Virtual Environment
 
 # 1. Open a terminal or command prompt.
 # 2. Navigate to the project folder where the `requirements.txt` file is located.
@@ -20,7 +20,7 @@ venv\Scripts\activate
 
 # You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
 
-*****Step 2: Install Dependencies*****
+Step 2: Install Dependencies
 # 1. Once the virtual environment is active, copy and past this list of depedencies into 'requirements.txt'.
 
 pandas               # For reading, processing, and manipulating datasets (e.g., CSV files).
@@ -52,13 +52,13 @@ pip install -r requirements.txt
 #    - flask (for the interactive dashboard)
 #    - dash (for dashboard creation)
 
-*****Step 3: Verify Installation*****
+Step 3: Verify Installation
 # 1. To ensure all dependencies are installed correctly, you can run:
 pip list
 
 # 2. You should see all the listed libraries in the output.
 
-*****Step 4: Deactivate the Virtual Environment (Optional)*****
+Step 4: Deactivate the Virtual Environment (Optional)
 # When you’re done working, deactivate the virtual environment by running:
 deactivate
 
