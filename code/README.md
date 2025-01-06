@@ -53,10 +53,10 @@ pip install -r requirements.txt
 #    - dash (for dashboard creation)
 
 Step 3: Verify Installation
-# 1. To ensure all dependencies are installed correctly, you can run:
+#1. To ensure all dependencies are installed correctly, you can run:
 pip list
 
-# 2. You should see all the listed libraries in the output.
+#2. You should see all the listed libraries in the output.
 
 Step 4: Deactivate the Virtual Environment (Optional)
 # When you’re done working, deactivate the virtual environment by running:
