@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Review Search</title>
+</head>
+<body>
+    <h1>Search Airport Reviews</h1>
+    <form method="POST">
+        <label for="search_query">Enter Airport Name:</label>
+        <input type="text" id="search_query" name="search_query" value="{{ search_query }}" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    {% if data is not none and not data.empty %}
+        <h2>Results for "{{ search_query | upper }}"</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Airport</th>
+                    <th>Review</th>
+                    <th>Rating</th>
+                    <th>Sentiment Score</th>
+                    <th>Sentiment Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data.itertuples() %}
+                <tr>
+                    <td>{{ row.Airport }}</td>
+                    <td>{{ row.cleaned_text }}</td>
+                    <td>{{ row.Rating }}</td>
+                    <td>{{ row.sentiment_score }}</td>
+                    <td>{{ row.sentiment_rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No results found for "{{ search_query | upper }}".</p>
+    {% endif %}
+</body>
+</html>

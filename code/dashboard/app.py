@@ -1,35 +1,71 @@
-import dash
-from dash import dcc, html
 import pandas as pd
-import plotly.express as px
+from flask import Flask, render_template, request
 
-# Load the sentiment data
-data = pd.read_csv('../data/sentiment_reviews.csv')
+app = Flask(__name__, template_folder='../templates')
 
-# Initialize the Dash app
-app = dash.Dash(__name__)
+def load_and_merge_data():
+    # Load the cleaned reviews and sentiment scores
+    cleaned_data = pd.read_csv('data/cleaned_reviews.csv')
+    sentiment_data = pd.read_csv('data/sentiment_reviews.csv')
 
-# Create a figure for sentiment distribution
-fig_sentiment = px.histogram(data, x="sentiment_score", nbins=30, title="Sentiment Score Distribution", 
-                              labels={"sentiment_score": "Sentiment Score"})
+    # Print the columns and the first few rows to inspect the data
+    print("Columns in cleaned data:", cleaned_data.columns)
+    print("Columns in sentiment data:", sentiment_data.columns)
+    print("First few rows of cleaned data:\n", cleaned_data.head())
+    print("First few rows of sentiment data:\n", sentiment_data.head())
 
-# Create a figure for average sentiment by airport
-if 'Airport' in data.columns:
-    avg_sentiment = data.groupby('Airport')['sentiment_score'].mean().reset_index()
-    fig_airport_sentiment = px.bar(avg_sentiment, x="Airport", y="sentiment_score", 
-                                   title="Average Sentiment Score by Airport",
-                                   labels={"sentiment_score": "Average Sentiment Score"})
-else:
-    fig_airport_sentiment = {}
+    # Ensure that 'Airport' contains the actual airport names from 'cleaned_text'
+    cleaned_data['Airport'] = cleaned_data['cleaned_text'].apply(lambda x: x if isinstance(x, str) else "")
+    sentiment_data['Airport'] = sentiment_data['cleaned_text'].apply(lambda x: x if isinstance(x, str) else "")
 
-# Layout of the app
-app.layout = html.Div([
-    html.H1("Sentiment Analysis Dashboard"),
-    dcc.Graph(figure=fig_sentiment),  # Display the sentiment score distribution
-    html.H2("Sentiment by Airport"),
-    dcc.Graph(figure=fig_airport_sentiment)  # Display sentiment by airport (if available)
-])
+    # Convert 'Airport' columns to strings
+    cleaned_data['Airport'] = cleaned_data['Airport'].astype(str)
+    sentiment_data['Airport'] = sentiment_data['Airport'].astype(str)
 
-# Run the app
+    # Merge the two dataframes on 'Airport'
+    merged_data = pd.merge(cleaned_data, sentiment_data, on='Airport', how='left', suffixes=('_cleaned', '_sentiment'))
+
+    return merged_data
+
+# Define a route for the home page
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    message = None
+    search_query = None
+    data = None
+
+    if request.method == 'POST':
+        search_query = request.form.get('search_query', '').strip().lower()  # Safe retrieval of form data
+
+        # Handle the case where no search query is provided
+        if not search_query:
+            message = "Please enter an airport name to search."
+        else:
+            # Load and merge data
+            merged_data = load_and_merge_data()
+
+            # Convert the 'Airport' column to lowercase for case-insensitive search
+            merged_data['Airport'] = merged_data['Airport'].str.lower()
+
+            # Print all airport names for debugging
+            print("Search Query:", search_query)
+            print("Merged Data 'Airport' Column:")
+            print(merged_data['Airport'].head(20))  # Check first 20 rows of merged data for debugging
+
+            # Perform a case-insensitive search
+            data = merged_data[merged_data['Airport'].str.contains(search_query, na=False)]
+
+            # Print search results for debugging
+            print("Search Results (first 5):")
+            print(data.head())
+
+            if data.empty:
+                message = f"No results found for '{search_query.upper()}'."
+            else:
+                message = f"Results for '{search_query.upper()}'"
+
+    return render_template('index.html', data=data, message=message, search_query=search_query)
+
+
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
