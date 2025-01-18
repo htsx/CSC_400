@@ -32,7 +32,9 @@ nltk                 # For working with text data, such as tokenization, stemmin
 beautifulsoup4       # For extracting data from web pages by parsing HTML or XML content.  
 vaderSentiment       # For analyzing text sentiment (positive, negative, or neutral scores).  
 textblob             # For basic text analysis tasks like sentiment detection, spell checking, and text correction.  
-flask                # For creating a lightweight web application or API backend.  
+flask                # For creating a lightweight web application or API backend.
+flask-WTF
+flask-SQLAlchemy
 dash                 # For building interactive, web-based dashboards to visualize and explore data.  
 
 After that, run the following command to install the required dependencies:
