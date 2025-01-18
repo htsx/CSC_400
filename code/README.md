@@ -16,7 +16,7 @@ On macOS/Linux:
 source venv/bin/activate
 
 On Windows:
-venv\Scripts\activate
+.\venv\Scripts\activate
 
 You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
 
