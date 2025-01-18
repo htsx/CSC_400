@@ -32,9 +32,9 @@ nltk                 # For working with text data, such as tokenization, stemmin
 beautifulsoup4       # For extracting data from web pages by parsing HTML or XML content.  
 vaderSentiment       # For analyzing text sentiment (positive, negative, or neutral scores).  
 textblob             # For basic text analysis tasks like sentiment detection, spell checking, and text correction.  
-flask                # For creating a lightweight web application or API backend.
-flask-WTF            # 
-flask-SQLAlchemy     #
+flask                # For creating a lightweight web application or API backend.  
+flask-WTF            # For creating and validating web forms with CSRF protection and integration with Flask.  
+flask-SQLAlchemy     # For integrating SQLAlchemy with Flask to manage database interactions easily.  
 dash                 # For building interactive, web-based dashboards to visualize and explore data.  
 
 After that, run the following command to install the required dependencies:
@@ -51,6 +51,8 @@ This will install the following Python libraries:
 - vaderSentiment
 - textblob
 - flask (for the interactive dashboard)
+- flask-WTF
+- flask-SQLAlchemy
 - dash (for dashboard creation)
 
 ## Step 3: Verify Installation
