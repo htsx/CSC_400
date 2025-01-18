@@ -16,13 +16,14 @@ On macOS/Linux:
 source venv/bin/activate
 
 On Windows:
-venv\Scripts\activate
+.\venv\Scripts\activate
 
 You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
 
 ## Step 2: Install Dependencies
 1. Once the virtual environment is active, copy and past this list of dependencies into requirements.txt:
 
+## Dependencies
 pandas               # For reading, processing, and manipulating datasets (e.g., CSV files).  
 numpy                # For performing numerical operations and handling arrays.  
 matplotlib           # For creating static visualizations like line graphs, bar plots, and scatter plots.  
@@ -33,7 +34,10 @@ beautifulsoup4       # For extracting data from web pages by parsing HTML or XML
 vaderSentiment       # For analyzing text sentiment (positive, negative, or neutral scores).  
 textblob             # For basic text analysis tasks like sentiment detection, spell checking, and text correction.  
 flask                # For creating a lightweight web application or API backend.  
+flask-WTF            # For creating and validating web forms with CSRF protection and integration with Flask.  
+flask-SQLAlchemy     # For integrating SQLAlchemy with Flask to manage database interactions easily.  
 dash                 # For building interactive, web-based dashboards to visualize and explore data.  
+
 
 After that, run the following command to install the required dependencies:
 pip install -r requirements.txt
@@ -49,6 +53,8 @@ This will install the following Python libraries:
 - vaderSentiment
 - textblob
 - flask (for the interactive dashboard)
+- flask-WTF
+- flask-SQLAlchemy
 - dash (for dashboard creation)
 
 ## Step 3: Verify Installation
