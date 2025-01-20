@@ -26,7 +26,7 @@ You’ll know the virtual environment is active when you see `(venv)` in your te
 ## Dependencies
 beautifulsoup4
 pandas
-textblob
+vaderSentiment
 matplotlib
 flask
 flask-WTF
