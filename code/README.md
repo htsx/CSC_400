@@ -24,32 +24,27 @@ You’ll know the virtual environment is active when you see `(venv)` in your te
 1. Once the virtual environment is active, copy and past this list of dependencies into requirements.txt:
 
 ## Dependencies
-beautifulsoup4 # For extracting data from web pages by parsing HTML or XML content (web scraping).
-pandas # For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
-textblob # For basic text analysis tasks like sentiment detection, spell checking, and text correction.
-vaderSentiment # For analyzing text sentiment (positive, negative, or neutral scores) (optional, choose between TextBlob and VADER).
-matplotlib # For creating static visualizations like line graphs, bar plots, and scatter plots (visualizing sentiment analysis results).
-flask # For creating a lightweight web application or API backend (serving the scraped data and sentiment analysis results on a website).
-flask-WTF # For creating and validating web forms with CSRF protection and integration with Flask (useful if handling user-submitted data or reviews).
-flask-SQLAlchemy # For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
+beautifulsoup4
+pandas
+textblob
+matplotlib
+flask
+flask-WTF
+flask-SQLAlchemy
 
 After that, run the following command to install the required dependencies:
 pip install -r requirements.txt
 
 This will install the following Python libraries:
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- nltk
-- beautifulsoup4
-- vaderSentiment
-- textblob
-- flask (for the interactive dashboard)
-- flask-WTF
-- flask-SQLAlchemy
-- dash (for dashboard creation)
+-beautifulsoup4 # For extracting data from web pages by parsing HTML or XML content (web scraping).
+-pandas # For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
+-textblob # For basic text analysis tasks like sentiment detection, spell checking, and text correction.
+-vaderSentiment # For analyzing text sentiment (positive, negative, or neutral scores) (optional, choose between TextBlob and VADER).
+-matplotlib # For creating static visualizations like line graphs, bar plots, and scatter plots (visualizing sentiment analysis results).
+-flask # For creating a lightweight web application or API backend (serving the scraped data and sentiment analysis results on a website).
+-flask-WTF # For creating and validating web forms with CSRF protection and integration with Flask (useful if handling user-submitted data or reviews).
+-flask-SQLAlchemy # For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
+
 
 ## Step 3: Verify Installation
 1. To ensure all dependencies are installed correctly, you can run:
