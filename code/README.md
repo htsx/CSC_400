@@ -36,7 +36,7 @@ After that, run the following command to install the required dependencies:
 pip install -r requirements.txt
 
 This will install the following Python libraries:
--beautifulsoup4 # For extracting data from web pages by parsing HTML or XML content (web scraping).
+-beautifulsoup4 = For extracting data from web pages by parsing HTML or XML content (web scraping).
 -pandas # For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
 -textblob # For basic text analysis tasks like sentiment detection, spell checking, and text correction.
 -vaderSentiment # For analyzing text sentiment (positive, negative, or neutral scores) (optional, choose between TextBlob and VADER).
