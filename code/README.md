@@ -37,13 +37,13 @@ pip install -r requirements.txt
 
 This will install the following Python libraries:
 - beautifulsoup4 # For extracting data from web pages by parsing HTML or XML content (web scraping).
--pandas # For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
--textblob # For basic text analysis tasks like sentiment detection, spell checking, and text correction.
--vaderSentiment # For analyzing text sentiment (positive, negative, or neutral scores) (optional, choose between TextBlob and VADER).
--matplotlib # For creating static visualizations like line graphs, bar plots, and scatter plots (visualizing sentiment analysis results).
--flask # For creating a lightweight web application or API backend (serving the scraped data and sentiment analysis results on a website).
--flask-WTF # For creating and validating web forms with CSRF protection and integration with Flask (useful if handling user-submitted data or reviews).
--flask-SQLAlchemy # For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
+- pandas # For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
+- textblob # For basic text analysis tasks like sentiment detection, spell checking, and text correction.
+- vaderSentiment # For analyzing text sentiment (positive, negative, or neutral scores) (optional, choose between TextBlob and VADER).
+- matplotlib # For creating static visualizations like line graphs, bar plots, and scatter plots (visualizing sentiment analysis results).
+- flask # For creating a lightweight web application or API backend (serving the scraped data and sentiment analysis results on a website).
+- flask-WTF # For creating and validating web forms with CSRF protection and integration with Flask (useful if handling user-submitted data or reviews).
+- flask-SQLAlchemy # For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
 
 
 ## Step 3: Verify Installation
