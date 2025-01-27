@@ -6,7 +6,7 @@ Make sure you have the following installed:
 
 ## Create a Virtual Environment
 
-1. Navigate to the project folder (code folder).
+1. Navigate to the project folder (The 'code' folder from github repository).
 2. Open a terminal or command prompt.
 3. Run the following command to create a virtual environment:
 python3 -m venv venv
