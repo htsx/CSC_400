@@ -8,8 +8,7 @@ Make sure you have the following installed:
 
 1. Navigate to the project folder (The 'code' folder from github repository).
 2. Open a terminal or command prompt.
-3. Run the following command to create a virtual environment:
-python3 -m venv venv
+3. Run the following command to create a virtual environment 'python3 -m venv venv'.
 4. Do the following command 'pip install -r requirements.txt'.
 5. Activate the virtual environment:
 On macOS/Linux:
