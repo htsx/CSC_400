@@ -4,7 +4,7 @@ Make sure you have the following installed:
 - Python 3.6 or higher
 - `pip` (Python package manager)
 
-## Step 1: Create a Virtual Environment
+## Create a Virtual Environment
 
 1. Open a terminal or command prompt.
 2. Run the following command to create a virtual environment:
@@ -40,13 +40,13 @@ This will install the following Python libraries:
 - flask-SQLAlchemy - For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
 
 
-## Step 3: Verify Installation
+## Verify Installation
 1. To ensure all dependencies are installed correctly, you can run:
 pip list
 
 2. You should see all the listed libraries in the output.
 
-## Step 4: Deactivate the Virtual Environment (Optional)
+## Deactivate the Virtual Environment (Optional)
 When you’re done working, deactivate the virtual environment by running:
 deactivate
 
