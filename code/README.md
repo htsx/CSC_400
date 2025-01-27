@@ -20,9 +20,6 @@ On Windows:
 
 You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
 
-## Step 2: Install Dependencies
-1. Once the virtual environment is active, copy and past this list of dependencies into requirements.txt:
-
 ## Dependencies
 beautifulsoup4
 pandas
