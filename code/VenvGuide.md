@@ -9,7 +9,7 @@ Make sure you have the following installed:
 1. Open the Virtual Studio Code (vscode) application.
 2. Clone the 'CSC_400' github repository (this repository) if you haven't already to your system using vscode.
 3. Open the terminal or command prompt in vscode.
-4. Navigate to the code folder in this project ('cd CSC_400' in terminal/command prompt).
+4. Navigate to the code folder in this project ('cd CSC_400' > 'cd code' in terminal/command prompt).
 5. Run the following command to create a virtual environment 'python3 -m venv venv'.
 6. Do the following command 'pip install -r requirements.txt'.
 7. Activate the virtual environment, On macOS/Linux do: 'source venv/bin/activate', On Windows do: '.\venv\Scripts\activate' (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
