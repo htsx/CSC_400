@@ -39,7 +39,7 @@ pip list
 
 2. You should see all the listed libraries in the output.
 
-## Deactivate the Virtual Environment (Optional)
+## Deactivate the Virtual Environment
 When you’re done working, deactivate the virtual environment by running:
 deactivate
 
