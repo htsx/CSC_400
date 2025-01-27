@@ -29,7 +29,7 @@ flask
 flask-WTF
 flask-SQLAlchemy
 
-This will install the following Python libraries:
+following Python libraries will be installed from requirements.txt:
 - beautifulsoup4 - For extracting data from web pages by parsing HTML or XML content (web scraping).
 - pandas - For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
 - textblob - For basic text analysis tasks like sentiment detection, spell checking, and text correction.
