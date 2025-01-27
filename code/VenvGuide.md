@@ -6,7 +6,7 @@ Make sure you have the following installed:
 
 ## Create the Virtual Environment
 
-1. Open Virtual Studio Code (VSCode) application.
+1. Open the Virtual Studio Code (VSCode) application.
 2. Navigate to the project folder (The 'code' folder from github repository).
 3. Open a terminal or command prompt.
 4. Run the following command to create a virtual environment 'python3 -m venv venv'.
