@@ -16,9 +16,7 @@ Make sure you have the following installed:
 8. After activating the virtual environment, run this command to run the flask application 'py dashboard\app.py'.
 9. When you’re done working, deactivate the virtual environment by running: 'deactivate'.
 
-## Dependencies
-
-The following Python libraries will be installed from requirements.txt:
+## The following Python libraries will be installed from requirements.txt:
 - beautifulsoup4 - For extracting data from web pages by parsing HTML or XML content (web scraping).
 - pandas - For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
 - textblob - For basic text analysis tasks like sentiment detection, spell checking, and text correction.
