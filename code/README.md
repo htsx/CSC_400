@@ -6,10 +6,10 @@ Make sure you have the following installed:
 
 ## Create a Virtual Environment
 
-1. Open a terminal or command prompt.
-2. Run the following command to create a virtual environment:
+1. Navigate to the project folder (code folder).
+2. Open a terminal or command prompt.
+3. Run the following command to create a virtual environment:
 python3 -m venv venv
-3. Navigate to the project folder where the `requirements.txt` file is located.
 4. pip install -r requirements.txt
 5. Activate the virtual environment:
 On macOS/Linux:
