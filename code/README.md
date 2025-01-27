@@ -18,6 +18,7 @@ On Windows:
 - .\venv\Scripts\activate
 
 You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.
+6. After activating the virtual environment, run this command to run the flask app 'py dashboard\app.py'.
 
 ## Dependencies
 
