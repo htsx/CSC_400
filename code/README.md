@@ -4,15 +4,16 @@ Make sure you have the following installed:
 - Python 3.6 or higher
 - `pip` (Python package manager)
 
-## Create a Virtual Environment
+## Create the Virtual Environment
 
-1. Navigate to the project folder (The 'code' folder from github repository).
-2. Open a terminal or command prompt.
-3. Run the following command to create a virtual environment 'python3 -m venv venv'.
-4. Do the following command 'pip install -r requirements.txt'.
-5. Activate the virtual environment, On macOS/Linux do : 'source venv/bin/activate', On Windows do: '.\venv\Scripts\activate' (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
-6. After activating the virtual environment, run this command to run the flask application 'py dashboard\app.py'.
-7. When you’re done working, deactivate the virtual environment by running: 'deactivate'.
+1. Open Virtual Studio Code (VSCode) application.
+2. Navigate to the project folder (The 'code' folder from github repository).
+3. Open a terminal or command prompt.
+4. Run the following command to create a virtual environment 'python3 -m venv venv'.
+5. Do the following command 'pip install -r requirements.txt'.
+6. Activate the virtual environment, On macOS/Linux do: 'source venv/bin/activate', On Windows do: '.\venv\Scripts\activate' (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
+7. After activating the virtual environment, run this command to run the flask application 'py dashboard\app.py'.
+8. When you’re done working, deactivate the virtual environment by running: 'deactivate'.
 
 ## Dependencies
 
