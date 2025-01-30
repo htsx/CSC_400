@@ -6,6 +6,8 @@ This project aims to:
   2.  Quantify how various aspects, such as staff behavior, comfort, and punctuality, influence overall satisfaction.
   3.  Deliver data-driven recommendations for targeted service enhancements.
 
+You must setup the Virtual Environment for this to work, guide below.
+
 ## Virtual Environment Guide
 
 ## *****Prerequisites*****
