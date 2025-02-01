@@ -8,6 +8,12 @@ This project aims to:
 
 You must setup the Virtual Environment for this to work, guide below.
 
+run `python wipe_data.py` or `py wipe_data.py` to wipe data from csv files in data folder.
+
+run `python data_scrapping.py` or `python data_scrapping.py`  to test data scrapper.
+run `python data_cleaning.py` or `python data_cleaning.py`  to test data cleaner.
+run `python sentiment_analysis.py` or `python sentiment_analysis`  to test sentiment analysis.
+
 ## Virtual Environment Guide
 
 ## *****Prerequisites*****
