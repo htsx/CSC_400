@@ -8,6 +8,7 @@ This project aims to:
 
 You must setup the Virtual Environment for this to work, guide below.
 
+## *****Data Scrapping*****
 <br> run `python wipe_data.py` or `py wipe_data.py` to wipe data from csv files in data folder. <br/>
 <br> run `python data_scrapping.py` or `python data_scrapping.py`  to test data scrapper. <br/>
 <br> run `python data_cleaning.py` or `python data_cleaning.py`  to test data cleaner. <br/>
@@ -15,14 +16,13 @@ You must setup the Virtual Environment for this to work, guide below.
 
 ## Virtual Environment Guide
 
-## *****Prerequisites*****
+*****Prerequisites*****
 
 Make sure you have the following installed:
 - Python 3.6 or higher
 - `pip` (Python package manager)
 
-## Create the Virtual Environment
-
+*****Create the Virtual Environment*****
 1. Open the Virtual Studio Code (vscode) application.
 2. Clone the 'CSC_400' github repository (this repository) if you haven't already to your system using vscode.
 3. Open the terminal or command prompt in vscode.
@@ -33,7 +33,7 @@ Make sure you have the following installed:
 8. After activating the virtual environment, run this command to run the flask application: `py dashboard/app.py` or `python dashboard/app.py`.
 9. When you’re done working, deactivate the virtual environment by running: `deactivate`.
 
-## The following Python libraries will be installed from requirements.txt:
+*****The following Python libraries will be installed from requirements.txt:*****
 - beautifulsoup4 - For extracting data from web pages by parsing HTML or XML content (web scraping).
 - pandas - For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
 - textblob - For basic text analysis tasks like sentiment detection, spell checking, and text correction.
@@ -43,6 +43,6 @@ Make sure you have the following installed:
 - flask-WTF - For creating and validating web forms with CSRF protection and integration with Flask (useful if handling user-submitted data or reviews).
 - flask-SQLAlchemy - For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
 
-## Verify Installation
+*****Verify Installation*****
 1. To ensure all dependencies are installed correctly, you can run: `pip list`.
 2. You should see all the listed libraries in the output.
