@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Airport Details</h1>
+    <p><strong>Rating:</strong> {{ airport.rating }}</p>
+    <p><strong>Airport:</strong> {{ airport.name }}</p>
+    <p><strong>Location:</strong> soon </p>
+    <p><strong>Feedback:</strong> soon </p>
+    <p><strong>Suggestions:</strong> soon </p>
+    <img src="{{ url_for('static', filename='images/' + airport.image) }}" alt="{{ airport.name }}">
+    <br><br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

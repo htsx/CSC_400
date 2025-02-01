@@ -3,46 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airport Review Search</title>
+    <title>Airport Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Search Airport Reviews</h1>
-    <form method="POST">
-        <label for="search_query">Enter Airport Name:</label>
-        <input type="text" id="search_query" name="search_query" value="{{ search_query }}" required>
-        <button type="submit">Search</button>
-    </form>
-
-    {% if message %}
-        <p>{{ message }}</p>
-    {% endif %}
-
-    {% if data is not none and not data.empty %}
-        <h2>Results for "{{ search_query | upper }}"</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Airport</th>
-                    <th>Review</th>
-                    <th>Rating</th>
-                    <th>Sentiment Score</th>
-                    <th>Sentiment Rating</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for row in data.itertuples() %}
-                <tr>
-                    <td>{{ row.Airport }}</td>
-                    <td>{{ row.cleaned_text }}</td>
-                    <td>{{ row.Rating }}</td>
-                    <td>{{ row.sentiment_score }}</td>
-                    <td>{{ row.sentiment_rating }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p>No results found for "{{ search_query | upper }}".</p>
-    {% endif %}
+    <h1>Airport Analysis</h1>
+    <ul>
+        {% for airport in data %}
+        <li>
+            <a href="{{ url_for('airport_details', index=loop.index0) }}">
+                {{ airport.name }} (Rating: {{ airport.rating }})
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

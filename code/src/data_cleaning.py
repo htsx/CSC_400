@@ -1,20 +1,34 @@
-import pandas as pd
-import re
+import csv
 
+#function for cleaning text
 def clean_text(text):
-    #Removes unwanted characters and normalizes text.
-    text = re.sub(r'\s+', ' ', text)  #Remove extra spaces
-    text = re.sub(r'[^\w\s]', '', text)  #Remove punctuation
-    return text.lower()
+    #text cleaning (to be implemented later)
+    return text
 
-def preprocess_data(filepath):
-    #Loads and preprocesses the dataset.
-    data = pd.read_csv(filepath)
-    data['cleaned_text'] = data['text'].apply(clean_text)
-    return data
-
+#main script
 if __name__ == "__main__":
-    input_path = '../data/tripadvisor_reviews.csv'
-    output_path = '../data/cleaned_reviews.csv'
-    cleaned_data = preprocess_data(input_path)
-    cleaned_data.to_csv(output_path, index=False)
+    input_path = 'data/airport_ratings.csv'
+    output_path = 'data/cleaned_reviews.csv'
+
+    #read the input CSV file
+    with open(input_path, 'r', encoding='utf-8') as infile:
+        reader = csv.reader(infile)
+        header = next(reader)  #header row
+        rows = [row for row in reader]
+
+    #add a new column for cleaned text
+    header.append('cleaned_text')
+
+    #clean the text column (placeholder for now)
+    cleaned_rows = []
+    for row in rows:
+        cleaned_text = clean_text(row[1])
+        cleaned_rows.append(row + [cleaned_text])
+
+    #write the cleaned data to a new CSV file
+    with open(output_path, 'w', newline='', encoding='utf-8') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(header)  #header
+        writer.writerows(cleaned_rows)  #cleaned rows
+
+    print(f"Cleaned data saved to {output_path}")
