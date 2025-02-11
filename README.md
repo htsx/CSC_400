@@ -1,10 +1,11 @@
 # CSC_400
-Flight Experience Feedback Analysis Project
+Flight Experience Feedback Sentiment Analysis Project
 
 This project aims to:
-  1.  Identify and categorize themes in passenger feedback to highlight common concerns and preferences.
-  2.  Quantify how various aspects, such as staff behavior, comfort, and punctuality, influence overall satisfaction.
-  3.  Deliver data-driven recommendations for targeted service enhancements.
+
+- Compare three data analysis techniques for sentiment analysis to determine which one provides the most accurate insights into passenger feedback.
+- Analyze passenger reviews to assess how different factors like service quality, comfort, and punctuality affect satisfaction levels.
+- Provide data-driven conclusions on the most effective techniques for sentiment analysis in passenger feedback analysis.
 
 You must setup the Virtual Environment for this to work, guide below.
 
