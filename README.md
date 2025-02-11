@@ -17,16 +17,18 @@ Make sure you have the following installed:
 - Python 3.6 or higher
 - `pip` (Python package manager)
 
-*****Create the Virtual Environment*****
+*****Creating the Virtual Environment*****
 1. Open the Virtual Studio Code (vscode) application.
 2. Clone the 'CSC_400' github repository (this repository) if you haven't already to your system using vscode.
 3. Open the terminal or command prompt in vscode.
 4. Navigate to the code folder in this project (`cd CSC_400` > `cd code` in terminal/command prompt).
 5. Run the following command to create a virtual environment: `python3 -m venv venv`.
-6. Run the following command: `pip install -r requirements.txt`.
-7. Activate the virtual environment, On macOS/Linux do: `source venv/bin/activate`, On Windows do: `.\venv\Scripts\activate` (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
-8. After activating the virtual environment, run this command to run the flask application: `py dashboard/app.py` or `python dashboard/app.py`.
-9. When you’re done working, deactivate the virtual environment by running: `deactivate`.
+
+*****Activating the Virtual Environment*****
+1. Activate the virtual environment, On macOS/Linux do: `source venv/bin/activate`, On Windows do: `.\venv\Scripts\activate` (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
+2. After activating the virtual environment, run this command to run the flask application: `py dashboard/app.py` or `python dashboard/app.py`.
+3. Run the following command: `pip install -r requirements.txt`.
+4. When you’re done working, deactivate the virtual environment by running: `deactivate`.
 
 *****The following Python libraries will be installed from requirements.txt:*****
 - beautifulsoup4 - For extracting data from web pages by parsing HTML or XML content (web scraping).
