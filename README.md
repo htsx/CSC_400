@@ -31,12 +31,16 @@ Make sure you have the following installed:
 *****The following Python libraries will be installed from requirements.txt:*****
 - beautifulsoup4 - For extracting data from web pages by parsing HTML or XML content (web scraping).
 - pandas - For reading, processing, and manipulating datasets (e.g., CSV files, reviews data).
-- textblob - For basic text analysis tasks like sentiment detection, spell checking, and text correction.
-- vaderSentiment - For analyzing text sentiment (positive, negative, or neutral scores) (optional, choose between TextBlob and VADER).
+- textblob - For basic text analysis tasks like sentiment detection, spell checking, and text correction (used for sentiment scoring and distribution analysis).
+- vaderSentiment - For analyzing text sentiment (positive, negative, or neutral scores) (alternative to TextBlob, often used for short and social media texts).
 - matplotlib - For creating static visualizations like line graphs, bar plots, and scatter plots (visualizing sentiment analysis results).
-- flask - For creating a lightweight web application or API backend (serving the scraped data and sentiment analysis results on a website).
+- flask - For creating a lightweight web application or API backend (serving the sentiment analysis results on a dashboard).
 - flask-WTF - For creating and validating web forms with CSRF protection and integration with Flask (useful if handling user-submitted data or reviews).
 - flask-SQLAlchemy - For integrating SQLAlchemy with Flask to manage database interactions easily (useful if storing reviews and sentiment scores in a database).
+- nltk - Provides tools for natural language processing, such as tokenization, stopword removal, and part-of-speech tagging (used for pre-processing text before analysis).
+- gensim - Implements topic modeling and word embeddings for analyzing larger datasets (used in keyword and topic-based sentiment analysis).
+- transformers - Provides pre-trained deep learning models (e.g., BERT, GPT) for advanced sentiment analysis and text classification (used in deep learning-based sentiment analysis).
+- torch - The core deep learning framework used by models in the transformers library (required for deep learning-based sentiment analysis).
 
 *****Verify Installation*****
 1. To ensure all dependencies are installed correctly, you can run: `pip list`.
