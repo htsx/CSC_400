@@ -24,7 +24,7 @@ ________________________________________________________________________________
 5. Run the following command to create a virtual environment: `python3 -m venv venv`.
 __________________________________________________________________________________________________________________________________
 *****Activating the Virtual Environment*****
-1. Activate the virtual environment, On macOS/Linux do: `source venv/bin/activate`, On Windows do: `.\venv\Scripts\activate` (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
+1. After creating the virtual environment,you must activate the virtual environment ny doing the following commands, On macOS/Linux do: `source venv/bin/activate`, On Windows do: `.\venv\Scripts\activate` (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).
 2. After activating the virtual environment, run this command to run the flask application: `py dashboard/app.py` or `python dashboard/app.py`.
 3. Run the following command: `pip install -r requirements.txt`.
 4. When you’re done working, deactivate the virtual environment by running: `deactivate`.
