@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
+# Initialize an empty list to store the airline names
+airline_names = []
+
 # Updated URL for airport reviews
 URL = "https://www.airlinequality.com/review-pages/a-z-airport-reviews/"
 
