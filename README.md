@@ -7,7 +7,7 @@ This project aims to:
 - Analyze passenger reviews to assess how different factors like service quality, comfort, and punctuality affect satisfaction levels.
 - Provide data-driven conclusions on the most effective techniques for sentiment analysis in passenger feedback analysis.
 
-Using these 3 Data Analysis Technique's:
+Using these 3 Data Analysis Techniques:
 
 - Sentiment Scoring & Distribution Analysis
 - Keyword & Topic Based Sentiment Analysis
