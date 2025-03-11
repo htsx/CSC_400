@@ -19,7 +19,7 @@ You must setup the Virtual Environment for this to work, guide below.
 __________________________________________________________________________________________________________________________________
 *****Prerequisites*****
 Make sure you have the following installed:
-- Python 3.6 or higher
+- Python 3.6 or higher to 3.11
 - `pip` (Python package manager)
 __________________________________________________________________________________________________________________________________
 *****Creating the Virtual Environment*****
