@@ -30,13 +30,16 @@ ________________________________________________________________________________
 5. Run the following command to create a virtual environment: `python3 -m venv venv`.
 __________________________________________________________________________________________________________________________________
 *****Activating the Virtual Environment*****
-1. After creating the virtual environment, you must activate the virtual environment ny doing the following commands:
+1. After creating the virtual environment, you must activate the virtual environment ny doing the following commands: <br />
    macOS/Linux do: `source venv/bin/activate`<br />
    On Windows do: `.\venv\Scripts\activate`<br />
-   (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).<br /> 
-3. After activating the virtual environment, run this command to run the flask application: `py dashboard/app.py` or `python dashboard/app.py`.
-5. Run the following command: `pip install -r requirements.txt`.
-6. When you’re done working, deactivate the virtual environment by running: `deactivate`.
+   (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).<br />
+2. Install the required Python libraries by running: `pip install -r requirements.txt`
+3. Download Required NLTK Data, run the following command in Python shell or script:
+<br />`
+import nltk nltk.download('punkt') #for tokenization nltk.download('stopwords') #for stopword removal nltk.download('punkt_tab') #for additional tokenizer data `
+6. Run the Flask application:: `py dashboard/app.py` or `python dashboard/app.py`.
+8. When you’re done working, deactivate the virtual environment by running: `deactivate`.
 __________________________________________________________________________________________________________________________________
 *****Verify Installation*****
 1. To ensure all dependencies are installed correctly, you can run: `pip list`.
