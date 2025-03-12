@@ -24,11 +24,16 @@ reviews_df['sentiment_label'] = reviews_df['average_sentiment'].apply(
     lambda score: 'positive' if score > 0.05 else ('neutral' if -0.05 <= score <= 0.05 else 'negative')
 )
 
+# Round sentiment scores to 4 decimal places
+reviews_df['textblob_sentiment'] = reviews_df['textblob_sentiment'].round(4)
+reviews_df['vader_sentiment'] = reviews_df['vader_sentiment'].round(4)
+reviews_df['average_sentiment'] = reviews_df['average_sentiment'].round(4)
+
 # Reorder columns
 reviews_df = reviews_df[['textblob_sentiment', 'vader_sentiment', 'average_sentiment', 'sentiment_label'] + 
                         [col for col in reviews_df.columns if col not in ['textblob_sentiment', 'vader_sentiment', 'average_sentiment', 'sentiment_label']]]
 
 # Save results
-reviews_df.to_csv('data/sentiment_scoring_reviews.csv', index=False)
+reviews_df.to_csv('data/sd_sentiment.csv', index=False)
 
 print("Sentiment analysis complete. Data saved to 'data/sd_sentiment.csv'.")
