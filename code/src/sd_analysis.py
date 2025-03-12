@@ -31,4 +31,4 @@ reviews_df = reviews_df[['textblob_sentiment', 'vader_sentiment', 'average_senti
 # Save results
 reviews_df.to_csv('data/sentiment_scoring_reviews.csv', index=False)
 
-print("Sentiment analysis complete. Data saved to 'data/sentiment_scoring_reviews.csv'.")
+print("Sentiment analysis complete. Data saved to 'data/sd_sentiment.csv'.")
