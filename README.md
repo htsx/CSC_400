@@ -35,11 +35,8 @@ ________________________________________________________________________________
    On Windows do: `.\venv\Scripts\activate`<br />
    (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).<br />
 2. Install the required Python libraries by running: `pip install -r requirements.txt`
-3. Download Required NLTK Data, run the following command in Python shell or script:
-<br />`
-import nltk nltk.download('punkt') #for tokenization nltk.download('stopwords') #for stopword removal nltk.download('punkt_tab') #for additional tokenizer data `
-6. Run the Flask application:: `py dashboard/app.py` or `python dashboard/app.py`.
-8. When you’re done working, deactivate the virtual environment by running: `deactivate`.
+3. Run the Flask application:: `py dashboard/app.py` or `python dashboard/app.py`.
+4. When you’re done working, deactivate the virtual environment by running: `deactivate`.
 __________________________________________________________________________________________________________________________________
 *****Verify Installation*****
 1. To ensure all dependencies are installed correctly, you can run: `pip list`.
