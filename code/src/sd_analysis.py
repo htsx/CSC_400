@@ -1,39 +1,43 @@
 import pandas as pd
-from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from textblob import TextBlob
 
-#load the reviews (20 for example)
-reviews_df = pd.read_csv('data/cleaned_skytrax_reviews.csv').head(20)
+# Load the cleaned dataset
+df = pd.read_csv("data/cleaned_skytrax_reviews.csv")
 
-#calculate sentiment scores
-def sentiment_scoring(text):
-    textblob_score = TextBlob(text).sentiment.polarity
-    vader_score = SentimentIntensityAnalyzer().polarity_scores(text)['compound']
-    return textblob_score, vader_score
+# Initialize VADER Sentiment Analyzer
+vader_analyzer = SentimentIntensityAnalyzer()
 
-#apply the sentiment scoring to the reviews
-reviews_df[['textblob_sentiment', 'vader_sentiment']] = reviews_df['review_text'].apply(
-    lambda text: pd.Series(sentiment_scoring(str(text)))
-)
+# Function to analyze sentiment using VADER
+def vader_sentiment(text):
+    if pd.isna(text):  # Handle missing values
+        return "Neutral"
+    score = vader_analyzer.polarity_scores(str(text))["compound"]
+    if score >= 0.05:
+        return "Positive"
+    elif score <= -0.05:
+        return "Negative"
+    else:
+        return "Neutral"
 
-#calculate average sentiment
-reviews_df['average_sentiment'] = (reviews_df['textblob_sentiment'] + reviews_df['vader_sentiment']) / 2
+# Function to analyze sentiment using TextBlob
+def textblob_sentiment(text):
+    if pd.isna(text):  # Handle missing values
+        return "Neutral"
+    score = TextBlob(str(text)).sentiment.polarity
+    if score > 0:
+        return "Positive"
+    elif score < 0:
+        return "Negative"
+    else:
+        return "Neutral"
 
-#classify the sentiment scoring
-reviews_df['sentiment_label'] = reviews_df['average_sentiment'].apply(
-    lambda score: 'positive' if score > 0.05 else ('neutral' if -0.05 <= score <= 0.05 else 'negative')
-)
+# Apply sentiment analysis
+df["VADER_Sentiment"] = df["review_text"].apply(vader_sentiment)
+df["TextBlob_Sentiment"] = df["review_text"].apply(textblob_sentiment)
 
-#round sentiment scores to 4 decimal places
-reviews_df['textblob_sentiment'] = reviews_df['textblob_sentiment'].round(4)
-reviews_df['vader_sentiment'] = reviews_df['vader_sentiment'].round(4)
-reviews_df['average_sentiment'] = reviews_df['average_sentiment'].round(4)
 
-#reorder csv columns
-reviews_df = reviews_df[['textblob_sentiment', 'vader_sentiment', 'average_sentiment', 'sentiment_label'] + 
-                        [col for col in reviews_df.columns if col not in ['textblob_sentiment', 'vader_sentiment', 'average_sentiment', 'sentiment_label']]]
+# Save results
+df.to_csv("data/sd_results.csv", index=False)
+print("✅ Sentiment analysis completed. Results saved to data/sentiment_results.csv.")
 
-#save the results
-reviews_df.to_csv('data/sd_sentiment.csv', index=False)
-
-print("Sentiment analysis complete. Data saved to 'data/sd_sentiment.csv'.")
