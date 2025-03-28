@@ -1,2 +1,4 @@
 code/src/semi_supervised_learning/fine_tuned_model/* filter=lfs diff=lfs merge=lfs -text
 code/src/semi_supervised_learning/results/checkpoint-189/* filter=lfs diff=lfs merge=lfs -text
+code/src/semi_supervised_learning/fine_tuned_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
+code/src/semi_supervised_learning/results/checkpoint-189/optimizer.pt filter=lfs diff=lfs merge=lfs -text
