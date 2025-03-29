@@ -3,7 +3,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
 # Load the cleaned dataset
-df = pd.read_csv("../../data/webscrapper/cleaned_skytrax_reviews.csv")
+df = pd.read_csv("data/webscrapper/cleaned_skytrax_reviews.csv")
 
 # Initialize VADER Sentiment Analyzer
 vader_analyzer = SentimentIntensityAnalyzer()

@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Read the CSV files
-classification_report_df = pd.read_csv('../../data/scoring_distribution/evaluation_results/sd_classification_report.csv', index_col=0)
-confusion_matrix_df = pd.read_csv('../../data/scoring_distribution/evaluation_results/sd_confusion_matrix.csv', index_col=0)
-evaluation_metrics_df = pd.read_csv('../../data/scoring_distribution/evaluation_results/sd_evaluation_metrics.csv', header=0)
+classification_report_df = pd.read_csv('data/scoring_distribution/evaluation_results/sd_classification_report.csv', index_col=0)
+confusion_matrix_df = pd.read_csv('data/scoring_distribution/evaluation_results/sd_confusion_matrix.csv', index_col=0)
+evaluation_metrics_df = pd.read_csv('data/scoring_distribution/evaluation_results/sd_evaluation_metrics.csv', header=0)
 
 # Remove "accuracy" from the classification report if present
 classification_report_df = classification_report_df[~classification_report_df.index.str.contains("accuracy", case=False)]
