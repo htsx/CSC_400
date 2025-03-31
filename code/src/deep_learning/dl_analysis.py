@@ -48,7 +48,7 @@ def analyze_sentiment(text):
         return None, None, None
 
 # Load cleaned dataset
-input_file = "data/webscrapper/cleaned_skytrax_reviews.csv"
+input_file = "../../data/webscrapper/cleaned_skytrax_reviews.csv"
 df = pd.read_csv(input_file)
 
 # Ensure 'review_text' column exists
@@ -79,5 +79,5 @@ for index, review in df.iterrows():
 results_df = pd.DataFrame(results)
 
 # Save the updated DataFrame back to the CSV
-output_file = "data/deep_learning/dl_results.csv"
+output_file = "../../data/deep_learning/dl_results.csv"
 results_df.to_csv

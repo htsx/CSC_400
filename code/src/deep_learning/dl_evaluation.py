@@ -2,8 +2,8 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix
 
 # Load ground truth and predicted sentiment files
-ground_truth_file = "data/ground_truth/ground_truth_reviews.csv"
-predictions_file = "data/deep_learning/dl_results.csv"
+ground_truth_file = "../../data/ground_truth/ground_truth_reviews.csv"
+predictions_file = "../../data/deep_learning/dl_results.csv"
 
 # Load datasets
 df_truth = pd.read_csv(ground_truth_file).head(1000)  # Use only the first 1000 labeled reviews
@@ -45,7 +45,7 @@ metrics_data = {
     'F1 Score': [f1]
 }
 df_metrics = pd.DataFrame(metrics_data)
-df_metrics.to_csv("data/deep_learning/evaluation_results/dl_evaluation_metrics.csv", index=False)
+df_metrics.to_csv("../../data/deep_learning/evaluation_results/dl_evaluation_metrics.csv", index=False)
 
 # Generate a detailed classification report
 print("\nDetailed Classification Report:")
@@ -55,7 +55,7 @@ print(report)
 # Save classification report as CSV
 report_data = classification_report(y_true, y_pred, target_names=['POSITIVE', 'NEGATIVE', 'NEUTRAL'], output_dict=True)
 df_report = pd.DataFrame(report_data).transpose()
-df_report.to_csv("data/deep_learning/evaluation_results/dl_classification_report.csv", index=True)
+df_report.to_csv("../../data/deep_learning/evaluation_results/dl_classification_report.csv", index=True)
 
 # Generate confusion matrix
 conf_matrix = confusion_matrix(y_true, y_pred, labels=['POSITIVE', 'NEGATIVE', 'NEUTRAL'])
@@ -64,7 +64,7 @@ print(conf_matrix)
 
 # Save confusion matrix to a CSV file
 df_conf_matrix = pd.DataFrame(conf_matrix, index=['POSITIVE', 'NEGATIVE', 'NEUTRAL'], columns=['POSITIVE', 'NEGATIVE', 'NEUTRAL'])
-df_conf_matrix.to_csv("data/deep_learning/evaluation_results/dl_confusion_matrix.csv", index=True)
+df_conf_matrix.to_csv("../../data/deep_learning/evaluation_results/dl_confusion_matrix.csv", index=True)
 
 # Find misclassified reviews
 df_misclassified = df_truth.copy()
@@ -78,7 +78,7 @@ if not df_misclassified.empty:
     print(df_misclassified[['review_text', 'ground_truth_sentiment', 'predicted_sentiment']])
     
     # Save misclassified reviews to a file for further analysis
-    df_misclassified.to_csv("data/deep_learning/evaluation_results/dl_misclassified_reviews.csv", index=False)
+    df_misclassified.to_csv("../../data/deep_learning/evaluation_results/dl_misclassified_reviews.csv", index=False)
     print("\nAll misclassified reviews saved to 'dl_misclassified_reviews.csv'")
 else:
     print("No misclassified reviews found.")

@@ -2,8 +2,8 @@ import pandas as pd
 import re
 
 #loads the csv file
-input_file = 'data/raw_skytrax_reviews.csv'
-output_file = 'data/cleaned_skytrax_reviews.csv'
+input_file = '../../data/webscrapper/raw_skytrax_reviews.csv'
+output_file = '../../data/webscrapper/cleaned_skytrax_reviews.csv'
 
 #reads the csv file
 df = pd.read_csv(input_file)

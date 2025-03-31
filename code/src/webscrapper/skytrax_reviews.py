@@ -69,7 +69,7 @@ if __name__ == "__main__":
         time.sleep(1)  # Be kind to the server, avoid hammering it with requests
 
     #save raw reviews to a csv file
-    with open('data/raw_skytrax_reviews.csv', 'w', newline='', encoding='utf-8') as f:
+    with open('../../data/webscrapper/raw_skytrax_reviews.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=['review_name', 'review_type', 'passenger_name', 'review_date', 'review_text'])
         writer.writeheader()
         writer.writerows(all_reviews)
