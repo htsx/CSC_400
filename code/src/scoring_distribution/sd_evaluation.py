@@ -10,7 +10,7 @@ try:
     df_truth = pd.read_csv(ground_truth_file).dropna(subset=['ground_truth_sentiment'])
     
     # Limit the data to the first 1001 reviews
-    df_truth = df_truth.head(1001)
+    df_truth = df_truth.head(1000)
     
     # Load combined results and ensure it matches ground truth in length
     df_pred = pd.read_csv(predictions_file).head(len(df_truth))  # Take the same number of rows as ground truth
@@ -34,9 +34,6 @@ try:
 
     print("Unique ground truth labels:", y_true.unique())
     print("Unique predicted labels:", y_pred.unique())
-
-    print(df_truth['ground_truth_sentiment'].isna().sum())  # Should be 0
-    print(df_pred['Combined_Sentiment'].isna().sum())  # Should be 0
 
     # Print results
     print("\nEvaluation Metrics for the first 1001 reviews:")

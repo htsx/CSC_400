@@ -10,7 +10,7 @@ sentiment_col = "ground_truth_sentiment"  # Column with human labels
 target_counts = {
     "NEGATIVE": 400,  # Original: 640
     "POSITIVE": 300,  # Original: 256
-    "NEUTRAL": 200    # Original: 105
+    "NEUTRAL": 301    # Total should be 1001 (adjusted from 105)
 }
 
 # --- LOAD DATA ---

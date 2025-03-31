@@ -9,15 +9,15 @@ try:
     # Load ground truth data and drop NaN values
     df_truth = pd.read_csv(ground_truth_file).dropna(subset=['ground_truth_sentiment'])
     
-    # Limit the data to the first 1001 reviews
-    df_truth = df_truth.head(1001)
+    # Ensure the number of rows in ground truth is 1001 (or as required)
+    df_truth = df_truth.head(1000).reset_index(drop=True)
     
-    # Load deep learning results and ensure it matches ground truth in length
-    df_pred = pd.read_csv(predictions_file).head(len(df_truth))  # Take the same number of rows as ground truth
-    
+    # Load deep learning results
+    df_pred = pd.read_csv(predictions_file).reset_index(drop=True)
+
     # Ensure the number of reviews match
     if len(df_truth) != len(df_pred):
-        raise ValueError("Mismatch in number of reviews between ground truth and predictions.")
+        raise ValueError(f"Mismatch in number of reviews: {len(df_truth)} ground truth reviews, but {len(df_pred)} predicted reviews.")
 
     # Extract ground truth labels and predicted labels, ensure they are stripped of any spaces and capitalized
     y_true = df_truth['ground_truth_sentiment'].astype(str).str.strip().str.capitalize()

@@ -56,7 +56,7 @@ if 'review_text' not in df.columns:
     raise ValueError("CSV file must contain a 'review_text' column.")
 
 # Limit to the first 1000 reviews
-df = df.head(1000)
+df = df.head(1001)
 
 # Process reviews
 results = []
