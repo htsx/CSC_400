@@ -4,7 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 
 # Load the data
-data = pd.read_csv("C:/Users/twoce/OneDrive/CSC 400/csc_400/code/src/semi_supervised_learning/data/processed_reviews.csv")
+data = pd.read_csv("data/processed_reviews.csv")
 
 # Filter for labeled data (first 1000)
 labeled_data = data.iloc[:1000]
