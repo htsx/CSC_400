@@ -55,3 +55,7 @@ ________________________________________________________________________________
 - gensim - Implements topic modeling and word embeddings for analyzing larger datasets (used in keyword and topic-based sentiment analysis).
 - transformers - Provides pre-trained deep learning models (e.g., BERT, GPT) for advanced sentiment analysis and text classification (used in deep learning-based sentiment analysis).
 - torch - The core deep learning framework used by models in the transformers library (required for deep learning-based sentiment analysis).
+- scikit-learn - A comprehensive library for machine learning (used for feature extraction, model training, and evaluation in sentiment analysis).
+- datasets - A library for easily accessing and sharing datasets, especially in the field of machine learning (used for obtaining review datasets for analysis).
+- accelerate - A library for simplifying training and evaluation of models on multiple hardware devices (used for optimizing deep learning workflows in sentiment analysis).
+- seaborn - A statistical data visualization library based on matplotlib (used for creating more advanced plots like heatmaps and correlation matrices).
