@@ -24,11 +24,14 @@ df_pred['sentiment'] = df_pred['sentiment'].astype(str).str.upper().str.strip()
 y_true = df_truth['ground_truth_sentiment']
 y_pred = df_pred['sentiment']
 
-# Calculate evaluation metrics
+# Define sentiment categories
+sentiment_labels = ['POSITIVE', 'NEGATIVE', 'NEUTRAL']
+
+# Calculate evaluation metrics with zero division handling
 accuracy = accuracy_score(y_true, y_pred)
-precision = precision_score(y_true, y_pred, average='macro', zero_division=0)
-recall = recall_score(y_true, y_pred, average='macro')
-f1 = f1_score(y_true, y_pred, average='macro')
+precision = precision_score(y_true, y_pred, average='macro', zero_division=1)
+recall = recall_score(y_true, y_pred, average='macro', zero_division=1)
+f1 = f1_score(y_true, y_pred, average='macro', zero_division=1)
 
 # Print results
 print("Evaluation Metrics for Keyword and Topic-Based Sentiment Analysis (First 1000 Reviews):")
@@ -37,13 +40,34 @@ print(f"Precision: {precision:.4f}")
 print(f"Recall:    {recall:.4f}")
 print(f"F1 Score:  {f1:.4f}")
 
+# Save the evaluation metrics to a CSV file
+metrics_data = {
+    'Accuracy': [accuracy],
+    'Precision': [precision],
+    'Recall': [recall],
+    'F1 Score': [f1]
+}
+df_metrics = pd.DataFrame(metrics_data)
+df_metrics.to_csv("../../data/keywords_topics/evaluation_results/kt_evaluation_metrics.csv", index=False)
+
 # Generate a detailed classification report
 print("\nDetailed Classification Report:")
-print(classification_report(y_true, y_pred, target_names=['POSITIVE', 'NEGATIVE', 'NEUTRAL'], zero_division=0))
+report = classification_report(y_true, y_pred, target_names=sentiment_labels, zero_division=0)
+print(report)
+
+# Save classification report as CSV
+report_data = classification_report(y_true, y_pred, target_names=sentiment_labels, output_dict=True)
+df_report = pd.DataFrame(report_data).transpose()
+df_report.to_csv("../../data/keywords_topics/evaluation_results/kt_classification_report.csv", index=True)
 
 # Generate confusion matrix
 print("\nConfusion Matrix:")
-print(confusion_matrix(y_true, y_pred, labels=['POSITIVE', 'NEGATIVE', 'NEUTRAL']))
+conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
+print(conf_matrix)
+
+# Save confusion matrix to a CSV file
+df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
+df_conf_matrix.to_csv("../../data/keywords_topics/evaluation_results/kt_confusion_matrix.csv", index=True)
 
 # Find misclassified reviews
 df_misclassified = df_truth.copy()
@@ -68,4 +92,3 @@ else:
 # topics = ['example_topic1', 'example_topic2']  # Replace with actual topics
 
 # (Use the above variables in your analysis as needed)
-

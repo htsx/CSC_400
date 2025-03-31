@@ -23,11 +23,20 @@ try:
     y_true = df_truth['ground_truth_sentiment'].astype(str).str.strip().str.capitalize()
     y_pred = df_pred['Combined_Sentiment'].astype(str).str.strip().str.capitalize()
 
+    # Define sentiment categories
+    sentiment_labels = ['Negative', 'Neutral', 'Positive']
+
     # Calculate evaluation metrics with zero division handling
     accuracy = accuracy_score(y_true, y_pred)
     precision = precision_score(y_true, y_pred, average='macro', zero_division=1)
     recall = recall_score(y_true, y_pred, average='macro', zero_division=1)
     f1 = f1_score(y_true, y_pred, average='macro', zero_division=1)
+
+    print("Unique ground truth labels:", y_true.unique())
+    print("Unique predicted labels:", y_pred.unique())
+
+    print(df_truth['ground_truth_sentiment'].isna().sum())  # Should be 0
+    print(df_pred['Combined_Sentiment'].isna().sum())  # Should be 0
 
     # Print results
     print("\nEvaluation Metrics for the first 1001 reviews:")
@@ -48,21 +57,21 @@ try:
 
     # Generate a detailed classification report
     print("\nDetailed Classification Report:")
-    report = classification_report(y_true, y_pred, target_names=['Positive', 'Negative', 'Neutral'], zero_division=0)
+    report = classification_report(y_true, y_pred, target_names=sentiment_labels, zero_division=0)
     print(report)
 
     # Save classification report as CSV
-    report_data = classification_report(y_true, y_pred, target_names=['Positive', 'Negative', 'Neutral'], output_dict=True)
+    report_data = classification_report(y_true, y_pred, target_names=sentiment_labels, output_dict=True)
     df_report = pd.DataFrame(report_data).transpose()
     df_report.to_csv("../../data/scoring_distribution/evaluation_results/sd_classification_report.csv", index=True)
 
     # Generate confusion matrix
     print("\nConfusion Matrix:")
-    conf_matrix = confusion_matrix(y_true, y_pred, labels=['Positive', 'Negative', 'Neutral'])
+    conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
     print(conf_matrix)
 
     # Save confusion matrix to a CSV file
-    df_conf_matrix = pd.DataFrame(conf_matrix, index=['Positive', 'Negative', 'Neutral'], columns=['Positive', 'Negative', 'Neutral'])
+    df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
     df_conf_matrix.to_csv("../../data/scoring_distribution/evaluation_results/sd_confusion_matrix.csv", index=True)
 
     # Find misclassified reviews

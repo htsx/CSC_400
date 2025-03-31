@@ -1,3 +1,3 @@
 import pandas as pd
-df = pd.read_csv("ground_truth_reviews.csv")
+df = pd.read_csv("balanced_ground_truth.csv")
 print(df["ground_truth_sentiment"].value_counts())
