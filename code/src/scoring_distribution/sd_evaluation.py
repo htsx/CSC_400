@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix
 
 # Load ground truth and predicted sentiment files
-ground_truth_file = "../../data/ground_truth/ground_truth_reviews.csv"
+ground_truth_file = "../../data/ground_truth/balanced_ground_truth.csv"
 predictions_file = "../../data/scoring_distribution/combined_results.csv"
 
 try:
