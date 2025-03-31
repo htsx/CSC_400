@@ -34,7 +34,7 @@ ________________________________________________________________________________
    macOS/Linux do: `source venv/bin/activate`<br />
    On Windows do: `.\venv\Scripts\activate`<br />
    (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).<br />
-2. Install the required Python libraries by running: `pip install -r requirements.txt`
+2. Install the required Python libraries by running: `pip install -r requirements.txt` while the virtual environment is running.
 3. Run the Flask application:: `py dashboard/app.py` or `python dashboard/app.py`.
 4. When you’re done working, deactivate the virtual environment by running: `deactivate`.
 __________________________________________________________________________________________________________________________________
