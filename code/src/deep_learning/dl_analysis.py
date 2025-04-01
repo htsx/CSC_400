@@ -1,83 +1,82 @@
 import pandas as pd
-from transformers import pipeline, AutoTokenizer
+from transformers import pipeline
 
-# Load a fine-tuned RoBERTa model for sentiment analysis
-model_name = "textattack/roberta-base-imdb"  # Fine-tuned for sentiment classification
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-sentiment_pipeline = pipeline(
-    "sentiment-analysis",
-    model=model_name,
-    tokenizer=tokenizer
-)
+# This is a pre-trained model that can tell if text is positive or negative
+sentiment_checker = pipeline("sentiment-analysis", model="textattack/roberta-base-imdb")
 
-# Define neutral keywords
-neutral_keywords = ["ok", "meh", "decent"]
+# Words that should be considered neutral
+neutral_words = ["ok", "meh", "decent"]
 
-# Function to truncate text properly using the tokenizer
-def truncate_text(text, max_tokens=512):
-    encoded = tokenizer(text, truncation=True, max_length=max_tokens)
-    return tokenizer.decode(encoded["input_ids"], skip_special_tokens=True)
+# Function to check if text contains neutral words
+def has_neutral_words(text):
+    text_lower = text.lower()
+    for word in neutral_words:
+        if word in text_lower:
+            return True
+    return False
 
-# Function to analyze sentiment
-def analyze_sentiment(text):
+# Function to analyze the sentiment of a review
+def get_sentiment(review_text):
     try:
-        text = truncate_text(text)  # Truncate properly with tokenizer
+        # First check for neutral words
+        if has_neutral_words(review_text):
+            return "NEUTRAL", 0.99, {'POSITIVE': 0.0, 'NEUTRAL': 0.99, 'NEGATIVE': 0.0}
         
-        # Check for neutral keywords
-        if any(word in text.lower() for word in neutral_keywords):
-            return "NEUTRAL", 0.99, {'NEGATIVE': 0.00, 'NEUTRAL': 0.99, 'POSITIVE': 0.00}
+        # Get sentiment from the model
+        result = sentiment_checker(review_text[:1000])[0]  # Using first 1000 characters to avoid errors
         
-        # Get sentiment prediction from model
-        result = sentiment_pipeline(text)[0]
+        sentiment = result['label'].upper()
+        confidence = round(result['score'], 2)
         
-        # RoBERTa IMDB model provides binary output (POSITIVE or NEGATIVE)
-        sentiment = result["label"].upper()
-        score = round(result["score"], 2)
-
-        # Map to three categories by adjusting threshold
-        if score < 0.6:
+        # If confidence isn't strong, consider it neutral
+        if confidence < 0.6:
             sentiment = "NEUTRAL"
-
-        # Construct scores dictionary
-        all_scores = {'POSITIVE': 0.0, 'NEGATIVE': 0.0, 'NEUTRAL': 0.0}
-        all_scores[sentiment] = score
-
-        return sentiment, score, all_scores
+        
+        # Prepare scores for all categories
+        scores = {
+            'POSITIVE': 0.0,
+            'NEUTRAL': 0.0,
+            'NEGATIVE': 0.0
+        }
+        scores[sentiment] = confidence
+        
+        return sentiment, confidence, scores
+    
     except Exception as e:
-        print(f"Error analyzing review: {text[:100]}... Error: {e}")
+        print(f"Couldn't analyze this review because: {e}")
         return None, None, None
 
-# Load cleaned dataset
-input_file = "../../data/webscrapper/cleaned_skytrax_reviews.csv"
-df = pd.read_csv(input_file)
+# Load the reviews data
+reviews_data = pd.read_csv("../../data/webscrapper/cleaned_skytrax_reviews.csv")
 
-# Ensure 'review_text' column exists
-if 'review_text' not in df.columns:
-    raise ValueError("CSV file must contain a 'review_text' column.")
+# Make sure we have the right column
+if 'review_text' not in reviews_data.columns:
+    print("Error: The CSV file needs a 'review_text' column.")
+    exit()
 
-# Limit to the first 1000 reviews
-df = df.head(1001)
+# Work with only the first 1000 reviews to save time
+reviews_data = reviews_data.head(1000)
 
-# Process reviews
-results = []
-for index, review in df.iterrows():
-    sentiment, score, all_scores = analyze_sentiment(review['review_text'])
-    results.append({
-        'review_name': review['review_name'],
-        'review_type': review['review_type'],
-        'passenger_name': review['passenger_name'],
-        'review_date': review['review_date'],
-        'review_text': review['review_text'],
+# Analyze each review and store results
+analysis_results = []
+for _, row in reviews_data.iterrows():
+    sentiment, confidence, scores = get_sentiment(row['review_text'])
+    
+    analysis_results.append({
+        'review_name': row['review_name'],
+        'review_type': row['review_type'],
+        'passenger_name': row['passenger_name'],
+        'review_date': row['review_date'],
+        'review_text': row['review_text'],
         'sentiment': sentiment,
-        'confidence': score,
-        'POS': all_scores.get('POSITIVE', 0.0),
-        'NEU': all_scores.get('NEUTRAL', 0.0),
-        'NEG': all_scores.get('NEGATIVE', 0.0)
+        'confidence': confidence,
+        'POS': scores['POSITIVE'] if scores else None,
+        'NEU': scores['NEUTRAL'] if scores else None,
+        'NEG': scores['NEGATIVE'] if scores else None
     })
 
-# Create a DataFrame from the results
-results_df = pd.DataFrame(results)
+# Save the results to a new CSV file
+results_df = pd.DataFrame(analysis_results)
+results_df.to_csv("../../data/deep_learning/dl_results.csv", index=False)
 
-# Save the updated DataFrame back to the CSV
-output_file = "../../data/deep_learning/dl_results.csv"
-results_df.to_csv
+print("Analysis complete! Results saved to dl_results.csv")

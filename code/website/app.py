@@ -10,5 +10,21 @@ def index():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/all_techniques')
+def all_techniques():
+    return render_template('all_techniques.html')
+
+@app.route('/scoring_distribution_analysis')
+def scoring_distribution_analysis():
+    return render_template('scoring_distribution_analysis.html')
+
+@app.route('/keywords_topics_analysis')
+def keywords_topics_analysis():
+    return render_template('keywords_topics_analysis.html')
+
+@app.route('/deep_learning_based_analysis')
+def deep_learning_based_analysis():
+    return render_template('deep_learning_based_analysis.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

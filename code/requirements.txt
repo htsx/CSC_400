@@ -13,3 +13,4 @@ scikit-learn
 datasets>=2.5.0
 accelerate>=0.26.0
 seaborn
+huggingface_hub

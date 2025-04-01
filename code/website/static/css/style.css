@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #003366;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+#dashboard-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.feature {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px;
+    color: white;
+    margin: 10px 0;
+}
+
+select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.metric-box {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
