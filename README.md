@@ -30,7 +30,7 @@ ________________________________________________________________________________
 5. Run the following command to create a virtual environment: `python3 -m venv venv`.
 __________________________________________________________________________________________________________________________________
 *****Activating the Virtual Environment*****
-1. After creating the virtual environment, you must activate the virtual environment ny doing the following commands: <br />
+1. After creating the virtual environment, you must activate the virtual environment by doing the following commands (make sure you are in the code folder): <br />
    macOS/Linux do: `source venv/bin/activate`<br />
    On Windows do: `.\venv\Scripts\activate`<br />
    (You’ll know the virtual environment is active when you see `(venv)` in your terminal prompt.).<br />
