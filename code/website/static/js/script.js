@@ -1,14 +1,39 @@
-function updateMetrics() {
-    const technique = document.getElementById('technique').value;
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the dropdown button and dropdown content
+  const dropdownBtn = document.querySelector('.dropbtn');
+  const dropdownContent = document.querySelector('.dropdown-content');
 
-    // Handle redirection based on the selected technique
-    if (technique === 'all') {
-        window.location.href = "all_techniques.html";  // Redirect to All Techniques page
-    } else if (technique === 'scoring_distribution_analysis') {
-        window.location.href = "scoring_distribution_analysis.html";  // Redirect to Scoring & Distribution Analysis page
-    } else if (technique === 'keywords_and_topics_analysis') {
-        window.location.href = "keywords_and_topics_analysis.html";  // Redirect to Keywords and Topics Analysis page
-    } else if (technique === 'deep_learning_based_analysis') {
-        window.location.href = "deep_learning_based_analysis.html";  // Redirect to Deep Learning-Based Analysis page
+  // Toggle dropdown visibility on click
+  dropdownBtn.addEventListener('click', function() {
+    dropdownContent.classList.toggle('show');  // Toggle 'show' class
+  });
+
+  // Close dropdown if clicked outside
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+      dropdownContent.classList.remove('show');  // Hide dropdown when clicking outside
     }
-}
+  });
+});
+
+  // Function to enlarge image when clicked
+  function enlargeImage(imgElement) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+  }
+
+  // Function to close the modal when the close button is clicked
+  function closeModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside of the image
+  window.onclick = function(event) {
+    var modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }

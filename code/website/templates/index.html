@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flight Experience Feedback Analysis</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
 </head>
 <body>
   <header>
-    <h1>CSC 400 CAPSTONE PROJECT
-    </h1>
+    <h1>CSC 400 CAPSTONE PROJECT</h1>
     <h2>Airline Experience Feedback Analysis</h2>
+    <nav>
+      <a href="{{ url_for('dashboard') }}" class="tab">Dashboard</a>
+    </nav>
   </header>
 
   <main>
@@ -39,10 +41,6 @@
       <h3>About the Project</h3>
       <p>
         This project is called Flight Experience Feedback Analysis with Sentiment Analysis. It was done by four CSC 400 students — Peter Chinedu Chukwu, Quinton C Haughton, Mohamed Ramzeen, and Joseph Rodriguez — with help from Professor MD Hossain. The goal is to understand what passengers feel about their flight experience by reading and analyzing their reviews.
-
-Passenger reviews can be hard to understand because they use complex words, jokes, or sarcasm. Old methods don’t work well for this. So, in our project, we use three different ways to analyze the reviews: simple scoring, checking keywords and topics, and using deep learning models like BERT and RoBERTa.
-
-We collect real reviews from AirlineQuality.com, clean the data, and show the results in a website dashboard made with Flask. This system helps airlines, researchers, and passengers to better understand how people feel about flights, so they can make smarter decisions and improve services.
       </p>
       <section class="methodology">
         <h3>Methodology</h3>

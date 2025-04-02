@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Flight Experience Analysis{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flight Experience Feedback Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
-<body>
-    <div class="header">Flight Experience Feedback Analysis: Uncovering Passenger Sentiment</div>
-    <div class="navbar">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('dashboard') }}">Dashboard</a>
-    </div>
+<body class="homepage">
+  <header>
+    <h1>CSC 400 CAPSTONE PROJECT</h1>
+    <h2>Airline Experience Feedback Analysis</h2>
+    <nav>
+      <ul class="main-nav">
+        <!-- Main Navigation Links -->
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+      </ul>
 
-    <section id="dashboard-features">
-        <div class="feature">
-            <h3>Data Analysis Techniques Explained</h3>
-            <p>Describes the three sentiment analysis techniques used in the project.</p>
-        </div>
-        
-        <div class="feature">
-            <h3>Sample Users' Comments</h3>
-            <p>Displays a selection of feedback from the reviews.</p>
-        </div>
-        
-        <div class="feature">
-            <h3>Word Cloud</h3>
-            <img src="{{ url_for('static', filename='images/wordcloud.png') }}" alt="Word Cloud" style="width: 100%;">
-        </div>
-        
-        <div class="feature">
-            <h3>Sentiment Overview Section</h3>
-            <p>Graphs showcasing sentiment trends and analysis results.</p>
-        </div>
-    </section>
+      <!-- Tab Container for Techniques -->
+      <div class="tab-container">
+        <a href="{{ url_for('all_techniques') }}" class="tab">All Techniques</a>
+        <a href="{{ url_for('deep_learning_based_analysis') }}" class="tab">Deep Learning-Based Analysis</a>
+        <a href="{{ url_for('scoring_distribution_analysis') }}" class="tab">Scoring & Distribution Analysis</a>
+        <a href="{{ url_for('keywords_topics_analysis') }}" class="tab">Keywords & Topics Analysis</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Dropdown to Select Data Analysis Technique -->
-    <div class="dropdown">
-        <label for="technique">Select Data Analysis:</label>
-        <select id="technique" onchange="window.location.href=this.value">
-            <option value="{{ url_for('all_techniques') }}">All Techniques</option>
-            <option value="{{ url_for('scoring_distribution_analysis') }}">Scoring & Distribution Analysis</option>
-            <option value="{{ url_for('keywords_topics_analysis') }}">Keywords and Topics Analysis</option>
-            <option value="{{ url_for('deep_learning_based_analysis') }}">Deep Learning-Based Analysis</option>
-        </select>
-    </div>
+  <main>
+    {% block content %}
+    <!-- The content of each specific page will go here -->
+    {% endblock %}
+  </main>
 
-    <!-- Placeholder for Page-Specific Content -->
-    <div class="metrics">
-        {% block content %}{% endblock %}
-    </div>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

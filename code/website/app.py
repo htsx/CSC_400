@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -6,25 +6,25 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/dashboard')
+@app.route("/dashboard")
 def dashboard():
-    return render_template('dashboard.html')
+    return redirect(url_for('all_techniques'))  # Redirecting to the all_techniques page
 
-@app.route('/all_techniques')
+@app.route("/all_techniques")
 def all_techniques():
-    return render_template('all_techniques.html')
+    return render_template("all_techniques.html")
 
-@app.route('/scoring_distribution_analysis')
+@app.route("/scoring_distribution_analysis")
 def scoring_distribution_analysis():
-    return render_template('scoring_distribution_analysis.html')
+    return render_template("scoring_distribution_analysis.html")
 
-@app.route('/keywords_topics_analysis')
+@app.route("/keywords_topics_analysis")
 def keywords_topics_analysis():
-    return render_template('keywords_topics_analysis.html')
+    return render_template("keywords_topics_analysis.html")
 
-@app.route('/deep_learning_based_analysis')
+@app.route("/deep_learning_based_analysis")
 def deep_learning_based_analysis():
-    return render_template('deep_learning_based_analysis.html')
+    return render_template("deep_learning_based_analysis.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

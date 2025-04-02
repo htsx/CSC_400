@@ -1,30 +1,80 @@
 {% extends 'base.html' %}
 
-{% block title %}All Techniques{% endblock %}
+{% block title %}Techniques Overview and Comparison{% endblock %}
 
 {% block content %}
-    <div class="metric-box">
-        <h3>Scoring & Distribution Analysis - Accuracy</h3>
-        <p>Accuracy metric for Scoring & Distribution Analysis.</p>
+  <!-- Container for the overview box -->
+  <div class="overview-box">
+    <h3>Overview and Comparison of Techniques</h3>
+    <p>This section provides a comparison and summary of the various techniques used across different analyses. Below are graphs and images summarizing Scoring and Distribution, and Keywords and Topic Extraction techniques.</p>
+  </div>
+
+  <!-- Container for the Metric Boxes -->
+  <div class="box-container">
+    <div class="metric-box" id="scoring-distribution-comparison-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Scoring vs Keywords Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>Scoring vs Keywords Comparison Graph</h3>
+      <p>Graph comparing the key metrics of Scoring & Distribution and Keywords & Topics techniques.</p>
     </div>
-    <div class="metric-box">
-        <h3>Scoring & Distribution Analysis - F1-Score</h3>
-        <p>F1-Score for Scoring & Distribution Analysis.</p>
+    <div class="metric-box" id="technique-comparison-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Techniques Comparison Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>General Techniques Comparison</h3>
+      <p>Summary of all techniques analyzed, showing their strengths and weaknesses in various metrics.</p>
     </div>
-    <div class="metric-box">
-        <h3>Keywords and Topics Analysis - Keyword Relevance</h3>
-        <p>Keyword relevance metric for Keywords and Topics Analysis.</p>
+    <div class="metric-box" id="distribution-keywords-overlap-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Distribution vs Keywords Overlap" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>Distribution vs Keywords Overlap</h3>
+      <p>Visualizing the overlap and differences between Scoring/Distribution and Keywords/Topics techniques.</p>
     </div>
-    <div class="metric-box">
-        <h3>Keywords and Topics Analysis - Topic Modeling</h3>
-        <p>Topic modeling for Keywords and Topics Analysis.</p>
+    <div class="metric-box" id="additional-graph-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Additional Example Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>Additional Example Comparison Graph</h3>
+      <p>This graph provides an additional perspective for comparing the techniques analyzed.</p>
     </div>
-    <div class="metric-box">
-        <h3>Deep Learning-Based Analysis - Model Accuracy</h3>
-        <p>Model accuracy for Deep Learning-Based Analysis.</p>
+  </div>
+
+  <!-- Container for the Additional Boxes -->
+  <div class="additional-box-container">
+    <div class="additional-box">
+      <h3>Technique Performance Comparison</h3>
+      <!-- Image Wrapper for Performance Comparison -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Technique Performance Comparison" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <p>Overall performance comparison of Scoring & Distribution and Keywords & Topics techniques based on efficiency and accuracy.</p>
     </div>
-    <div class="metric-box">
-        <h3>Deep Learning-Based Analysis - F1-Score</h3>
-        <p>F1-Score for Deep Learning-Based Analysis.</p>
+    <div class="additional-box">
+      <h3>Visualization of Score Distribution Across All Techniques</h3>
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Score Distribution Comparison" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <p>General comparison of how scores are distributed across various techniques, highlighting key differences.</p>
     </div>
+    <div class="additional-box">
+      <h3>Keyword Clustering Comparison</h3>
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Keyword Clustering Comparison" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <p>Visualization of keyword clustering and how each technique handles clustering of important topics.</p>
+    </div>
+  </div>
+
+  <!-- Enlarge Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
 {% endblock %}

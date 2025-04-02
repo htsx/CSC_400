@@ -1,22 +1,78 @@
 {% extends 'base.html' %}
 
-{% block title %}Keywords and Topics Analysis{% endblock %}
+{% block title %}Keywords and Topics Analysis Overview{% endblock %}
 
 {% block content %}
-    <div class="metric-box">
-        <h3>Keyword Relevance</h3>
-        <p>Keyword relevance metric specific to Keywords and Topics Analysis.</p>
+  <!-- Container for the overview box -->
+  <div class="overview-box">
+    <h3>Keywords and Topics Overview</h3>
+    <p>Here are the various techniques used in the analysis:</p>
+  </div>
+
+  <!-- Container for the Metric Boxes -->
+  <div class="box-container">
+    <div class="metric-box" id="f1-box">
+      <!-- Image Wrapper for Lightbaox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="F1 Score Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>F1 Score</h3>
+      <p>Metric description goes here.</p>
     </div>
-    <div class="metric-box">
-        <h3>Topic Modeling</h3>
-        <p>Topic modeling results specific to Keywords and Topics Analysis.</p>
+    <div class="metric-box" id="recall-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Recall Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>Recall</h3>
+      <p>Metric description goes here.</p>
     </div>
-    <div class="metric-box">
-        <h3>Sentiment Correlation</h3>
-        <p>Sentiment correlation for Keywords and Topics Analysis.</p>
+    <div class="metric-box" id="precision-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Precision Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>Precision</h3>
+      <p>Metric description goes here.</p>
     </div>
-    <div class="metric-box">
-        <h3>Frequency Analysis</h3>
-        <p>Frequency analysis results for Keywords and Topics Analysis.</p>
+    <div class="metric-box" id="accuracy-box">
+      <!-- Image Wrapper for Lightbox -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Accuracy Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <h3>Accuracy</h3>
+      <p>Metric description goes here.</p>
     </div>
+  </div>
+
+  <!-- Container for the Additional Boxes -->
+  <div class="additional-box-container">
+    <div class="additional-box">
+      <h3>Confusion Matrix</h3>
+      <!-- Image Wrapper for Confusion Matrix -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Confusion Matrix Graph" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <p>Confusion Matrix details go here.</p>
+    </div>
+    <div class="additional-box">
+      <h3>Sample Comments</h3>
+      <p>Sample comments go here.</p>
+    </div>
+    <div class="additional-box">
+      <h3>Extra Graphs</h3>
+      <!-- Image Wrapper for Extra Graphs -->
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/line-graph.jpg') }}" alt="Extra Graphs" class="metric-image" onclick="enlargeImage(this)">
+      </div>
+      <p>Additional graphs or information go here.</p>
+    </div>
+  </div>
+
+  <!-- Enlarge Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
 {% endblock %}
