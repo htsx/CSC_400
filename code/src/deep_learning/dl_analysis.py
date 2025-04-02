@@ -1,60 +1,50 @@
 import pandas as pd
 from transformers import pipeline
 
-# This is a pre-trained model that can tell if text is positive or negative
-sentiment_checker = pipeline("sentiment-analysis", model="textattack/roberta-base-imdb")
+# Load the cardiffnlp/twitter-xlm-roberta-base-sentiment model for sentiment analysis
+sentiment_checker = pipeline("sentiment-analysis", model="cardiffnlp/twitter-xlm-roberta-base-sentiment")
 
 # Words that should be considered neutral
 neutral_words = ["ok", "meh", "decent"]
 
-# Function to check if text contains neutral words
 def has_neutral_words(text):
+    """Check if the text contains any predefined neutral words."""
     text_lower = text.lower()
-    for word in neutral_words:
-        if word in text_lower:
-            return True
-    return False
+    return any(word in text_lower for word in neutral_words)
 
-# Function to analyze the sentiment of a review
 def get_sentiment(review_text):
+    """Analyze the sentiment of a review using the pre-trained model."""
     try:
-        # First check for neutral words
         if has_neutral_words(review_text):
             return "NEUTRAL", 0.99, {'POSITIVE': 0.0, 'NEUTRAL': 0.99, 'NEGATIVE': 0.0}
         
         # Get sentiment from the model
-        result = sentiment_checker(review_text[:1000])[0]  # Using first 1000 characters to avoid errors
-        
-        sentiment = result['label'].upper()
+        result = sentiment_checker(review_text[:1000])[0]  # Limit to 1000 characters
+        sentiment = result['label'].upper()  # Sentiment label (Positive, Neutral, Negative)
         confidence = round(result['score'], 2)
         
-        # If confidence isn't strong, consider it neutral
-        if confidence < 0.6:
+        # If confidence is low, default to neutral or adjust thresholds
+        if confidence < 0.55:
             sentiment = "NEUTRAL"
         
         # Prepare scores for all categories
-        scores = {
-            'POSITIVE': 0.0,
-            'NEUTRAL': 0.0,
-            'NEGATIVE': 0.0
-        }
+        scores = {'POSITIVE': 0.0, 'NEUTRAL': 0.0, 'NEGATIVE': 0.0}
         scores[sentiment] = confidence
         
         return sentiment, confidence, scores
-    
     except Exception as e:
-        print(f"Couldn't analyze this review because: {e}")
+        print(f"Error analyzing review: {e}")
         return None, None, None
 
 # Load the reviews data
 reviews_data = pd.read_csv("../../data/webscrapper/cleaned_skytrax_reviews.csv")
 
-# Make sure we have the right column
+# Ensure the required column exists
 if 'review_text' not in reviews_data.columns:
     print("Error: The CSV file needs a 'review_text' column.")
     exit()
 
-# Work with only the first 1000 reviews to save time
+# Limit to first 1000 reviews for efficiency
 reviews_data = reviews_data.head(1000)
 
 # Analyze each review and store results
