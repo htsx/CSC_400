@@ -17,7 +17,8 @@ Absolutely! Here’s the updated `README.md` section with steps on how to instal
 ```markdown
 ## 🔧 Setting Up the Virtual Environment (`venv`)
 
-This project uses a Python virtual environment to manage dependencies. Follow the steps below to create and activate the environment based on your operating system.
+This project uses a Python virtual environment to manage dependencies.
+Follow the steps below to create and activate the environment based on your operating system.
 
 ---
 
