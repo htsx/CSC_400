@@ -2,25 +2,36 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix
 
 # Load ground truth and predicted sentiment files
-ground_truth_file = "../../data/ground_truth/balanced_ground_truth.csv"
+skytrax_dataset = "../../data/webscrapper/ground_truth_reviews.csv"
 predictions_file = "../../data/deep_learning/dl_results.csv"
 
 try:
     # Load ground truth data and drop NaN values
-    df_truth = pd.read_csv(ground_truth_file).dropna(subset=['ground_truth_sentiment'])
+    df_truth = pd.read_csv(skytrax_dataset).dropna(subset=['review_classification'])
     
-    # Ensure the number of rows in ground truth is 1001 (or as required)
-    df_truth = df_truth.head(1000).reset_index(drop=True)
+    # Print columns and first few rows for verification
+    print("Columns in ground truth dataset:", df_truth.columns)
+    print("First few rows of ground truth dataset:\n", df_truth.head())
+    
+    # Limit to 10,800 reviews
+    df_truth = df_truth.head(10800).reset_index(drop=True)
     
     # Load deep learning results
     df_pred = pd.read_csv(predictions_file).reset_index(drop=True)
+    
+    # Print columns and first few rows for verification
+    print("Columns in predicted sentiment dataset:", df_pred.columns)
+    print("First few rows of predicted sentiment dataset:\n", df_pred.head())
+
+    # Limit to 10,800 reviews
+    df_pred = df_pred.head(10800).reset_index(drop=True)
 
     # Ensure the number of reviews match
     if len(df_truth) != len(df_pred):
-        raise ValueError(f"Mismatch in number of reviews: {len(df_truth)} ground truth reviews, but {len(df_pred)} predicted reviews.")
+        raise ValueError(f"Mismatch in number of reviews: {len(df_truth)} Skytrax Dataset reviews, but {len(df_pred)} predicted reviews.")
 
     # Extract ground truth labels and predicted labels, ensure they are stripped of any spaces and capitalized
-    y_true = df_truth['ground_truth_sentiment'].astype(str).str.strip().str.capitalize()
+    y_true = df_truth['review_classification'].astype(str).str.strip().str.capitalize()
     y_pred = df_pred['sentiment'].astype(str).str.strip().str.capitalize()
 
     # Define sentiment categories
@@ -35,11 +46,8 @@ try:
     print("Unique ground truth labels:", y_true.unique())
     print("Unique predicted labels:", y_pred.unique())
 
-    print(df_truth['ground_truth_sentiment'].isna().sum())  # Should be 0
-    print(df_pred['sentiment'].isna().sum())  # Should be 0
-
     # Print results
-    print("\nEvaluation Metrics for the first 1001 reviews:")
+    print("\nEvaluation Metrics for the first 10,800 reviews:")
     print(f"Accuracy:  {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall:    {recall:.4f}")
@@ -77,17 +85,25 @@ try:
     # Find misclassified reviews
     df_misclassified = df_truth.copy()
     df_misclassified['predicted_sentiment'] = y_pred
-    df_misclassified = df_misclassified[df_misclassified['ground_truth_sentiment'].str.strip().str.capitalize() != df_misclassified['predicted_sentiment']]
+    df_misclassified = df_misclassified[df_misclassified['review_classification'].str.strip().str.capitalize() != df_misclassified['predicted_sentiment']]
 
     # Display misclassified reviews with both ground truth and predicted sentiment
     if not df_misclassified.empty:
         print(f"\nNumber of misclassified reviews: {len(df_misclassified)}")
-        print("\nSample of misclassified reviews (Ground Truth vs Prediction):")
-        print(df_misclassified[['review_text', 'ground_truth_sentiment', 'predicted_sentiment']].head(10))  # Displaying a sample of 10
+        print("\nSample of misclassified reviews (Skytrax Dataset vs Prediction):")
+        
+        # Print a sample of misclassified reviews with truncated review text for readability
+        sample_misclassified = df_misclassified[['review_text', 'review_classification', 'predicted_sentiment']].head(10)
+        for index, row in sample_misclassified.iterrows():
+            review_text = row['review_text']
+            if len(review_text) > 100:  # Truncate if the review is too long
+                review_text = review_text[:100] + '...'  # Truncated text
+            print(f"Review: {review_text}\nTrue Sentiment: {row['review_classification']} | Predicted Sentiment: {row['predicted_sentiment']}\n")
         
         # Save misclassified reviews to a file for further analysis
         df_misclassified.to_csv("../../data/deep_learning/evaluation_results/dl_misclassified_reviews.csv", index=False)
         print("\nAll misclassified reviews saved to 'dl_misclassified_reviews.csv'")
+
     else:
         print("No misclassified reviews found.")
 
