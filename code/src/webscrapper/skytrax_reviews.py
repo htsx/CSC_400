@@ -67,12 +67,18 @@ def scrape_reviews(review_name, review_url, review_type, session):
 
                 rating_value = float(container.find('span', {'itemprop': 'ratingValue'}).get_text(strip=True)) if container.find('span', {'itemprop': 'ratingValue'}) else 0.0
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
                 # Use a placeholder value for review classification instead of leaving it empty
                 review_classification = "NotClassified"  # Placeholder instead of leaving it empty
 =======
                 review_classification = ""  # <-- Leave blank for hybrid labeling
 >>>>>>> a4d1eadb (commit)
+=======
+                
+                # Use a placeholder value for review classification instead of leaving it empty
+                review_classification = "NotClassified"  # Placeholder instead of leaving it empty
+>>>>>>> 17bd358c (dataset)
 
                 reviews.append({
                     'review_name': review_name,
