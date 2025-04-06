@@ -8,6 +8,7 @@ nltk.download('punkt')
 # Initialize VADER
 vader = SentimentIntensityAnalyzer()
 
+<<<<<<< HEAD
 # Clean review text
 def clean_text(text):
     if isinstance(text, str):
@@ -16,6 +17,19 @@ def clean_text(text):
     return ""
 
 # Keyword-based sentiment
+=======
+# Function to clean special characters and NaN values
+def clean_text(text):
+    if isinstance(text, str):
+        # Remove special characters and digits, leave only letters and spaces
+        text = re.sub(r'[^A-Za-z\s]', '', text)  # Remove anything that's not a letter or space
+        text = text.strip()  # Remove leading/trailing spaces
+        return text
+    else:
+        return ""  # If it's NaN or any non-string value, return empty
+
+# Simple keyword-based function (replace with topic modeling if needed)
+>>>>>>> a4d1eadb (commit)
 def keyword_based_sentiment(text):
     positive_keywords = ['great', 'excellent', 'friendly', 'smooth', 'comfortable', 'helpful', 'clean']
     negative_keywords = ['terrible', 'delay', 'rude', 'dirty', 'horrible', 'bad', 'awful']
@@ -51,37 +65,66 @@ def vader_sentiment(text):
     else:
         return 'Neutral'
 
+<<<<<<< HEAD
 # File paths
+=======
+# Load your cleaned dataset
+>>>>>>> a4d1eadb (commit)
 input_file = "../../data/webscrapper/cleaned_skytrax_reviews.csv"
 output_file = "../../data/webscrapper/hybrid_labeled.csv"
 
 try:
     df = pd.read_csv(input_file)
 
+<<<<<<< HEAD
     # Clean text
     df['review_text'] = df['review_text'].apply(clean_text)
 
     # Apply individual models
+=======
+    # Step 1: Clean the review text (remove NaNs and special characters)
+    df['review_text'] = df['review_text'].apply(clean_text)
+
+    # Step 2: Apply all three sentiment techniques
+>>>>>>> a4d1eadb (commit)
     df['textblob_label'] = df['review_text'].apply(textblob_sentiment)
     df['vader_label'] = df['review_text'].apply(vader_sentiment)
     df['keyword_label'] = df['review_text'].apply(keyword_based_sentiment)
 
+<<<<<<< HEAD
     # Apply hybrid label logic
     def hybrid_label(row):
         labels = [row['textblob_label'], row['vader_label'], row['keyword_label']]
         if labels.count(labels[0]) == len(labels):
             return labels[0]
+=======
+    # Final hybrid label
+    def hybrid_label(row):
+        labels = [row['textblob_label'], row['vader_label'], row['keyword_label']]
+        
+        # If all three models agree, use that label
+        if labels.count(labels[0]) == len(labels):
+            return labels[0]
+        
+        # If two models agree, use that label
+>>>>>>> a4d1eadb (commit)
         if labels.count('Positive') >= 2:
             return 'Positive'
         elif labels.count('Negative') >= 2:
             return 'Negative'
         elif labels.count('Neutral') >= 2:
             return 'Neutral'
+<<<<<<< HEAD
+=======
+        
+        # If models disagree, flag for manual review
+>>>>>>> a4d1eadb (commit)
         return 'ManualCheck'
 
     # Apply the hybrid sentiment labeling function
     df['hybrid_sentiment'] = df.apply(hybrid_label, axis=1)
 
+<<<<<<< HEAD
     # ✅ Ensure review_classification always mirrors hybrid_sentiment
     df.drop(columns=['review_classification'], errors='ignore', inplace=True)
     df['review_classification'] = df['hybrid_sentiment']
@@ -91,6 +134,13 @@ try:
     print(f"✅ Hybrid labeled data saved to: {output_file}")
 
     # Save reviews that need manual check to a separate file
+=======
+    # Save the result to the output file
+    df.to_csv(output_file, index=False)
+    print(f"✅ Hybrid labeled data saved to: {output_file}")
+
+    # Separate the rows needing manual check
+>>>>>>> a4d1eadb (commit)
     manual_check_df = df[df['hybrid_sentiment'] == 'ManualCheck']
     if not manual_check_df.empty:
         manual_check_file = "../../data/webscrapper/review_needed.csv"
