@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 17bd358c (dataset)
 review_name,review_type,passenger_name,review_date,review_text,rating_value,textblob_label,vader_label,keyword_label,hybrid_sentiment,review_classification
 Aalborg,airport,3 reviewsThomas Rune Knudsen,2023-09-16,This airport is always a breeze Small and compact but with ok facilities considering the size Staff is almost always friendly and downtoearth Few if any lines Clean and good WiFi They might need security in the baggage reclaim as two toddlers got on the belt just as it started moving Seemed very dangerous and the parents were present but completely oblivious Never seen such bad parenting at an airport before The family was Danish Parking is no longer free but  DKK per day A very silly move,8.0,Neutral,Positive,Positive,Positive,Positive
 Aalborg,airport,Roeland Heitz,2019-01-06,Worst and most chaotic airport transfer I have ever experienced In spite of low costs I will never fly with Aeroflot again Is this  or still the s,1.0,Neutral,Negative,Neutral,Neutral,Neutral
