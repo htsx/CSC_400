@@ -1,43 +1,43 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix
 
-# Load ground truth and predicted sentiment files
+#Load the ground truth and predicted sentiment files
 skytrax_dataset = "../../data/webscrapper/ground_truth_reviews.csv"
 predictions_file = "../../data/deep_learning/dl_results.csv"
 
 try:
-    # Load ground truth data and drop NaN values
+    #Load the ground truth data and drop rows with NaN values in 'review_classification'
     df_truth = pd.read_csv(skytrax_dataset).dropna(subset=['review_classification'])
     
-    # Print columns and first few rows for verification
+    #Print the columns and the first few rows just to make sure it looks right
     print("Columns in ground truth dataset:", df_truth.columns)
     print("First few rows of ground truth dataset:\n", df_truth.head())
     
-    # Limit to 10,800 reviews
+    #Limit the data to 10,800 reviews
     df_truth = df_truth.head(10800).reset_index(drop=True)
     
-    # Load deep learning results
+    #Load the deep learning results
     df_pred = pd.read_csv(predictions_file).reset_index(drop=True)
     
-    # Print columns and first few rows for verification
+    #Print the columns and first few rows to verify
     print("Columns in predicted sentiment dataset:", df_pred.columns)
     print("First few rows of predicted sentiment dataset:\n", df_pred.head())
 
-    # Limit to 10,800 reviews
+    #Limit to 10,800 reviews to match the ground truth data
     df_pred = df_pred.head(10800).reset_index(drop=True)
 
-    # Ensure the number of reviews match
+    #Check if both datasets have the same number of reviews
     if len(df_truth) != len(df_pred):
         raise ValueError(f"Mismatch in number of reviews: {len(df_truth)} Skytrax Dataset reviews, but {len(df_pred)} predicted reviews.")
 
-    # Extract ground truth labels and predicted labels, ensure they are stripped of any spaces and capitalized
+    #Get the ground truth and predicted labels, making sure they're clean (no spaces, capitalized)
     y_true = df_truth['review_classification'].astype(str).str.strip().str.capitalize()
     y_pred = df_pred['sentiment'].astype(str).str.strip().str.capitalize()
 
-    # Define sentiment categories
+    #Define the sentiment labels
     sentiment_labels = ['Negative', 'Neutral', 'Positive']
 
-    # Calculate evaluation metrics with zero division handling
+    #Calculate the evaluation metrics (accuracy, precision, recall, f1) while handling any division by zero
     accuracy = accuracy_score(y_true, y_pred)
     precision = precision_score(y_true, y_pred, average='macro', zero_division=1)
     recall = recall_score(y_true, y_pred, average='macro', zero_division=1)
@@ -46,14 +46,14 @@ try:
     print("Unique ground truth labels:", y_true.unique())
     print("Unique predicted labels:", y_pred.unique())
 
-    # Print results
+    #Print the evaluation results
     print("\nEvaluation Metrics for the first 10,800 reviews:")
     print(f"Accuracy:  {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall:    {recall:.4f}")
     print(f"F1 Score:  {f1:.4f}")
 
-    # Save the evaluation metrics to a CSV file
+    #Save the metrics to a CSV file
     metrics_data = {
         'Accuracy': [accuracy],
         'Precision': [precision],
@@ -63,44 +63,44 @@ try:
     df_metrics = pd.DataFrame(metrics_data)
     df_metrics.to_csv("../../data/deep_learning/evaluation_results/dl_evaluation_metrics.csv", index=False)
 
-    # Generate a detailed classification report
+    #Generate and print a detailed classification report
     print("\nDetailed Classification Report:")
     report = classification_report(y_true, y_pred, target_names=sentiment_labels, zero_division=0)
     print(report)
 
-    # Save classification report as CSV
+    #Save the classification report as a CSV
     report_data = classification_report(y_true, y_pred, target_names=sentiment_labels, output_dict=True)
     df_report = pd.DataFrame(report_data).transpose()
     df_report.to_csv("../../data/deep_learning/evaluation_results/dl_classification_report.csv", index=True)
 
-    # Generate confusion matrix
+    #Generate the confusion matrix and print it
     conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
     print("\nConfusion Matrix:")
     print(conf_matrix)
 
-    # Save confusion matrix to a CSV file
+    #Save the confusion matrix to a CSV file
     df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
     df_conf_matrix.to_csv("../../data/deep_learning/evaluation_results/dl_confusion_matrix.csv", index=True)
 
-    # Find misclassified reviews
+    #Find any misclassified reviews by comparing ground truth and predictions
     df_misclassified = df_truth.copy()
     df_misclassified['predicted_sentiment'] = y_pred
     df_misclassified = df_misclassified[df_misclassified['review_classification'].str.strip().str.capitalize() != df_misclassified['predicted_sentiment']]
 
-    # Display misclassified reviews with both ground truth and predicted sentiment
+    #If there are misclassified reviews, display a sample
     if not df_misclassified.empty:
         print(f"\nNumber of misclassified reviews: {len(df_misclassified)}")
         print("\nSample of misclassified reviews (Skytrax Dataset vs Prediction):")
         
-        # Print a sample of misclassified reviews with truncated review text for readability
+        #Print a sample of misclassified reviews with truncated text for easier reading
         sample_misclassified = df_misclassified[['review_text', 'review_classification', 'predicted_sentiment']].head(10)
         for index, row in sample_misclassified.iterrows():
             review_text = row['review_text']
-            if len(review_text) > 100:  # Truncate if the review is too long
-                review_text = review_text[:100] + '...'  # Truncated text
+            if len(review_text) > 100:  #If the review is too long, just show the first 100 characters
+                review_text = review_text[:100] + '...'  #Truncate text for brevity
             print(f"Review: {review_text}\nTrue Sentiment: {row['review_classification']} | Predicted Sentiment: {row['predicted_sentiment']}\n")
         
-        # Save misclassified reviews to a file for further analysis
+        #Save the misclassified reviews to a CSV for further analysis
         df_misclassified.to_csv("../../data/deep_learning/evaluation_results/dl_misclassified_reviews.csv", index=False)
         print("\nAll misclassified reviews saved to 'dl_misclassified_reviews.csv'")
 
