@@ -1,8 +1,4 @@
 review_name,review_type,passenger_name,review_date,review_text,rating_value,review_classification
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 17bd358c (dataset)
 Aalborg,airport,3 reviewsThomas Rune Knudsen,2023-09-16,"Not Verified|  This airport is always a breeze. Small and compact but with ok facilities considering the size. Staff is (almost) always friendly and down-to-earth. Few if any lines. Clean, and good Wi-Fi. They might need security in the baggage reclaim as two toddlers got on the belt just as it started moving. Seemed very dangerous, and the parents were present but completely oblivious. Never seen such bad parenting at an airport before. The family was Danish. Parking is no longer free, but 20 DKK per day. A very silly move.",8.0,NotClassified
 Aalborg,airport,Roeland Heitz,2019-01-06,"Not Verified|  Worst and most chaotic airport transfer I have ever experienced. In spite of low costs, I will never fly with Aeroflot again! Is this 2019 or still the 70’s?",1.0,NotClassified
 Aalborg,airport,Don Shaw,2018-06-07,"✅Trip Verified| The best airport in the world. I have used it multiple times, and there is never any significant waiting time at check-in or security. The staff are always good-natured and friendly. Parking is free. It is quiet. Duty-free items are cheaper than in e.g. Copenhagen. And on top of all this you get free water and a newspaper while you wait for the plane. The best by far.",10.0,NotClassified
