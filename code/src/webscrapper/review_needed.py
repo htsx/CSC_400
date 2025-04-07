@@ -1,60 +1,60 @@
 import pandas as pd
 from transformers import pipeline, DistilBertTokenizer
 
-# Initialize the sentiment analysis pipeline and tokenizer from Hugging Face
+#Set up the Hugging Face model and tokenizer for sentiment analysis
 sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
 
-# Load your hybrid-labeled data
+#Load the data that already has hybrid sentiment labels
 hybrid_labeled_df = pd.read_csv("../../data/webscrapper/hybrid_labeled.csv")
 
-# Check if there are any reviews that need manual labeling based on the 'hybrid_sentiment' column
+#Get reviews that still need labeling (those marked 'ManualCheck')
 unlabeled_reviews = hybrid_labeled_df[hybrid_labeled_df['hybrid_sentiment'] == 'ManualCheck']
 
-# Function to check if the review exceeds token limit (512 tokens)
+#Function to check if a review is too long (based on the token limit of 512 tokens)
 def is_review_too_long(review, max_length=512):
-    # Tokenize the review and get the number of tokens
+    #Tokenize and check if the review exceeds the token limit
     tokens = tokenizer.encode(review, add_special_tokens=True)
-    return len(tokens) > max_length
+    return len(tokens) > max_length  #Return True if the review is too long
 
-# List to collect indexes of reviews to remove
+#Collect indexes of reviews that are too long, so we can remove them later
 indexes_to_remove = []
 
-# Pseudo-labeling: Apply the pretrained model to unlabeled reviews
+#Start pseudo-labeling the reviews that need it
 for idx, row in unlabeled_reviews.iterrows():
     review_text = row['review_text']
     
-    # Skip reviews that are too long (in terms of tokens) and collect their index for removal
+    #Skip reviews that are too long (more than 512 tokens) and mark them for removal
     if is_review_too_long(review_text):
-        print(f"Removing long review at index {idx}: {review_text[:50]}...")  # Print the first 50 chars for logging
+        print(f"Removing long review at index {idx}: {review_text[:50]}...")  #Print first 50 chars for logging
         indexes_to_remove.append(idx)
-        continue  # Skip this review
+        continue  #Skip this review and move to the next one
     
-    # Get sentiment prediction for each review
-    sentiment = sentiment_analyzer(review_text)[0]['label']  # Get the sentiment label
+    #Get the sentiment prediction (either 'POSITIVE' or 'NEGATIVE')
+    sentiment = sentiment_analyzer(review_text)[0]['label']  #Get sentiment (either POSITIVE or NEGATIVE)
     
-    # Map the result back to the 'hybrid_sentiment' and 'review_classification' columns
+    #Find the review in the dataframe and update the sentiment labels
     matching_row = hybrid_labeled_df[hybrid_labeled_df['review_text'] == review_text]
     if not matching_row.empty:
         hybrid_labeled_df.loc[matching_row.index, 'hybrid_sentiment'] = sentiment
-        hybrid_labeled_df.loc[matching_row.index, 'review_classification'] = sentiment  # Update review_classification
+        hybrid_labeled_df.loc[matching_row.index, 'review_classification'] = sentiment  #Update the classification column
 
-# Remove the long reviews from the DataFrame using the indexes collected
+#Remove the long reviews using the indexes we collected earlier
 hybrid_labeled_df = hybrid_labeled_df.drop(indexes_to_remove)
 
-# **Print out all rows where either hybrid_sentiment or review_classification is still 'ManualCheck'**
+#Now let's see if there are any reviews that are still marked as 'ManualCheck' after processing
 manual_check_reviews = hybrid_labeled_df[
     (hybrid_labeled_df['hybrid_sentiment'] == 'ManualCheck') | 
     (hybrid_labeled_df['review_classification'] == 'ManualCheck')
 ]
 
 if not manual_check_reviews.empty:
-    print(f"🔎 Found {len(manual_check_reviews)} reviews still marked for 'ManualCheck' in either 'hybrid_sentiment' or 'review_classification':")
-    print(manual_check_reviews[['review_text', 'hybrid_sentiment', 'review_classification']].head(10))  # Display first 10 reviews
+    print(f"🔎 Found {len(manual_check_reviews)} reviews still needing manual labeling:")
+    print(manual_check_reviews[['review_text', 'hybrid_sentiment', 'review_classification']].head(10))  #Show first 10 reviews
 else:
-    print("✅ No reviews left needing manual check in either column.")
+    print("✅ All reviews have been labeled! No manual check required.")
 
-# Save the newly labeled reviews (hybrid + pseudo-labeling) without long reviews
+#Save the updated dataset with pseudo-labeling
 hybrid_labeled_df.to_csv("../../data/webscrapper/ground_truth_reviews.csv", index=False)
 
 print("✅ Pseudo-labeling complete and saved to 'ground_truth_reviews.csv'")
