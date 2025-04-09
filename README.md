@@ -12,9 +12,6 @@ To evaluate these techniques, a semi-supervised labeled dataset is created using
 
 The results, visualizations, and sample reviews are displayed through a Flask-based dashboard.
 
-Absolutely! Here’s the updated `README.md` section with steps on how to install dependencies using `requirements.txt`:
-
-```markdown
 ## 🔧 Setting Up the Virtual Environment (`venv`)
 
 This project uses a Python virtual environment to manage dependencies.
