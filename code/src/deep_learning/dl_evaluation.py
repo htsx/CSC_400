@@ -13,8 +13,8 @@ try:
     print("Columns in ground truth dataset:", df_truth.columns)
     print("First few rows of ground truth dataset:\n", df_truth.head())
     
-    #Limit the data to 10,800 reviews
-    df_truth = df_truth.head(10800).reset_index(drop=True)
+    #Limit the data to 20000 reviews
+    df_truth = df_truth.head(20000).reset_index(drop=True)
     
     #Load the deep learning results
     df_pred = pd.read_csv(predictions_file).reset_index(drop=True)
@@ -23,8 +23,8 @@ try:
     print("Columns in predicted sentiment dataset:", df_pred.columns)
     print("First few rows of predicted sentiment dataset:\n", df_pred.head())
 
-    #Limit to 10,800 reviews to match the ground truth data
-    df_pred = df_pred.head(10800).reset_index(drop=True)
+    #Limit to 20000 reviews to match the ground truth data
+    df_pred = df_pred.head(20000).reset_index(drop=True)
 
     #Check if both datasets have the same number of reviews
     if len(df_truth) != len(df_pred):
