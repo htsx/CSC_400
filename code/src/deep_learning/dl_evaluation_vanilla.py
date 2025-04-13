@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 # File paths
 skytrax_dataset = "../../data/webscrapper/cleaned_balanced.csv"
-predictions_file = "../../data/deep_learning/tweaked/dl_results.csv"
+predictions_file = "../../data/deep_learning/vanilla/dl_results.csv"
 
 try:
     # Load the ground truth data and drop rows with NaN values
@@ -42,7 +42,7 @@ try:
     print("Unique ground truth labels:", y_true.unique())
     print("Unique predicted labels:", y_pred.unique())
 
-    print("\nEvaluation Metrics for the reviews:")
+    print("\nEvaluation Metrics for the first 12,000 reviews:")
     print(f"Accuracy:  {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall:    {recall:.4f}")
@@ -56,7 +56,7 @@ try:
         'F1 Score': [f1]
     }
     df_metrics = pd.DataFrame(metrics_data)
-    df_metrics.to_csv("../../data/deep_learning/tweaked/dl_evaluation_metrics.csv", index=False)
+    df_metrics.to_csv("../../data/deep_learning/vanilla/dl_evaluation_metrics.csv", index=False)
 
     # Classification report
     print("\nDetailed Classification Report:")
@@ -65,7 +65,7 @@ try:
 
     report_data = classification_report(y_true, y_pred, target_names=sentiment_labels, output_dict=True)
     df_report = pd.DataFrame(report_data).transpose()
-    df_report.to_csv("../../data/deep_learning/tweaked/dl_classification_report.csv", index=True)
+    df_report.to_csv("../../data/deep_learning/vanilla/dl_classification_report.csv", index=True)
 
     # Confusion matrix
     conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
@@ -73,7 +73,7 @@ try:
     print(conf_matrix)
 
     df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
-    df_conf_matrix.to_csv("../../data/deep_learning/tweaked/dl_confusion_matrix.csv", index=True)
+    df_conf_matrix.to_csv("../../data/deep_learning/vanilla/dl_confusion_matrix.csv", index=True)
 
     # Misclassified
     df_misclassified = df_truth.copy()
@@ -93,7 +93,7 @@ try:
                 review_text = review_text[:100] + '...'
             print(f"Review: {review_text}\nTrue Sentiment: {row['review_classification']} | Predicted Sentiment: {row['predicted_sentiment']}\n")
 
-        df_misclassified.to_csv("../../data/deep_learning/tweaked/dl_misclassified_reviews.csv", index=False)
+        df_misclassified.to_csv("../../data/deep_learning/vanilla/dl_misclassified_reviews.csv", index=False)
         print("\nAll misclassified reviews saved to 'dl_misclassified_reviews.csv'")
     else:
         print("No misclassified reviews found.")
