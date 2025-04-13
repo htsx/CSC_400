@@ -85,9 +85,9 @@ class ReviewAnalyzer:
                     sentiment = self._calculate_context_sentiment(context)
                     topic_sentiments[topic] += sentiment
 
-        if sentiment_score >= 3:
+        if sentiment_score >= 1:
             overall_sentiment = "positive"
-        elif sentiment_score <= -3:
+        elif sentiment_score <= -1:
             overall_sentiment = "negative"
         else:
             overall_sentiment = "neutral"
@@ -158,25 +158,30 @@ class ReviewAnalyzer:
 # === CSV Analysis Block Starts Here ===
 
 if __name__ == "__main__":
-    input_file = "../../data/webscrapper/cleaned_skytrax_reviews.csv"
-    output_file = "../../data/keywords_topics/kt_results.csv"
+    input_file = "../../data/webscrapper/unlabeled_reviews.csv"
+    output_file = "../../data/keywords_topics/tweaked/kt_results.csv"
 
     if not os.path.exists(input_file):
         raise FileNotFoundError(f"Input file not found: {input_file}")
 
     df = pd.read_csv(input_file)
 
-    if 'review' not in df.columns:
-        raise ValueError("Expected column 'review' not found in CSV.")
+    if 'review_text' not in df.columns:
+        raise ValueError("Expected column 'review_text' not found in CSV.")
 
     analyzer = ReviewAnalyzer()
     results = []
 
-    for review in df['review']:
+    for _, row in df.iterrows():  # Iterating over rows to preserve all columns
+        review = row['review_text']
         if isinstance(review, str) and review.strip():
             result = analyzer.analyze_review(review)
             results.append({
-                'review': review,
+                'review_name': row['review_name'],  # Add the review_name
+                'review_type': row['review_type'],  # Add the review_type
+                'passenger_name': row['passenger_name'],  # Add the passenger_name
+                'review_date': row['review_date'],  # Add the review_date
+                'review_text': review,  # Add the review_text
                 'overall_sentiment': result['overall_sentiment'],
                 'sentiment_score': result['sentiment_score'],
                 **result['topic_mentions'],
@@ -187,3 +192,5 @@ if __name__ == "__main__":
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     result_df.to_csv(output_file, index=False)
     print(f"Results saved to {output_file}")
+
+
