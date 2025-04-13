@@ -1,65 +1,102 @@
-import pandas as pd
 from transformers import pipeline
+import pandas as pd
+import re
 
-#Load the sentiment analysis model for Twitter-based sentiment classification
-sentiment_checker = pipeline("sentiment-analysis", model="cardiffnlp/twitter-xlm-roberta-base-sentiment")
 
-#List of neutral words like "ok", "meh", "decent" that we don’t want to count as positive or negative
-neutral_words = ["ok", "meh", "decent"]
+# Initialize the sentiment analysis pipeline
+sentiment_checker = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment")
 
-def has_neutral_words(text):
-    text_lower = text.lower()  #Make everything lowercase so the comparison is case-insensitive
-    return any(word in text_lower for word in neutral_words)
 
-def get_sentiment(review_text):
-    try:
-        if has_neutral_words(review_text):  #If the review has any neutral words, label it as neutral
-            return "NEUTRAL", 0.99, {'POSITIVE': 0.0, 'NEUTRAL': 0.99, 'NEGATIVE': 0.0}
-        
-        #Get sentiment analysis from the model (limit review length to 1000 characters just in case)
-        result = sentiment_checker(review_text[:1000])[0]  
-        sentiment = result['label'].upper()  #Get the sentiment label and make sure it’s uppercase
-        confidence = round(result['score'], 2)  #Round the confidence score to 2 decimal places
+# Define label mapping
+label_mapping = {
+    'LABEL_0': 'NEGATIVE',
+    'LABEL_1': 'NEUTRAL',
+    'LABEL_2': 'POSITIVE'
+}
 
-        if confidence < 0.55:  #If the model isn’t confident enough, mark it as neutral
-            sentiment = "NEUTRAL"
 
-        #Create a dictionary for sentiment scores
-        scores = {'POSITIVE': 0.0, 'NEUTRAL': 0.0, 'NEGATIVE': 0.0}
-        scores[sentiment] = confidence  #Set the score for the sentiment we got
+# Define strong sentiment keywords
+strong_positive = {"amazing", "excellent", "fantastic", "loved", "perfect"}
+strong_negative = {"horrible", "terrible", "worst", "disgusting", "awful"}
 
-        return sentiment, confidence, scores
-    except Exception as e:
-        print(f"Error analyzing review: {e}")  #Print any errors that come up
-        return None, None, None
 
-#Load the review data from the CSV file
-reviews_data = pd.read_csv("../../data/webscrapper/cleaned_skytrax_reviews.csv")
+def clean_text(text):
+    """Basic cleaning of the text data."""
+    text = re.sub(r'http\S+|www\S+', '', text)  # Remove URLs
+    text = re.sub(r'<.*?>', '', text)  # Remove HTML tags
+    text = re.sub(r'[^A-Za-z0-9\s.,!?]', '', text)  # Keep alphanumeric and punctuation
+    text = re.sub(r'\s+', ' ', text).strip()  # Remove extra spaces
+    return text.lower()
 
-if 'review_text' not in reviews_data.columns:
-    print("Error: The CSV file needs a 'review_text' column.")  #Make sure the data has the right column
-    exit()
 
-#Go through each review, analyze it, and store the results
-analysis_results = []
-for _, row in reviews_data.iterrows():
-    sentiment, confidence, scores = get_sentiment(row['review_text'])
+def adjust_threshold(sentiment, confidence,
+                     positive_threshold=0.70,
+                     negative_threshold=0.82,
+                     neutral_threshold=0.75):
+    """Adjust sentiment classification based on confidence thresholds."""
+    if sentiment == 'POSITIVE' and confidence < positive_threshold:
+        return 'NEUTRAL', 0.5
+    elif sentiment == 'NEGATIVE' and confidence < negative_threshold:
+        return 'NEUTRAL', 0.5
+    elif sentiment == 'NEUTRAL' and confidence < neutral_threshold:
+        return 'NEUTRAL', max(confidence, 0.75)
+    return sentiment, confidence
 
-    analysis_results.append({
-        'review_name': row['review_name'],
-        'review_type': row['review_type'],
-        'passenger_name': row['passenger_name'],
-        'review_date': row['review_date'],
-        'review_text': row['review_text'],
-        'sentiment': sentiment,
-        'confidence': confidence,
-        'POS': scores['POSITIVE'] if scores else None,
-        'NEU': scores['NEUTRAL'] if scores else None,
-        'NEG': scores['NEGATIVE'] if scores else None
-    })
 
-#Convert the results into a DataFrame and save it to a CSV file
-results_df = pd.DataFrame(analysis_results)
-results_df.to_csv("../../data/deep_learning/dl_results.csv", index=False)
+def keyword_override(text, sentiment, confidence, threshold=0.60):
+    """Override model prediction if strong sentiment keywords are found with low confidence."""
+    tokens = text.lower().split()
+    if confidence < threshold:
+        if any(word in tokens for word in strong_positive):
+            return "POSITIVE", 0.75
+        elif any(word in tokens for word in strong_negative):
+            return "NEGATIVE", 0.75
+    return sentiment, confidence
 
-print("Analysis complete! Results saved to dl_results.csv")  #Let us know when it’s done
+
+def analyze_sentiment(text):
+    """Analyze sentiment and return the predicted sentiment and confidence."""
+    cleaned_text = clean_text(text)
+    result = sentiment_checker(cleaned_text)[0]
+
+
+    sentiment = label_mapping.get(result['label'], 'NEUTRAL')
+    confidence = round(result['score'], 2)
+
+
+    # Apply threshold and keyword logic
+    sentiment, confidence = adjust_threshold(sentiment, confidence)
+    sentiment, confidence = keyword_override(cleaned_text, sentiment, confidence)
+
+
+    return sentiment.capitalize(), confidence
+
+
+def process_reviews(df):
+    """Process the reviews in the dataframe."""
+    results = []
+    for _, row in df.iterrows():
+        sentiment, confidence = analyze_sentiment(row['review_text'])
+        results.append({
+            'review_name': row['review_name'],
+            'review_type': row['review_type'],
+            'passenger_name': row['passenger_name'],
+            'review_date': row['review_date'],
+            'review_text': row['review_text'],
+            'sentiment': sentiment,
+            'confidence': confidence
+        })
+    return pd.DataFrame(results)
+
+
+# Load and process data
+reviews_data = pd.read_csv("../../data/webscrapper/unlabeled_reviews.csv")
+reviews_data = reviews_data[reviews_data['review_text'].notna()]
+reviews_data['review_text'] = reviews_data['review_text'].astype(str)
+
+
+results_df = process_reviews(reviews_data)
+results_df.to_csv("../../data/deep_learning/tweaked/dl_results.csv", index=False)
+
+
+print(f"Analysis complete! {len(results_df)} reviews processed.")

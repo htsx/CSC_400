@@ -2,40 +2,78 @@ import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
-#Load the cleaned dataset (make sure it’s ready for analysis)
+# Load cleaned reviews
 df = pd.read_csv("../../data/webscrapper/cleaned_skytrax_reviews.csv")
 
-#Initialize VADER Sentiment Analyzer (VADER is pretty good for social media-style text)
+# Initialize analyzer
 vader_analyzer = SentimentIntensityAnalyzer()
 
-#Function to analyze sentiment using VADER
+# VADER scoring
 def vader_sentiment(text):
-    if pd.isna(text):  #Handle missing values (we don't want errors if there's no text)
-        return "Neutral"  #If there's no text, it's considered neutral
-    score = vader_analyzer.polarity_scores(str(text))["compound"]  #Get the compound score (overall sentiment)
-    if score >= 0.05:  #If the score is positive, return "Positive"
+    if pd.isna(text):
+        return "Neutral"
+    score = vader_analyzer.polarity_scores(str(text))["compound"]
+    if score >= 0.05:
         return "Positive"
-    elif score <= -0.05:  #If the score is negative, return "Negative"
+    elif score <= -0.05:
         return "Negative"
-    else:  #Otherwise, consider it neutral
+    else:
         return "Neutral"
 
-#Function to analyze sentiment using TextBlob
+# TextBlob scoring
 def textblob_sentiment(text):
-    if pd.isna(text):  #Handle missing values (again, no errors if text is missing)
-        return "Neutral"  #Default to neutral if there's no text
-    score = TextBlob(str(text)).sentiment.polarity  #Get the polarity score from TextBlob
-    if score > 0:  #If the score is positive, return "Positive"
+    if pd.isna(text):
+        return "Neutral"
+    score = TextBlob(str(text)).sentiment.polarity
+    if score > 0:
         return "Positive"
-    elif score < 0:  #If the score is negative, return "Negative"
+    elif score < 0:
         return "Negative"
-    else:  #Otherwise, consider it neutral
+    else:
         return "Neutral"
 
-#Apply sentiment analysis to the review text using both VADER and TextBlob
-df["VADER_Sentiment"] = df["review_text"].apply(vader_sentiment)  #Using VADER for sentiment
-df["TextBlob_Sentiment"] = df["review_text"].apply(textblob_sentiment)  #Using TextBlob for sentiment
+# Keyword-based fallback (basic rule-based sentiment booster)
+def keyword_sentiment(text):
+    if pd.isna(text):
+        return "Neutral"
+    text = str(text).lower()
+    positive_keywords = ["excellent", "amazing", "perfect", "great", "comfortable", "pleasant", "friendly"]
+    negative_keywords = ["terrible", "awful", "worst", "unfriendly", "dirty", "late", "rude", "cancelled"]
 
-#Save the results to a new CSV file for later use
+    pos_hits = any(word in text for word in positive_keywords)
+    neg_hits = any(word in text for word in negative_keywords)
+
+    if pos_hits and not neg_hits:
+        return "Positive"
+    elif neg_hits and not pos_hits:
+        return "Negative"
+    elif pos_hits and neg_hits:
+        return "Neutral"
+    else:
+        return "Neutral"
+
+# Combine all three using hybrid rule-based logic
+def hybrid_sentiment(text):
+    vader = vader_sentiment(text)
+    textblob = textblob_sentiment(text)
+    keyword = keyword_sentiment(text)
+
+    # Agreement between any two
+    if vader == textblob:
+        return vader
+    elif vader == keyword:
+        return vader
+    elif textblob == keyword:
+        return textblob
+    else:
+        return "Neutral"
+
+# Apply all techniques
+df["VADER_Sentiment"] = df["review_text"].apply(vader_sentiment)
+df["TextBlob_Sentiment"] = df["review_text"].apply(textblob_sentiment)
+df["Keyword_Sentiment"] = df["review_text"].apply(keyword_sentiment)
+df["Hybrid_Sentiment"] = df["review_text"].apply(hybrid_sentiment)
+
+# Save updated results
 df.to_csv("../../data/scoring_distribution/sd_results.csv", index=False)
-print("✅ Sentiment analysis completed. Results saved to data/scoring_distribution/sentiment_results.csv.")  #Let the user know it's done
+print("✅ Hybrid sentiment analysis completed. Results saved to data/scoring_distribution/sd_results.csv.")
