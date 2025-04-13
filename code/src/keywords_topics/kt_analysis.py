@@ -15,7 +15,11 @@ class ReviewAnalyzer:
             'exceptional', 'superb', 'terrific', 'delightful', 'enjoyable',
             'satisfactory', 'pleased', 'content', 'grateful', 'appreciate',
             'welcoming', 'professional', 'courteous', 'polite', 'attentive',
-            'spacious', 'well-maintained', 'organized', 'streamlined', 'hassle-free'
+            'spacious', 'well-maintained', 'organized', 'streamlined', 'hassle-free',
+            'great', 'pleasant', 'comfortable', 'efficient', 'nice', 'smooth', 'friendly',
+            'smoothless', 'outstanding', 'extensive', 'beautiful', 'comfortable', 
+    'superior', 'pleased', 'friendly', 'welcoming', 'clean', 'efficient',
+    'great', 'pleasant', 'nice', 'easy', 'perfect', 'quick'
         }
         
         self.negative_keywords = {
@@ -27,6 +31,12 @@ class ReviewAnalyzer:
             'frustrating', 'annoying', 'inconvenient', 'disorganized', 'chaotic',
             'overpriced', 'unacceptable', 'subpar', 'inadequate', 'unpleasant',
             'stressful', 'confusing', 'disappointing', 'unreliable', 'inconsistent'
+        }
+
+        self.neutral_keywords = {
+            'ok', 'okay', 'average', 'decent', 'fine', 'sufficient',
+            'acceptable', 'nothing special', 'mediocre', 'typical',
+            'standard', 'middle of the road', 'so-so', 'alright', 'neutral'
         }
         
         self.negation_words = {
@@ -68,7 +78,20 @@ class ReviewAnalyzer:
             'comfort': ['comfortable', 'space', 'crowded', 'quiet', 'noisy', 
                        'temperature', 'air conditioning', 'seating', 'chair',
                        'bench', 'rest', 'relax', 'sleep', 'nap', 'restroom',
-                       'bathroom', 'toilet']
+                       'bathroom', 'toilet'],
+            'staff_checkin': ['check-in', 'counter', 'agent', 'representative', 'staff', 'reception', 
+                            'employee', 'service', 'welcome', 'assist', 'attendant', 'customer', 
+                            'queue', 'line', 'waiting', 'help', 'support', 'clerk', 'desk', 'greeting'],
+
+            'staff_security': ['security', 'officer', 'agent', 'guard', 'screening', 'checkpoint', 
+                                'inspection', 'patrol', 'boarding', 'bag check', 'security check', 
+                                'x-ray', 'metal detector', 'passport control', 'surveillance', 'safety', 
+                                'crowd control', 'escort', 'control'],
+
+            'facilities_wifi': ['wifi', 'internet', 'connection', 'signal', 'speed', 'network', 'access', 
+                                'hotspot', 'router', 'bandwidth', 'reception', 'reliable', 'secure', 
+                                'login', 'free wifi', 'connection issues', 'slow internet', 'speed test', 
+                                'cafe', 'lounge', 'waiting area'],
         }
 
     def analyze_review(self, review_text):
@@ -83,11 +106,15 @@ class ReviewAnalyzer:
                     topic_mentions[topic] += 1
                     context = self._get_context(review_text, word)
                     sentiment = self._calculate_context_sentiment(context)
+                    # Fallback only if there's no clear sentiment from context
+                    if sentiment == 0 and not any(w in context for w in (
+                        self.positive_keywords | self.negative_keywords | self.neutral_keywords)):
+                        sentiment = sentiment_score
                     topic_sentiments[topic] += sentiment
 
-        if sentiment_score >= 1:
+        if sentiment_score >= 1.1:
             overall_sentiment = "positive"
-        elif sentiment_score <= -1:
+        elif sentiment_score <= -0.9:
             overall_sentiment = "negative"
         else:
             overall_sentiment = "neutral"
@@ -142,6 +169,8 @@ class ReviewAnalyzer:
                 score += 1
             elif word in self.negative_keywords:
                 score -= 1
+            elif word in self.neutral_keywords:
+                score += 0  # explicitly count as neutral (can help later logic)
         return score
 
     def _get_context(self, text, word, window_size=7):
