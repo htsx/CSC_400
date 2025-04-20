@@ -4,20 +4,20 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import nltk
 import re
 
-# Download the Punkt tokenizer for TextBlob
+#Download the Punkt tokenizer for TextBlob
 nltk.download('punkt')
 
-# Initialize VADER sentiment analyzer
+#Initialize VADER sentiment analyzer
 vader = SentimentIntensityAnalyzer()
 
-# Function to clean the review text
+#Function to clean the review text
 def clean_text(text):
     if isinstance(text, str):
         text = re.sub(r'[^A-Za-z\s]', '', text)
         return text.strip()
     return ""
 
-# Keyword-based sentiment analysis
+#Keyword-based sentiment analysis
 def keyword_based_sentiment(text):
     positive_keywords = ['great', 'excellent', 'friendly', 'smooth', 'comfortable', 'helpful', 'clean']
     negative_keywords = ['terrible', 'delay', 'rude', 'dirty', 'horrible', 'bad', 'awful']
@@ -33,7 +33,7 @@ def keyword_based_sentiment(text):
     else:
         return 'Neutral'
 
-# TextBlob sentiment
+#TextBlob sentiment
 def textblob_sentiment(text):
     polarity = TextBlob(text).sentiment.polarity
     if polarity > 0.1:
@@ -43,7 +43,7 @@ def textblob_sentiment(text):
     else:
         return 'Neutral'
 
-# VADER sentiment
+#VADER sentiment
 def vader_sentiment(text):
     score = vader.polarity_scores(text)['compound']
     if score >= 0.05:
@@ -53,22 +53,22 @@ def vader_sentiment(text):
     else:
         return 'Neutral'
 
-# File paths
+#File paths
 input_file = "../data/extra/cleaned_skytrax_reviews.csv"
 output_file = "../data/extra/hybrid_labeled.csv"
 
 try:
     df = pd.read_csv(input_file)
 
-    # Clean the review text
+    #Clean the review text
     df['review_text'] = df['review_text'].apply(clean_text)
 
-    # Apply all three techniques
+    #Apply all three techniques
     df['textblob_label'] = df['review_text'].apply(textblob_sentiment)
     df['vader_label'] = df['review_text'].apply(vader_sentiment)
     df['keyword_label'] = df['review_text'].apply(keyword_based_sentiment)
 
-    # Strict hybrid labeling: all three must agree
+    #Strict hybrid labeling: all three must agree
     def hybrid_label(row):
         labels = [row['textblob_label'], row['vader_label'], row['keyword_label']]
         if labels.count(labels[0]) == 3:

@@ -6,24 +6,24 @@ skytrax_dataset = "../../data/dataset/balanced.csv"
 predictions_file = "../../data/keywordstopics/kt_results.csv"  # Updated file path for keywords and topics results
 
 try:
-    # Load ground truth data and drop NaN values
+    #Load the ground truth data and drop rows with NaN values
     df_truth = pd.read_csv(skytrax_dataset).dropna(subset=['review_classification'])
     
-    # Load the predicted results
+    #Load predictions
     df_pred = pd.read_csv(predictions_file).reset_index(drop=True)
 
-    # Ensure the number of reviews match between ground truth and predictions
+    #Ensure the number of reviews match between ground truth and predictions
     if len(df_truth) != len(df_pred):
         raise ValueError(f"Mismatch in number of reviews: {len(df_truth)} Skytrax Dataset reviews, but {len(df_pred)} predicted reviews.")
 
-    # Extract ground truth labels and predicted labels, strip extra spaces and capitalize them
+    #Extract ground truth labels and predicted labels, strip extra spaces and capitalize them
     y_true = df_truth['review_classification'].astype(str).str.strip().str.capitalize()
     y_pred = df_pred['overall_sentiment'].astype(str).str.strip().str.capitalize()
 
-    # Define the sentiment categories
+    #Define the sentiment categories
     sentiment_labels = ['Negative', 'Neutral', 'Positive']
 
-    # Calculate evaluation metrics
+    #Calculate evaluation metrics
     accuracy = accuracy_score(y_true, y_pred)
     precision = precision_score(y_true, y_pred, average='macro', zero_division=1)
     recall = recall_score(y_true, y_pred, average='macro', zero_division=1)
@@ -35,7 +35,7 @@ try:
     print(f"Recall:    {recall:.4f}")
     print(f"F1 Score:  {f1:.4f}")
 
-    # Save the evaluation metrics
+    #Save the evaluation metrics
     metrics_data = {
         'Accuracy': [accuracy],
         'Precision': [precision],
@@ -45,7 +45,7 @@ try:
     df_metrics = pd.DataFrame(metrics_data)
     df_metrics.to_csv("../../data/keywordstopics/kt_evaluation_metrics.csv", index=False)
 
-    # Generate and save the classification report
+    #Generate and save the classification report
     print("\nDetailed Classification Report:")
     report = classification_report(y_true, y_pred, target_names=sentiment_labels, zero_division=0)
     print(report)
@@ -53,14 +53,14 @@ try:
     df_report = pd.DataFrame(report_data).transpose()
     df_report.to_csv("../../data/keywordstopics/kt_classification_report.csv", index=True)
 
-    # Generate and save the confusion matrix
+    #Generate and save the confusion matrix
     conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
     print("\nConfusion Matrix:")
     print(conf_matrix)
     df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
     df_conf_matrix.to_csv("../../data/keywordstopics/kt_confusion_matrix.csv", index=True)
 
-    # Identify and save misclassified reviews (and print count)
+    #Identify and save misclassified reviews (and print count)
     df_misclassified = df_truth.copy()
     df_misclassified['predicted_sentiment'] = y_pred
     df_misclassified = df_misclassified[df_misclassified['review_classification'].str.strip().str.capitalize() != df_misclassified['predicted_sentiment']]

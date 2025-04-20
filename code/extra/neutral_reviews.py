@@ -3,13 +3,13 @@ import pandas as pd
 import time
 from dotenv import OPENAI_API_KEY
 
-# Set your OpenAI API key
+#Set API key
 openai.api_key = OPENAI_API_KEY
 target_count = 4000
 output_file = "openai_generated_neutral_reviews.csv"
 batch_size = 20  # Number of reviews to generate per API call
 
-# Prompt to generate realistic neutral airline reviews
+#Prompt to generate realistic neutral airline reviews
 system_prompt = "You are a professional reviewer generating realistic airline reviews."
 user_prompt_template = (
     "Generate {} short, neutral airline reviews. "
@@ -17,15 +17,15 @@ user_prompt_template = (
     "and avoid emotional or strongly positive/negative language."
 )
 
-# Storage
+#Storage
 all_reviews = []
 
-# Loop to generate batches
+#Loop to generate batches
 while len(all_reviews) < target_count:
     try:
         user_prompt = user_prompt_template.format(batch_size)
 
-        # Use the correct method: ChatCompletion.create()
+        #Use the correct method: ChatCompletion.create()
         response = openai.ChatCompletion.create(
             model="gpt-4",  # or "gpt-3.5-turbo"
             messages=[{
@@ -41,16 +41,16 @@ while len(all_reviews) < target_count:
         all_reviews.extend(reviews)
         print(f"Generated {len(all_reviews)} / {target_count}")
 
-        time.sleep(1.2)  # Respect API rate limits
+        time.sleep(1.2)  #API rate limits
 
     except Exception as e:
         print(f"Error: {e}")
         time.sleep(5)
 
-# Final trimming if overshot
+#Fnal trimming if overshot
 all_reviews = all_reviews[:target_count]
 
-# Create DataFrame and fill required columns
+#Create DataFrame and fill required columns
 neutral_df = pd.DataFrame({
     "review_text": all_reviews,
     "review_classification": "Neutral",
@@ -61,6 +61,6 @@ neutral_df = pd.DataFrame({
     "source": "synthetic"
 })
 
-# Save to CSV
+#Save to CSV
 neutral_df.to_csv(output_file, index=False)
 print(f"Saved {len(neutral_df)} neutral reviews to {output_file}")
