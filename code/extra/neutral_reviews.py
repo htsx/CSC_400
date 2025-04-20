@@ -1,11 +1,10 @@
 import openai
 import pandas as pd
 import time
+from dotenv import OPENAI_API_KEY
 
 # Set your OpenAI API key
-openai.api_key = "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"
-
-# Parameters
+openai.api_key = OPENAI_API_KEY
 target_count = 4000
 output_file = "openai_generated_neutral_reviews.csv"
 batch_size = 20  # Number of reviews to generate per API call

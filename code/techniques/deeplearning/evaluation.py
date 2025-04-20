@@ -9,14 +9,8 @@ try:
     # Load the ground truth data and drop rows with NaN values
     df_truth = pd.read_csv(skytrax_dataset).dropna(subset=['review_classification'])
 
-    print("Columns in ground truth dataset:", df_truth.columns)
-    print("First few rows of ground truth dataset:\n", df_truth.head())
-
     # Load predictions
     df_pred = pd.read_csv(predictions_file).reset_index(drop=True)
-
-    print("Columns in predicted sentiment dataset:", df_pred.columns)
-    print("First few rows of predicted sentiment dataset:\n", df_pred.head())
 
     # Apply the 12,000 limit consistently
     MAX_REVIEWS = 12000
@@ -56,21 +50,21 @@ try:
     df_metrics.to_csv("../../data/deeplearning/dl_evaluation_metrics.csv", index=False)
 
     # Classification report
-    print("\nDetailed Classification Report:")
     report = classification_report(y_true, y_pred, target_names=sentiment_labels, zero_division=0)
-    print(report)
-
     report_data = classification_report(y_true, y_pred, target_names=sentiment_labels, output_dict=True)
     df_report = pd.DataFrame(report_data).transpose()
     df_report.to_csv("../../data/deeplearning/dl_classification_report.csv", index=True)
 
+    print("\nDetailed Classification Report:")
+    print(report)
+
     # Confusion matrix
     conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
-    print("\nConfusion Matrix:")
-    print(conf_matrix)
-
     df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
     df_conf_matrix.to_csv("../../data/deeplearning/dl_confusion_matrix.csv", index=True)
+
+    print("\nConfusion Matrix:")
+    print(conf_matrix)
 
     # Misclassified
     df_misclassified = df_truth.copy()
@@ -79,13 +73,11 @@ try:
         df_misclassified['review_classification'].str.strip().str.capitalize() != df_misclassified['predicted_sentiment']
     ]
 
-    # Count and print misclassified reviews
-    num_misclassified = len(df_misclassified)
-    print(f"\nNumber of misclassified reviews: {num_misclassified}")
-
-    # Save misclassified reviews without printing
+    # Save misclassified reviews
     if not df_misclassified.empty:
         df_misclassified.to_csv("../../data/deeplearning/dl_misclassified_reviews.csv", index=False)
+
+    print(f"\nNumber of misclassified reviews: {len(df_misclassified)}")
 
 except FileNotFoundError as e:
     print(f"Error loading files: {e}")
