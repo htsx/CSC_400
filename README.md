@@ -1,6 +1,6 @@
 CSC 400 Research Project: Flight Experience Feedback Analysis
 
-Your project focuses on analyzing airline passenger reviews using sentiment analysis techniques to better understand customer satisfaction. The goal is to compare the effectiveness of three methods:
+The project focuses on analyzing airline passenger reviews using sentiment analysis techniques to better understand customer satisfaction. The goal is to compare the effectiveness of three methods:
 
 - Sentiment Scoring & Distribution Analysis
 
