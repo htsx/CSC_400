@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Load the review data from the CSV file
-reviews_data = pd.read_csv("../data/extra/balanced.csv")
+reviews_data = pd.read_csv("../data/dataset/validation_set.csv")
 
 #Check if the 'sentiment' column exists
 if 'review_classification' not in reviews_data.columns:

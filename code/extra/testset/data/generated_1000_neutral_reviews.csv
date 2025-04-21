@@ -1,0 +1,1001 @@
+review_text,review_classification,review_name,review_type,passenger_name,review_date,source
+"1. ""The flight with Airline A was punctual and efficient. The in-flight meal was acceptable but nothing extraordinary.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""My experience with Airline B was decent. The cabin crew was professional and attentive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Airline C's services met my expectations. The leg room was just enough for a comfortable journey.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Airline D offered a smooth flight with a few minor turbulence. The in-flight entertainment was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""My journey with Airline E was satisfactory. The cleanliness of the aircraft could be improved though.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline F provided adequate service with on-time departure and arrival. The in-flight meal options could use some variety.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with Airline G was comfortable. The check-in process was fairly quick and efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""My experience with Airline H was standard. The economy seating was somewhat cramped but manageable for a short flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline I's flight was acceptable. The cabin crew was polite but the in-flight services were nothing out of the ordinary.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The flight with Airline J was on schedule. The in-flight entertainment had a reasonable selection.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Airline K offered a satisfactory flight experience. The food was okay, and the seating was comfortable enough.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""My flight with Airline L was acceptable. The boarding process was smooth, but the in-flight meal was slightly disappointing.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline M provided a smooth journey. The legroom was a bit tight, but the flight was punctual.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""The service on Airline N was adequate. The cabin crew was professional, but the food was just average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Flying with Airline O was a decent experience. The seats were comfortable, but the in-flight entertainment options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Airline P's flight was acceptable. The check-in and boarding process was efficient, but the food could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The flight with Airline Q was satisfactory. The cabin was clean, and the flight left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline R provided an average flying experience. The crew was polite, but the in-flight entertainment could be better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""My experience with Airline S was satisfactory. The flight was punctual, but the food quality was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline T's services were standard. The flight was comfortable, but the variety in in-flight meal options was limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Flight was on time with Delta Airlines and the service was satisfactory. The food was decent and the seating was comfortable enough for a short haul flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""The British Airways flight was quite full but managed to leave on time. The in-flight entertainment options were good, but the food was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""American Airlines provided a smooth check-in process and the flight landed on time. The cabin crew was professional and efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""The United Airlines flight was mostly uneventful. The plane was a bit old but well-maintained and the flight was on schedule.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""The Lufthansa flight was fairly comfortable with adequate legroom. The food could have been better, but the service was efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Emirates provided a standard flight experience with no major issues. The cabin was clean and the in-flight entertainment was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The Air France flight was average with usual service and facilities. The flight attendants were polite and the flight was punctual.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""My Southwest Airlines flight was on time. The seats were a bit cramped but the cabin crew was friendly and attentive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""The JetBlue flight was fine with a smooth take-off and landing. The in-flight meal could use some improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The Singapore Airlines flight provided an average experience. The legroom was sufficient and the food was fairly good.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""My flight with Qantas was reasonable. The plane left and arrived on time with no significant issues.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The Ryanair flight was decent. The plane was clean and the staff was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""The Turkish Airlines flight was uneventful. The seats were comfortable and the service was routine.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""My Virgin Atlantic flight was satisfactory. The in-flight entertainment was diverse and the flight was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The Cathay Pacific flight was decent with no delay. The food was mediocre but the cabin crew was friendly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""The Aeroflot flight was typical. The service was professional and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""My Air Canada flight was average. The check-in process was smooth and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The KLM flight was reasonable. The plane was a bit old but the service was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The Iberia flight was fine. The food was average and the seats were comfortable enough for the journey.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""My flight with Etihad Airways was fairly standard. The service was efficient and the flight landed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+1. American Airlines provided a satisfactory service. The flight was on time and the staff was fairly professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. United Airlines was comfortable enough for the long flight. The in-flight entertainment could use some updates, but the food was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. The Delta Air Lines flight was okay for the price. The seats were somewhat cramped, however, the flight arrived on time.",Neutral,Unknown,General,Anonymous,,synthetic
+4. Southwest Airlines offered a smooth check-in process. The flight was pleasant with minimal turbulence.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. British Airways offered an average experience. The flight departed and arrived as per schedule, and the staff was reasonably polite.",Neutral,Unknown,General,Anonymous,,synthetic
+6. Emirates provided a fairly comfortable journey. The food was alright and the cabin crew was attentive.,Neutral,Unknown,General,Anonymous,,synthetic
+7. The Lufthansa flight was on time and the food was acceptable. The in-flight entertainment had a good variety.,Neutral,Unknown,General,Anonymous,,synthetic
+8. Air France's service was standard. The cabin was clean and the in-flight meal was satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+9. The flight with Qatar Airways was decent. The legroom was adequate and the staff was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"10. Virgin Atlantic provided a routine service. The flight was on time, and the snacks provided were average.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Spirit Airlines was basic but functional. The flight was on time, though the seat comfort could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+12. The JetBlue flight was satisfactory. The staff was competent and the flight landed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"13. Turkish Airlines offered a decent in-flight experience. The meal served was average, but the flight was punctual.",Neutral,Unknown,General,Anonymous,,synthetic
+14. Air Canada's service was standard. The cabin crew was professional and the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+15. The KLM flight was fine. The seats were comfortable enough for a short haul flight.,Neutral,Unknown,General,Anonymous,,synthetic
+16. Cathay Pacific offered an acceptable service. The flight was on time and the crew was friendly.,Neutral,Unknown,General,Anonymous,,synthetic
+"17. The Ryanair flight was average. The seating was a bit cramped, but the service was efficient.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The EasyJet flight was decent. Despite the limited legroom, the flight departed and arrived on time.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. The Singapore Airlines flight was okay. The food could be improved, but the staff was polite.",Neutral,Unknown,General,Anonymous,,synthetic
+20. The Etihad Airways flight was satisfactory. The seats were comfortable and the in-flight entertainment was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The flight experience on Airline X was uneventful, with on-time departure and arrival. The in-flight meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Airline Y offers decent legroom in their economy class. The crew was professional, though not particularly engaging.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The check-in process with Airline Z was smooth, but the boarding process was a bit disorganized. The flight itself was comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Airline A's cabin was clean and maintained. The entertainment options were satisfactory, but not extensive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Flight with Airline B was punctual, with a smooth take-off and landing. The food, however, was a bit bland.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline C's staff was polite, and the flight was on time. The in-flight entertainment could use an upgrade.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The baggage handling by Airline D was efficient. The in-flight meal options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The seats on Airline E's flight were comfortable enough for a short haul. The cabin crew was cordial.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline F had a smooth check-in and security process. The in-flight service was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The flight with Airline G had a slight delay but was otherwise fine. The in-flight meal was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""While the Airline H flight was comfortable, the legroom was a bit tight. The crew was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Airline I's flight was punctual and the cabin was clean. The food quality was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""The boarding process with Airline J was a bit slow. The flight was comfortable with a decent meal.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Airline K's flight had a smooth take-off and landing. The in-flight entertainment options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The cabin crew on Airline L's flight was polite and professional. The food, however, could use some improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Airline M's check-in process was efficient. The in-flight service was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The flight with Airline N had decent legroom and comfortable seats. The meal options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O's flight was on time, and the cabin crew was friendly. The in-flight entertainment was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The baggage handling process with Airline P was smooth. The in-flight meal was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q's flight was comfortable with professional cabin crew. The entertainment options were satisfactory, but not extensive.""",Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight with Airline X was average. The seating was comfortable enough and the cabin crew was polite.,Neutral,Unknown,General,Anonymous,,synthetic
+2. I found the in-flight entertainment options on Airline Y to be sufficient for a short-haul flight. The food quality could be improved.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. The boarding process with Airline Z was pretty smooth. However, the flight was slightly delayed.",Neutral,Unknown,General,Anonymous,,synthetic
+4. Airline A provided decent legroom in economy. The meal service was prompt but the variety was lacking.,Neutral,Unknown,General,Anonymous,,synthetic
+5. Airline B's flight was on time and the cabin cleanliness was satisfactory. The staff could have been more attentive.,Neutral,Unknown,General,Anonymous,,synthetic
+6. Airline C's check-in process was straightforward. The in-flight meal was average and the entertainment options were limited.,Neutral,Unknown,General,Anonymous,,synthetic
+7. Airline D offered a comfortable flight experience. The snacks provided were not up to the mark though.,Neutral,Unknown,General,Anonymous,,synthetic
+8. The overall flight with Airline E was okay. The crew was professional but the food quality was average.,Neutral,Unknown,General,Anonymous,,synthetic
+9. Airline F's flight departed and arrived as per schedule. The in-flight entertainment and food service were pretty standard.,Neutral,Unknown,General,Anonymous,,synthetic
+"10. The flight with Airline G was comfortable, but the Wi-Fi connectivity was unstable. The staff was courteous.",Neutral,Unknown,General,Anonymous,,synthetic
+11. Airline H's flight was moderately comfortable. The check-in process was a bit slow but the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"12. The in-flight service on Airline I was decent. The seats were somewhat cramped, but the crew was helpful.",Neutral,Unknown,General,Anonymous,,synthetic
+13. Airline J provided satisfactory service. The food options could have been better.,Neutral,Unknown,General,Anonymous,,synthetic
+"14. Airline K's flight was average. The check-in process was smooth, but the in-flight entertainment could use an upgrade.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The flight with Airline L was okay. The legroom was sufficient, but the cabin temperature was slightly too cold.",Neutral,Unknown,General,Anonymous,,synthetic
+16. Airline M's flight was on time. The in-flight meals were standard and the cabin crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"17. Airline N's flight was fairly comfortable. However, the boarding process could have been more organized.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The service on Airline O's flight was satisfactory. The food quality was average, and the flight was on schedule.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. The flight with Airline P was decent. The crew was professional, but the seating space was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. Airline Q's flight was okay. The in-flight entertainment options were limited, but the flight departed and arrived on time.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Airline X provided a satisfactory service. The flight was on time and the crew was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""The in-flight meal on Airline Y was standard for an airline meal. The flight attendants were courteous.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Plane cleanliness was up to par on Airlines Z. The legroom was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Airline A's booking process was straightforward. The flight itself was uneventful.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""The flight with Airline B arrived on time with no major issues. The entertainment selection was adequate.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline C's service was typical for what you'd expect. The food was edible and the seats were reasonably comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with Airline D was satisfactory. The crew was professional, and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Airline E provided an average experience. The in-flight entertainment was decent and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""The boarding process with Airline F was smooth. The flight attendants were attentive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Airline G's flight was reasonably comfortable. The food wasn't exceptional, but it was adequate for a short flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""The flight with Airline H was typical. The crew was polite and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The service on Airline I was adequate. The flight was on time and the seats were decently comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J provided a typical flying experience. The food was standard and the in-flight entertainment was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""The staff on Airline K's flight was professional. The flight arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline L's flight was uneventful. The food was average and the service was adequate.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""The flight with Airline M was standard. The cabin was clean and the flight left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Airline N provided a typical service. The flight attendants were professional and the flight arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The in-flight service on Airline O was satisfactory. The in-flight entertainment was adequate.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Airline P's flight was as expected. The seats were comfortable enough for the long flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""The service on Airline Q's flight was average. The food and beverage service was on par with other airlines.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""British Airways consistently delivers a smooth flight experience, although the in-flight entertainment options could use some updating.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""American Airlines offers basic amenities, with relatively comfortable seating and average in-flight food.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Lufthansa's staff is generally professional, but the legroom in economy class is average at best.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Air Canada's flights are generally on time, however, their customer service could use some improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Emirates offers a decent selection of in-flight movies, but the meals provided are just satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Qantas Airways provides a smooth check-in process, but the in-flight experience is rather ordinary.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Singapore Airlines has a clean cabin environment, although the cabin crew could be more responsive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Delta Airlines offers reliable baggage handling, but their flight delays can be quite frequent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Air France provides a standard in-flight service, but their boarding process isn't the most efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Turkish Airlines has a user-friendly website for booking, but the in-flight food lacks variety.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Southwest Airlines is generally punctual, but the lack of complimentary in-flight amenities is noticeable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Cathay Pacific's seats are satisfactorily comfortable, but their in-flight entertainment is somewhat outdated.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Etihad Airways offers decent legroom, but their customer service response time could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Japan Airlines' in-flight meals are standard, but the cabin temperature can be a little inconsistent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Virgin Atlantic offers an efficient check-in process, but the quality of the in-flight headphones is average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""KLM's flight staff are usually friendly, but the quality of their in-flight meals is unexceptional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Norwegian Air provides reasonable fares, but their baggage fees can add up quickly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""United Airlines has a straightforward booking process, but the cleanliness of the plane could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Alaska Airlines' flights are mostly on time, but the seating in economy class is just satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Ryanair offers a practical no-frills service, but their strict baggage policy can be inconvenient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. United Airlines provided a fairly standard flight experience. The seats were reasonably comfortable, and the flight was on time.",Neutral,Unknown,General,Anonymous,,synthetic
+"2. American Airlines offered a reliable service. The in-flight meal was acceptable, and the staff were professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. Delta Airlines provided an on-time departure and arrival. The plane was relatively clean, and the in-flight entertainment was good.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. Qatar Airways offered a decent level of comfort for the long-haul flight. The food was okay, and the cabin crew was polite.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. On my Air Canada flight, the plane departed and arrived as scheduled. The legroom in economy class was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Southwest Airlines' service was standard, and the flight was on time. The snack options were limited but satisfactory.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. Lufthansa offered an acceptable flight experience. The seats were somewhat comfortable, and the in-flight movie selection was broad.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. British Airways' flight was on schedule, and the cabin cleanliness was at an acceptable level. The food quality was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. Allegiant Air provided a typical low-cost airline experience. The plane was a bit cramped, but the flight was on time.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. On my Virgin Atlantic flight, the staff was professional, and the in-flight entertainment options were satisfactory. The food could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Air France's service was as expected. The flight took off and landed on time, and the staff was quite professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. JetBlue Airways offered a standard flight experience. The seat comfort was average, and the in-flight snacks were okay.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. Alaska Airlines' flight was on time, and the plane was reasonably clean. The staff provided an acceptable level of service.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. The flight with RyanAir was cost-effective. The seating was a bit tight, but the overall experience was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The service on Emirates was quite standard. The food was acceptable, and the cabin crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. On my flight with Spirit Airlines, the cabin was quite clean, and the flight was punctual. The legroom was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. Air China provided a satisfactory service. The in-flight meal was acceptable, and the staff was polite.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The service on Turkish Airlines was reliable. The flight was on time, and the in-flight entertainment was good.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. The Qantas flight was on schedule, and the cabin was clean. The food quality was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. The flight with Aeroflot was quite standard. The seating was a bit tight, but the overall experience was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. The flight on Air Canada was satisfactory. The plane was clean and the service was efficient, nothing out of the ordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+2. United Airlines provided a standard flight experience. The check-in process was smooth and the in-flight service was adequate.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. Emirates offered a good selection of in-flight entertainment. The food was typical airplane fare, nothing exceptional.",Neutral,Unknown,General,Anonymous,,synthetic
+4. The seats on Delta Airlines were reasonably comfortable for a long-haul flight. The cabin crew were professional and attentive.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. The British Airways flight was average. The flight departed and arrived on time, and the on-board facilities were good.",Neutral,Unknown,General,Anonymous,,synthetic
+6. Qantas Airways provided a standard service. The check-in was efficient and the flight was comfortable enough.,Neutral,Unknown,General,Anonymous,,synthetic
+"7. The Lufthansa flight was punctual and the crew was professional. The food, however, was rather ordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+8. The Southwest Airlines flight was fine. The boarding process was smooth and the seats were fairly comfortable.,Neutral,Unknown,General,Anonymous,,synthetic
+9. Ryanair offered a no-frills service. The flight was on time and the crew was friendly enough.,Neutral,Unknown,General,Anonymous,,synthetic
+10. The in-flight entertainment on American Airlines was decent. The food and drink options were typical for an airline.,Neutral,Unknown,General,Anonymous,,synthetic
+11. The Virgin Atlantic flight was satisfactory. The cabin crew was attentive and the flight arrived on time.,Neutral,Unknown,General,Anonymous,,synthetic
+12. The Turkish Airlines flight was standard. The plane was clean and the in-flight service was adequate.,Neutral,Unknown,General,Anonymous,,synthetic
+13. The seats on Air France were comfortable enough for a short-haul flight. The service was efficient and the food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"14. The Etihad Airways flight was decent. The food was okay, and the cabin crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The Singapore Airlines flight was average. The in-flight entertainment was good, but the food was nothing special.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. The Cathay Pacific flight was satisfactory. The plane was clean, the flight was on time and the crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+17. The easyJet flight was standard. The boarding process was smooth and the flight arrived on time.,Neutral,Unknown,General,Anonymous,,synthetic
+18. The Aer Lingus flight was average. The seats were comfortable enough and the flight was punctual.,Neutral,Unknown,General,Anonymous,,synthetic
+19. The JetBlue flight was fine. The in-flight service was efficient and the plane was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+20. The Norwegian Air flight was satisfactory. The check-in process was smooth and the flight departed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The flight was pretty standard with American Airlines. The seats were comfortable enough for a short flight, and the staff was polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Air Canada provided a satisfactory service on my recent trip. The plane was clean and the in-flight entertainment was up-to-date.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""My trip with Lufthansa was overall decent. The food was average and the flight arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""I took a flight with Delta Airlines last week. The boarding process was smooth, and the seats were standard for economy class.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""I found British Airways to be quite acceptable. The staff were professional, and the in-flight meal was reasonably good.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Air France provided a comfortable flight experience. The legroom was sufficient, and the flight departed on schedule.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""My recent flight with Emirates was typical. The cabin was clean, and the crew was efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""I traveled with Virgin Atlantic recently. The airplane was moderately crowded, but the service was decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""The flight with Qantas was average. The food quality was as expected for airline food, and the flight landed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""My trip with Southwest Airlines was pretty typical. The boarding process was organized, and the flight crew was amicable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""My flight with Turkish Airlines was overall satisfactory. The seats were a bit cramped, but the in-flight entertainment made up for it.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""I flew with JetBlue recently. The check-in process was smooth, and the flight left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""My recent flight with United Airlines was okay. The cabin was clean, and the staff was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""I found my flight with Qatar Airways to be quite standard. The food was acceptable, and the flight attendants were courteous.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""My experience with Etihad Airways was average. The plane was a bit old, but the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""My flight with Ryanair was acceptable. The seats were a bit cramped, but the pricing was competitive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""I recently flew with Cathay Pacific. The legroom was average, and the in-flight meal was decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""My recent trip with Aer Lingus was fine. The boarding process was straightforward, and the staff was polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""I flew with Singapore Airlines last week. The airplane was clean, and the in-flight entertainment options were plentiful.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""My flight with Alaska Airlines was pretty standard. The check-in process was easy, and the flight left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. Airline X provides adequate service, with on-time departures and arrivals. Their in-flight meals are fairly standard.",Neutral,Unknown,General,Anonymous,,synthetic
+2. The flight with Airline Y was unremarkable. The staff were polite and did their job efficiently.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. Airline Z's service was as expected. The seats were a bit tight, but otherwise, the journey was smooth.",Neutral,Unknown,General,Anonymous,,synthetic
+4. Airline A provided an average flying experience. The legroom was okay and the food was edible.,Neutral,Unknown,General,Anonymous,,synthetic
+5. The check-in process with Airline B was relatively smooth. The in-flight entertainment could use some improvement.,Neutral,Unknown,General,Anonymous,,synthetic
+6. Airline C's flight attendants were professional. The flight departed and arrived as scheduled.,Neutral,Unknown,General,Anonymous,,synthetic
+7. The flight with Airline D was comfortable enough. The in-flight movie selection was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"8. My flight with Airline E was generally satisfactory. The seats were a bit uncomfortable, but the staff was polite.",Neutral,Unknown,General,Anonymous,,synthetic
+9. Airline F's services were adequate. There were no significant delays and the food was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"10. The flight with Airline G was standard. The cabin was clean, but the seating was a bit cramped.",Neutral,Unknown,General,Anonymous,,synthetic
+11. Airline H provided a typical flying experience. The crew was professional and the flight arrived on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"12. The flight with Airline I was satisfactory. However, the boarding process could be more organized.",Neutral,Unknown,General,Anonymous,,synthetic
+13. Airline J's service was acceptable. The crew was polite and the flight was on schedule.,Neutral,Unknown,General,Anonymous,,synthetic
+14. The flight with Airline K was as expected. The food was average but the in-flight entertainment was good.,Neutral,Unknown,General,Anonymous,,synthetic
+"15. My flight with Airline L was okay. The seats were not the most comfortable, but the flight was punctual.",Neutral,Unknown,General,Anonymous,,synthetic
+16. Airline M's flight was decent. The crew members were professional and the in-flight meals were satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The flight with Airline N was uneventful. The boarding process was smooth and the flight departed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"18. Airline O's service was standard. The legroom was a bit tight, but the in-flight entertainment was good.",Neutral,Unknown,General,Anonymous,,synthetic
+19. The flight with Airline P was satisfactory. The check-in process was efficient and the flight was punctual.,Neutral,Unknown,General,Anonymous,,synthetic
+20. Airline Q's service was acceptable. The seats were comfortable enough and the crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight on Air Canada was satisfactory. The crew was professional and the meals were average.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. I flew with Delta Airlines and experienced typical service. Nothing special to report, but no significant issues either.",Neutral,Unknown,General,Anonymous,,synthetic
+3. My experience on United Airlines was average. The flight was on time and the cabin was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+"4. I was comfortable during my flight with American Airlines. The flight attendants were friendly, and the in-flight entertainment was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. My Qantas flight was acceptable. The aircraft was a bit older, but the crew made the journey pleasant enough.",Neutral,Unknown,General,Anonymous,,synthetic
+6. My flight with Emirates was standard. The seats were comfortable but the food was nothing extraordinary.,Neutral,Unknown,General,Anonymous,,synthetic
+7. British Airways offered a satisfactory service. The flight was on schedule and the legroom was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"8. I took a flight with Southwest Airlines. The process was smooth, and the cabin crew was efficient.",Neutral,Unknown,General,Anonymous,,synthetic
+9. My journey with Singapore Airlines was average. The seat was comfortable and the meal was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+10. Lufthansa provided a typical airline experience. The flight was on time and the crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"11. My flight on Etihad Airways was satisfactory. The in-flight entertainment was good, but the food could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+12. The JetBlue flight was okay. The flight left on time and the cabin was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+"13. I had an average experience with Cathay Pacific. The crew was polite, and the in-flight entertainment was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+14. My trip on Air France was typical. The flight was on time and the crew was friendly.,Neutral,Unknown,General,Anonymous,,synthetic
+15. The service on Alaska Airlines was satisfactory. The flight attendants did their job diligently.,Neutral,Unknown,General,Anonymous,,synthetic
+"16. I flew with Ryanair. The journey was smooth, and check-in was efficient.",Neutral,Unknown,General,Anonymous,,synthetic
+17. My flight on Turkish Airlines was average. The seats were comfortable and the food was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"18. The Virgin Atlantic flight was okay. The flight was punctual, but the legroom was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+19. My journey with Aer Lingus was standard. The cabin was clean and the flight attendants were professional.,Neutral,Unknown,General,Anonymous,,synthetic
+20. I flew with EasyJet and had a typical experience. The flight was on time and the boarding process was efficient.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. The flight with Air Canada was on time and uneventful. The in-flight meal was acceptable, nothing extraordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+2. Emirates provided a basic level of comfort on our long-haul flight. The entertainment system was adequate with a decent selection of films.,Neutral,Unknown,General,Anonymous,,synthetic
+3. The Southwest Airlines flight attendants were professional and did their job efficiently. The snacks offered were standard.,Neutral,Unknown,General,Anonymous,,synthetic
+4. The Lufthansa flight was clean and the in-flight service was up to expectations. No significant issues to report.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. American Airlines provided a smooth check-in process and the flight departed on time. The legroom was a bit limited, but manageable.",Neutral,Unknown,General,Anonymous,,synthetic
+6. The Qatar Airways flight was satisfactory. The crew was competent and the food was typical for an airline.,Neutral,Unknown,General,Anonymous,,synthetic
+"7. The Delta Airlines flight was fine, with on-time departure and arrival. The seat comfort was average.",Neutral,Unknown,General,Anonymous,,synthetic
+8. The seating on the British Airways flight was a bit cramped but tolerable. The crew was responsive to requests.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. The JetBlue flight was routine with no major issues. The in-flight entertainment options were okay, not too varied.",Neutral,Unknown,General,Anonymous,,synthetic
+10. Air France provided a decent flight experience. The food was average but the flight was punctual.,Neutral,Unknown,General,Anonymous,,synthetic
+11. KLM's flight was unremarkable but efficient. The crew was professional and the in-flight entertainment was standard.,Neutral,Unknown,General,Anonymous,,synthetic
+12. The flight with Virgin Atlantic was satisfactory. The plane was clean and the flight departed and arrived as scheduled.,Neutral,Unknown,General,Anonymous,,synthetic
+13. The Turkish Airlines flight was usual with no surprises. The food was fine and the service was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+14. Qantas provided a smooth flight with no significant turbulence. The crew was competent and the facilities were clean.,Neutral,Unknown,General,Anonymous,,synthetic
+15. The United Airlines flight was standard. The seats were moderately comfortable and the crew was courteous.,Neutral,Unknown,General,Anonymous,,synthetic
+16. The flight with Ryanair was on time and the boarding process was streamlined. The seating was a bit tight but manageable.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The Alaska Airlines flight was uneventful. The flight attendants were professional and the in-flight snacks were average.,Neutral,Unknown,General,Anonymous,,synthetic
+18. The flight with Etihad Airways was satisfactory. The legroom was typical and the food was fine.,Neutral,Unknown,General,Anonymous,,synthetic
+"19. The Spirit Airlines flight was standard, with regular in-flight service. The seats were a bit narrow but the flight arrived on time.",Neutral,Unknown,General,Anonymous,,synthetic
+20. The Cathay Pacific flight was adequate. The food was typical airline fare and the crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Airline X provided an efficient check-in process and the flight left on time. The seats were quite standard and the meal was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Airline Y's customer service was commendable. The flight was a bit delayed but they kept us informed throughout.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The flight with Airline Z was smooth and the cabin was clean. The in-flight entertainment could use an update though.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Airline A's in-flight meal was average, but their on-time departure and arrival were impressive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""The legroom on Airline B's economy class was just adequate. The cabin crew was professional and polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline C's flight was comfortable, but the food options were limited. The boarding process was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with Airline D was on time, and the check-in process was efficient. The seats could use more padding for comfort.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Airline E's cabin crew was attentive and professional. The plane interior looked a bit outdated, but it was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""The flight with Airline F was quite pleasant. The food was mediocre but the drinks selection was diverse.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Airline G offered a smooth check-in process and the flight departed on time. The in-flight entertainment was a bit limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""The flight with Airline H was decent. The legroom was adequate, but the in-flight meal could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Airline I's flight was punctual and the cabin crew was professional. The seat comfort was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""The flight with Airline J was acceptable. The boarding was efficient, but the in-flight entertainment had few options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Airline K's flight was smooth, and the cabin was kept clean. The food offered was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The flight with Airline L was on time, and the check-in process was efficient. The seats were a bit cramped.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Airline M provided a decent in-flight meal and the cabin crew was professional. The legroom was just enough.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The flight with Airline N was satisfactory. The plane was clean, but the seats were a bit uncomfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O's flight was punctual and the cabin crew was courteous. The in-flight entertainment was basic.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The flight with Airline P was average. The boarding process was smooth, but the food could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q's flight was decent. The seats were fine, but the in-flight entertainment had limited options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""My flight with Airline X was satisfactory. The staff were professional and the flight left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""The in-flight meal on Airline Y was average, nothing too fancy. The legroom was decent, though.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Airline Z offered a smooth check-in process. The flight was a bit delayed, but overall it was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""The flight attendants on Airline A were courteous. The plane was clean, but the entertainment system needed updating.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Airline B provided a standard service. The ticket price was reasonable for the quality of the experience.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""On my flight with Airline C, the cabin was comfortable enough. The food could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Airline D's flight was fairly punctual. The in-flight entertainment was a bit lacking, but it was a short flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Airline E had a smooth boarding process. The flight was a bit crowded, but the staff managed it well.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""The staff on Airline F were polite, though not particularly warm. The seats were comfortable enough for the long flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Airline G's flight was okay. The food options were limited but the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""The flight with Airline H was satisfactory. The Wi-Fi connection was not stable, but the cabin crew was helpful.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Airline I's in-flight service was average. The seat recline was limited but not uncomfortable for a short flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J had an easy online booking system. The in-flight amenities were basic, but functional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""My flight with Airline K was okay. The cabin was clean, but the temperature was a bit too cold.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline L provided a typical flight experience. The boarding process was a little slow, but the flight itself was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""The flight attendants on Airline M were professional. The meal options were limited, but the beverages were good.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Airline N's flight was adequate. The legroom was a bit tight, but the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O's service was standard. The flight was a bit noisy, but the seats were comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""My flight with Airline P was fine. The luggage handling was swift, though the in-flight entertainment was limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q's flight was satisfactory. The food was average, but the flight arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+1. Flew with Airline A and the flight was on time. The food was pretty standard for airline fare.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. The legroom on Airline B's economy seats was adequate, but not spacious. The cabin crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. On my flight with Airline C, the in-flight entertainment had a good variety of movies. The seats were fairly comfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+4. The ticket booking process for Airline D was straightforward. The flight itself was uneventful.,Neutral,Unknown,General,Anonymous,,synthetic
+5. Airline E's flight was mildly delayed but the communication from the crew was clear. The food served was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+6. The check-in process at Airline F was efficient. The flight was smooth and landed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+7. Airline G's seats were a bit narrow but manageable for a short flight. The crew was polite and attentive.,Neutral,Unknown,General,Anonymous,,synthetic
+8. The food on Airline H was satisfactory and the flight departed on schedule. The in-flight entertainment options were average.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. On my flight with Airline I, the cabin was clean and the boarding process was well-organized.",Neutral,Unknown,General,Anonymous,,synthetic
+10. Airline J's flight attendants were friendly. The in-flight meal was appropriate for the price of the ticket.,Neutral,Unknown,General,Anonymous,,synthetic
+11. The baggage handling at Airline K was efficient. The flight was a bit bumpy but the pilot handled it well.,Neutral,Unknown,General,Anonymous,,synthetic
+12. Airline L's online check-in process was simple and easy to navigate. The flight itself was satisfactory with no major issues.,Neutral,Unknown,General,Anonymous,,synthetic
+13. The cabin crew on Airline M's flight was professional and courteous. The legroom was slightly limited.,Neutral,Unknown,General,Anonymous,,synthetic
+14. The food on Airline N was average but the flight was punctual. The in-flight entertainment could use more variety.,Neutral,Unknown,General,Anonymous,,synthetic
+15. Flew with Airline O and the seats were reasonably comfortable. The flight was slightly delayed but the communication was good.,Neutral,Unknown,General,Anonymous,,synthetic
+16. Airline P's boarding process was rather smooth and the flight was on time. The airline food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The check-in process for Airline Q was straightforward. The flight was average with no major issues to report.,Neutral,Unknown,General,Anonymous,,synthetic
+18. Airline R's economy seating was a bit tight but manageable for a short flight. The flight departed and landed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+19. The in-flight meal on Airline S was satisfactory. The flight attendants were professional and the flight was smooth.,Neutral,Unknown,General,Anonymous,,synthetic
+"20. On my flight with Airline T, the check-in went smoothly. The onboard service was standard and the flight arrived on time.",Neutral,Unknown,General,Anonymous,,synthetic
+1. The overall flight with Air Canada was average. The staff was polite and the seats were fairly comfortable. Food options could have been better.,Neutral,Unknown,General,Anonymous,,synthetic
+2. I flew with Southwest airlines. The flight departed and arrived on time. The in-flight entertainment system was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. I had a usual experience with Delta Airlines. The cabin was clean and the flight staff was professional. The legroom was a bit cramped, though.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. The flight with British Airways was relatively smooth. The meal served was standard airline fare. The flight was slightly delayed, but not by much.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. I traveled with Ryanair recently. The check-in process was efficient and the flight was punctual. The seating was quite compact, however.",Neutral,Unknown,General,Anonymous,,synthetic
+6. I flew with Turkish Airlines. The cabin crew was courteous and the flight was smooth. The food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+7. My flight with Virgin Atlantic was fine. The seats were comfortable enough for a long haul flight. The in-flight entertainment was okay.,Neutral,Unknown,General,Anonymous,,synthetic
+8. The flight with Emirates was typical. The staff was friendly and the flight landed on time. The food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. My experience with United Airlines was standard. The cabin was clean, but the seats were slightly uncomfortable. The food could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. My journey with EasyJet was average. The flight was on time and the boarding process was smooth. The legroom was a bit tight, though.",Neutral,Unknown,General,Anonymous,,synthetic
+11. The flight with American Airlines was uneventful. The staff was professional and the in-flight service was decent. The seating was a bit tight.,Neutral,Unknown,General,Anonymous,,synthetic
+12. My experience with Lufthansa was fairly average. The flight landed on time and the cabin crew was polite. The food was typical airline fare.,Neutral,Unknown,General,Anonymous,,synthetic
+13. My flight with Air France was standard. The flight was smooth and the staff was helpful. The food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"14. I traveled with JetBlue recently. The check-in process was efficient, but the flight was slightly delayed. The in-flight entertainment was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. My journey with Qantas was standard. The seats were comfortable and the staff was friendly. The food options could have been better, though.",Neutral,Unknown,General,Anonymous,,synthetic
+16. My flight with Air India was fine. The cabin was clean and the flight departed on time. The food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+17. I flew with Cathay Pacific. The cabin crew was professional and the flight was smooth. The legroom was a bit tight.,Neutral,Unknown,General,Anonymous,,synthetic
+18. My experience with Etihad Airways was typical. The flight was on time and the boarding process was smooth. The food was standard airline fare.,Neutral,Unknown,General,Anonymous,,synthetic
+"19. I flew with KLM. The staff was friendly, but the flight was slightly delayed. The seating was quite compact, however.",Neutral,Unknown,General,Anonymous,,synthetic
+20. My journey with Aer Lingus was okay. The check-in process was efficient and the flight was punctual. The in-flight entertainment could have been better.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. The flight with Airline A was generally on time, although the in-flight meal was pretty standard. The staff were courteous.",Neutral,Unknown,General,Anonymous,,synthetic
+2. I had a satisfactory experience with Airline B. Legroom was adequate and the entertainment system was updated.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. Airline C's flight was quite punctual, but the inflight entertainment options could use an upgrade. The crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. Flight with Airline D was generally comfortable. The airplane was clean, but the food was nothing to write home about.",Neutral,Unknown,General,Anonymous,,synthetic
+5. Airline E offered a decent in-flight service. The meals were typical airline fare and the cabin crew were polite.,Neutral,Unknown,General,Anonymous,,synthetic
+6. My journey with Airline F was generally smooth. The seat was comfortable enough for a short haul flight.,Neutral,Unknown,General,Anonymous,,synthetic
+"7. Airline G's service was adequate for the price paid. The flight departed and arrived on time, but the seat space was a bit cramped.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. The flight with Airline H was satisfactory. The in-flight meal options were average, but the staff was attentive.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. I found Airline I's service to be average. The flight was slightly delayed, but the cabin was kept clean.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. Airline J provided a comfortable journey. The boarding process was smooth, but the food options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. The flight with Airline K was generally good. Seats were comfortable, but the in-flight entertainment was outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. Airline L offered a decent service for the price. The flight was on time and the crew were professional, but the legroom was limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. My flight with Airline M was fine. The boarding process was smooth, but the snacks served were quite typical.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. I had a fairly normal experience with Airline N. The flight departed on time, but the in-flight entertainment could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+15. Airline O offered an average service. The seats were comfortable enough but the meal options were not very diverse.,Neutral,Unknown,General,Anonymous,,synthetic
+"16. My flight with Airline P was satisfactory. The airplane was clean and the staff was polite, but the layover was a bit long.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. Airline Q provided a decent service. The flight was punctual, but the legroom was somewhat limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The experience with Airline R was typical of most airlines. The staff was professional, but the food was average at best.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. My flight with Airline S was generally good. The boarding process was efficient, but the in-flight entertainment options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. Airline T provided a standard service. The flight was comfortable, but the meal could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The flight with Air Canada was on time and the staff was polite. The plane was a bit outdated but clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""JetBlue offers a fairly comfortable ride. The legroom was decent, and the snack options were standard.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Flew with Lufthansa from Munich to New York. The flight was smooth with hardly any turbulence. Food could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""My experience with Southwest Airlines was just fine. The check-in process was smooth, and the flight was punctual. In-flight entertainment options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Had an average experience with Delta Airlines. The staff was professional, but the food was rather bland.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""The flight from London to Tokyo with British Airways was on time. They offered a variety of movies and shows on their entertainment system.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Qatar Airways provided a comfortable journey. The seats were pretty average, but the crew members were attentive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Flew with Virgin Atlantic from New York to London. The plane was clean and the staff was quite friendly. The meals were nothing special.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""American Airlines flight from Dallas to LA was uneventful. The plane was clean, and the staff was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Air France provided a standard flying experience. The flight departed on time, and the in-flight meal was alright.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Emirates offers a decent number of entertainment options. However, the food and beverage service was slow.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""United Airlines' flight from Chicago to San Francisco was comfortable. The staff was friendly, but the meal options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Flew with Singapore Airlines from Singapore to Sydney. The flight was smooth, and the cabin was clean. The meal service was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Air New Zealand's service was adequate. The seats were comfortable enough for a long-haul flight. The food was standard.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The flight with Cathay Pacific from Hong Kong to Vancouver was on time. The in-flight entertainment was okay. The cabin was a bit chilly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Aeroflot's service was pretty standard. The flight was punctual, and the staff was professional. The plane was clean but a bit cramped.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Turkish Airlines provided a smooth flight from Istanbul to New York. The seats were comfortable, but the food was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The flight with Etihad Airways from Abu Dhabi to London was just fine. The plane was clean, and the staff was courteous. The meals could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Flew with KLM from Amsterdam to New York. The flight was on time, and the cabin crew was friendly. The food was nothing to write home about.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""The flight with Qantas from Sydney to LA was comfortable. The staff was professional, and the in-flight entertainment was decent. The meal service was a bit slow though.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. Flew with American Airlines recently; the service was efficient and flight punctual. However, the legroom was slightly limited.",Neutral,Unknown,General,Anonymous,,synthetic
+2. Boarded a United Airlines flight last week. The staff was professional and the in-flight entertainment was satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+3. Had a routine experience with Southwest Airlines. The flight was on time and the snack selection was average.,Neutral,Unknown,General,Anonymous,,synthetic
+4. Lufthansa's flight was overall up to the mark. The seats were comfortable but the food could use some improvement.,Neutral,Unknown,General,Anonymous,,synthetic
+5. Delta Airlines provided a typical flying experience. The cabin was clean and the flight staff was attentive.,Neutral,Unknown,General,Anonymous,,synthetic
+"6. British Airways' flight was decent. It departed on time and the food was reasonable, although not exceptional.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. Flew with Air Canada recently. The check-in process was smooth, but the in-flight entertainment options were somewhat limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. The JetBlue flight was satisfactory. While the seats were comfortable, the variety in food options was not impressive.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. Qatar Airways provided an average service. The flight landed on schedule, but the cabin temperature was a bit uncomfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. Air France's flight was fine. The staff was polite and the legroom was adequate, but the food was just okay.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Cathay Pacific's flight was ordinary. The flight was on time and the cabin crew was professional, but the meal choices were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. Emirates served a routine flight. The onboard entertainment was good, but the boarding process was somewhat slow.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. The Singapore Airlines flight was standard. The seats were comfortable, but the inflight meal could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. The KLM flight was okay. The staff was efficient, but the inflight entertainment was a bit outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The Turkish Airlines flight was acceptable. The flight departed and landed on time, but the food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. The Virgin Atlantic flight was as expected. The cabin was clean and the staff was friendly, but the legroom was a bit limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. The Alaska Airlines flight was alright. The flight was punctual and the check-in process was efficient, but the food options were mediocre.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The Etihad Airways flight was decent. The staff was courteous, but the seat comfort could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. The Ryanair flight was as expected. The flight was on time and the boarding process was smooth, but the seat space was a bit cramped.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. Flew with EasyJet recently. The service was average, with an on-time departure but quite limited inflight entertainment options.",Neutral,Unknown,General,Anonymous,,synthetic
+1. Emirates Airline: The food was quite standard for airline fare and the seat space was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. British Airways: The flight attendants were professional, but the in-flight entertainment could be upgraded.",Neutral,Unknown,General,Anonymous,,synthetic
+3. JetBlue: The plane was clean and the seats were comfortable enough for the long journey.,Neutral,Unknown,General,Anonymous,,synthetic
+"4. Southwest Airlines: The free checked bag policy is a nice perk, but the flight was a bit delayed.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. American Airlines: The service was efficient, but the legroom was a bit limited.",Neutral,Unknown,General,Anonymous,,synthetic
+6. Delta Airlines: The boarding process was orderly and the flight landed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"7. Air France: The flight was quite smooth and the cabin crew was attentive. However, the food could use some improvement.",Neutral,Unknown,General,Anonymous,,synthetic
+8. United Airlines: The flight landed on time and the check-in process was efficient. The seat comfort was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. Lufthansa: The in-flight entertainment selection was extensive, but the food quality could be better.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. Qantas: The overall flight experience was average, with a comfortable seat and acceptable service.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Cathay Pacific: The flight was on time and the staff was polite, but the food was just average.",Neutral,Unknown,General,Anonymous,,synthetic
+12. Air Canada: The boarding process was smooth and the legroom was satisfactory. The food was standard airline fare.,Neutral,Unknown,General,Anonymous,,synthetic
+"13. Singapore Airlines: The plane was clean and the service was efficient, but the in-flight entertainment could use more variety.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. Turkish Airlines: The flight was quite comfortable and the staff was courteous. However, the meal options could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+15. Etihad Airways: The seat was comfortable and the staff was professional. The in-flight entertainment was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"16. Air India: The flight was on schedule and the check-in process was smooth, but the food was just okay.",Neutral,Unknown,General,Anonymous,,synthetic
+17. Qatar Airways: The boarding process was orderly and the flight landed on time. The seat comfort was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"18. Aeromexico: The flight was on time and the service was efficient. However, the legroom was a bit limited.",Neutral,Unknown,General,Anonymous,,synthetic
+19. KLM: The plane was clean and the in-flight entertainment was satisfactory. The food was standard airline fare.,Neutral,Unknown,General,Anonymous,,synthetic
+"20. Ryanair: The flight was on schedule and the staff was professional, but the seat comfort could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight with American Airlines was on time and the staff was professional. The seats were average in terms of comfort.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. United Airlines offered a smooth check-in process. The in-flight meal was okay, nothing extraordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+3. Delta Airlines provided timely service. The legroom was quite adequate but the entertainment system could use an upgrade.,Neutral,Unknown,General,Anonymous,,synthetic
+4. My flight with Qatar Airways was fine. The cabin crew was polite and the food was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. Southwest Airlines had clean planes and the attendants were professional. The WiFi was a bit slow, however.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Virgin Atlantic had a decent entertainment selection. The food was average, but the staff was quite attentive.",Neutral,Unknown,General,Anonymous,,synthetic
+7. JetBlue Airways had a timely departure and arrival. The complimentary snacks were satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+8. My experience with Spirit Airlines was fairly basic. The seats were a bit cramped but the flight was cost-effective.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. Air Canada's service was reliable, and the staff was pleasant. The in-flight meal was acceptable.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. My flight on British Airways was reasonable. The cabin was clean, and the flight attendants were professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Lufthansa provided an efficient check-in process. The in-flight entertainment was average, and the meal could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. My journey with Emirates was standard. The cabin crew was attentive, and the food was okay.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. Air France's flight was punctual. The seats were a bit tight, but the cabin crew was friendly.",Neutral,Unknown,General,Anonymous,,synthetic
+14. Ryanair offered a cost-effective service. The seats were a bit cramped but the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+15. My experience with Alaska Airlines was typical. The flight was smooth and the staff was polite.,Neutral,Unknown,General,Anonymous,,synthetic
+16. The flight with Turkish Airlines was average. The food was okay and the cabin was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+"17. EasyJet provided a basic service. The seats were not very comfortable, but the flight was on time.",Neutral,Unknown,General,Anonymous,,synthetic
+18. My journey with Etihad Airways was decent. The in-flight entertainment was satisfactory and the cabin crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+19. Aer Lingus had a timely departure and arrival. The seats were average in terms of comfort.,Neutral,Unknown,General,Anonymous,,synthetic
+"20. My flight with Cathay Pacific was standard. The staff was polite, and the in-flight meal was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. The boarding process with Airline X was smooth, and the flight was on time. The in-flight meal was average.",Neutral,Unknown,General,Anonymous,,synthetic
+2. Airline Y offered a comfortable flight but could use some updates on their in-flight entertainment system.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. The flight with Airline Z was punctual, the staff were polite, and the legroom was standard.",Neutral,Unknown,General,Anonymous,,synthetic
+4. Airline A's seats were sufficiently comfortable for a short-haul flight. The snack provided was satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. The flight attendants on Airline B were professional, but the food could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Airline C's flight was decent. The plane was clean, and the flight was on schedule.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. Airline D provided a smooth check-in process, the flight was average with minimal turbulence.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. The flight with Airline E was good, the seats were a bit cramped, but the service was efficient.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. Airline F's flight was fairly comfortable. The in-flight entertainment was satisfactory, with a decent selection of movies.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. The legroom on Airline G was standard, and the food was typical airline fare.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Airline H's flight was on time, the crew was professional, but the airplane could use a bit of an upgrade.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. The flight with Airline I was smooth and the cabin crew was attentive, although the meal options were somewhat limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. Airline J provided a satisfactory in-flight experience, with timely departure and an average meal.",Neutral,Unknown,General,Anonymous,,synthetic
+14. Airline K's flight was peaceful and the staff were cordial. The in-flight entertainment could use some more variety.,Neutral,Unknown,General,Anonymous,,synthetic
+15. The boarding process with Airline L was efficient. The flight itself was comfortable enough for a short journey.,Neutral,Unknown,General,Anonymous,,synthetic
+16. Airline M had a smooth flight with punctual departure and arrival. The in-flight meal was standard.,Neutral,Unknown,General,Anonymous,,synthetic
+"17. The flight with Airline N was comfortable enough, with fairly decent service from the crew.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. Airline O's flight was typical. The seats were a bit tight, but the crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. The flight with Airline P was on time, the legroom was standard, and the food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. Airline Q provided a satisfactory flight experience with punctual departure and arrival, but the seats could have been more comfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight with AirAsia was okay. The seats were average and the food was decent. The flight departed and arrived on time.,Neutral,Unknown,General,Anonymous,,synthetic
+2. Flew with British Airways from London to New York. The legroom was reasonable and the cabin crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+3. American Airlines provided a smooth check-in process. The inflight entertainment was satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+"4. Took a Delta Airlines flight to Atlanta. The cleanliness of the aircraft could be improved, but the flight was punctual.",Neutral,Unknown,General,Anonymous,,synthetic
+5. The flight with Emirates to Dubai was fairly comfortable. The meals served were of good quality.,Neutral,Unknown,General,Anonymous,,synthetic
+6. Ryanair provided a basic service for a short haul flight. The staff were efficient and the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+7. Air France's flight from Paris to Rome was average. The staff was helpful and the food was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+"8. JetBlue's service was standard, with comfortable enough seating. The flight left and arrived as scheduled.",Neutral,Unknown,General,Anonymous,,synthetic
+9. Flew with Lufthansa from Frankfurt to Munich. The plane was clean and the flight crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+10. Qantas offered a decent in-flight meal and the cabin crew was courteous. The flight landed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+11. The Southwest Airlines flight from Dallas to Houston was middle-of-the-road. The boarding process was smooth and the flight was on schedule.,Neutral,Unknown,General,Anonymous,,synthetic
+"12. The flight with Turkish Airlines was alright. The in-flight entertainment could use more variety, but the staff was friendly.",Neutral,Unknown,General,Anonymous,,synthetic
+13. Flew with United Airlines from Chicago to Los Angeles. The seats were average and the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+14. The flight with Virgin Atlantic to London was okay. The legroom was adequate and the food was standard.,Neutral,Unknown,General,Anonymous,,synthetic
+15. Spirit Airlines offered a basic service. The plane was clean and the flight departed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+16. The Air Canada flight from Toronto to Montreal was average. The cabin crew was professional and the plane was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The KLM flight to Amsterdam was decent. The seats were comfortable enough and the in-flight meal was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+"18. The flight with Aeroflot was okay. The boarding process was smooth, but the in-flight entertainment could use an upgrade.",Neutral,Unknown,General,Anonymous,,synthetic
+19. The EasyJet flight from Barcelona to Rome was satisfactory. The seats were okay and the staff was efficient.,Neutral,Unknown,General,Anonymous,,synthetic
+20. The flight with Singapore Airlines was alright. The food was good and the cabin crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The check-in process of Airline A was efficient. The flight departed on time and the in-flight food was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Airline B offers a comfortable flight experience with ample legroom. However, the in-flight entertainment could use an update.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The flight crew of Airline C was professional and responsive. The food served was standard airline fare.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""The online booking process for Airline D was straightforward. The flight was punctual, but the seats were a bit cramped.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Airline E's flight was smooth and landed on time. The meal options were quite limited though.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline F's flight attendants were friendly and attentive. The plane was clean but the in-flight entertainment system was outdated.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Airline G's boarding process was well-organized. The food was edible, but nothing to write home about.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The flight with Airline H was on schedule. The seats were comfortable, but the cabin temperature was a bit too cold.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline I's flight was reasonably comfortable with adequate legroom. The selection of in-flight movies was decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Airline J's flight departed and arrived on time. The meal service could be improved, as the options were fairly basic.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Airline K offered a smooth flight and efficient service. However, the in-flight snacks were quite ordinary.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The flight with Airline L was punctual. The cabin crew was professional, but the food quality was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline M's check-in process was smooth. The flight was comfortable, but the in-flight entertainment was limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""The online booking system of Airline N was user-friendly. The flight was on time, but the cabin was a bit noisy.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline O's flight was on schedule. The seats were somewhat narrow, but the in-flight service was prompt.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Airline P offered a standard flight experience with on-time performance. The food quality was adequate, but not exceptional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The flight crew of Airline Q was courteous. The flight departed on time, but the legroom was limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline R's flight was relatively comfortable. The boarding process was efficient, but the in-flight meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The flight with Airline S was punctual. The cabin was clean, but the in-flight entertainment options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline T's flight left and arrived on time. The meal service was basic and the cabin was maintained at a comfortable temperature.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""American Airlines' flight was punctual and the cabin was kept clean. The food served could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""JetBlue provided a comfortable flying experience. The in-flight entertainment was fairly good with a nice variety of options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""United Airlines' staff were professional and polite. The meals served were average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Aeromexico's flight was on time and the boarding process was smooth. The legroom could be better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Alitalia offered an average in-flight experience. The seats were okay, but the service was a bit slow.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Delta provided a decent service. The flight departed on time and the cabin was tidy.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Air France's flight was generally comfortable, but the food was quite plain. The staff were professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Qatar Airways offered a good selection of movies for in-flight entertainment. The food was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Lufthansa's service was efficient but the seats were a bit cramped. The flight arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Spirit Airlines' flight was punctual, but the comfort level could be improved. The baggage policy was clear and fair.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Emirates' cabin crew were polite and helpful. The in-flight meals were typical airline food.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Ryanair's flight arrived on time. The seating arrangement was a bit tight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Etihad Airways' flight was comfortable. The in-flight entertainment was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Southwest Airlines provided a smooth flight. The snacks offered could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Turkish Airlines' flight was on time and the boarding process was orderly. The meals served were just okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Air Canada's service was professional. The flight was on time but the legroom was a bit limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""British Airways' flight was punctual. The in-flight meal could use some improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Virgin Atlantic provided an efficient service. The seats were satisfactory but the food was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Norwegian Air's flight was on time. The cabin could have been cleaner.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Cathay Pacific's flight was smooth, but the food was quite average. The staff were professional and polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The service on Airline X was satisfactory. The flight was punctual, and the cabin was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Airline Y provided an average in-flight experience. The food was edible, but not outstanding.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The crew on my Airline Z flight were professional and efficient, ensuring a smooth journey.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Airline A's seats were reasonably comfortable for a short-haul flight. No significant complaints.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""The in-flight entertainment on Airline B was decent, with a variety of films and music options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline C's boarding process was organized, although the queue moved a bit slowly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Airline D's staff were polite and did their best to accommodate passenger requests.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The flight with Airline E was reasonably on time. Baggage handling was efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline F's food could do with some improvement, but the beverages were fine.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Airline G provided standard legroom. The cabin's cleanliness was maintained throughout the flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""The pilot on my Airline H flight made regular updates, which was appreciated.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Airline I's online check-in process was straightforward and convenient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J's in-flight Wi-Fi was a bit slow, but functional for basic browsing.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""The staff on Airline K were attentive, but the in-flight meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline L's flight was smooth and turbulence was handled well by the flight crew.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""The seats on Airline M were a bit cramped, but the overall flight experience was decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Airline N's boarding process was a bit chaotic, but the flight itself was comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O's baggage claim process was quick and efficient, reducing waiting time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The frequent flyer program of Airline P is average, offering standard benefits to members.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q's cabin was a bit cold, but blankets were available on request.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. Flight 101 with Delta Airlines was satisfactory. The flight was on time and the attendants were friendly, although the in-flight food could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+"2. Flew short-haul with Air France. The seats were quite comfortable, but the legroom was slightly limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. I took a trip with Lufthansa recently. The staff was professional and the flight was punctual, however, the in-flight entertainment was a bit outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. The British Airways flight was quite average. The cabin was clean, though the food served was just typical airline fare.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. Had a standard experience with American Airlines. The crew was polite and the flight was smooth, although the in-flight amenities were only average.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. My flight on Southwest Airlines was satisfactory. The check-in process was efficient, but the seats could use more padding for comfort.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. Virgin Atlantic offered an adequate service. The flight was on time and the cabin crew were professional, but the food was just passable.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. I flew with United Airlines recently. The flight was on time and the seats were comfortable, but the cabin temperature was slightly too cool.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. My experience with JetBlue was quite regular. The crew was friendly, although the in-flight entertainment system was a bit glitchy.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. The flight with Etihad Airways was acceptable. The staff was courteous, but the plane seemed a bit old.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. The service on Emirates was as expected. The flight was punctual and the food was decent, but the in-flight entertainment was mediocre.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. Flew with Qantas recently. The flight was smooth and the cabin was clean, but the legroom was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. My flight on Air Canada was average. The crew was professional and the plane was clean, but the food options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. The service on Turkish Airlines was satisfactory. The flight was on time and the crew was friendly, but the seats were a bit uncomfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. I had a typical experience on Ryanair. The flight was punctual, but the cabin was slightly crowded.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. The flight on Aer Lingus was quite average. The staff was friendly and the flight was smooth, but the food served was unremarkable.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. My experience with Cathay Pacific was as expected. The flight was on time and the seats were comfortable, but the in-flight entertainment was limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The service on Singapore Airlines was adequate. The food was good and the cabin was clean, but the in-flight service was a bit slow.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. Flew with KLM recently. The flight was on time and the check-in process was efficient, but the in-flight food was just passable.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. My flight on Norwegian Air was typical. The plane was clean and the flight was smooth, but the legroom was slightly limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""My flight with Airline X was on schedule. The in-flight meals were okay and the legroom was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""I had a standard experience with Airline Y. The staff was professional and the flight departed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The in-flight entertainment on Airline Z was decent. The food could have been better, but it was not terrible.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""I flew with Airline A. The seats were quite comfortable but the cabin was a bit chilly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Airline B provided an average experience. The staff was friendly and the flight was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""My trip with Airline C was pretty standard. The food was average and the staff was courteous.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The boarding process with Airline D was organized. The flight was a bit delayed but overall, the experience was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""My flight with Airline E was just fine. The plane was clean and the crew was attentive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline F delivered an ordinary flying experience. There was a good selection of movies and the flight was punctual.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""I had a normal experience with Airline G. The cabin was a bit crowded but the service was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Airline H provided a standard service. The flight was on time and the seats were moderately comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The flight with Airline I was average. There was a decent selection of food and drinks.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J provided adequate service. The in-flight entertainment was okay and the staff was helpful.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""My experience with Airline K was ordinary. The flight was a bit noisy but the staff was friendly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline L offered a decent flying experience. The seats were comfortable and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""My flight with Airline M was alright. The cabin was clean and the food was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""I had a typical experience with Airline N. The flight was smooth and the staff was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O provided a standard service. The boarding process was smooth and the flight departed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Airline P offered an okay flying experience. The in-flight entertainment was decent but the food could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""My flight with Airline Q was average. The flight was on time and the crew was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Flight was on time with Delta airlines. The seating was a bit cramped but manageable. Snacks were standard.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""I flew with Emirates; the in-flight entertainment was satisfactory. The food could use improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""United Airlines offered decent service. The flight attendants were professional and the flight was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Air Canada provided a clean cabin and on-time departure. The meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""I had an average experience with British Airways. The in-flight service was okay, and the flight was not delayed.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Cathay Pacific provided a smooth check-in process. The food was typical airline food, nothing out of the ordinary.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Qatar Airways offered a standard level of service. The in-flight entertainment kept me engaged during the flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""SAS provided a punctual departure and arrival. The legroom was acceptable for a medium haul flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Lufthansa's service was routine. The flight landed on time and the baggage arrived without any issues.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The American Airlines flight was fine. The cabin was clean, and the staff were courteous.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Turkish Airlines' flight was quite normal. Comfortable seats, acceptable food, nothing too impressive.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Etihad Airways provided a smooth flight. The in-flight entertainment was standard.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Singapore Airlines offered a typical flight experience. The cabin was clean, the service was good, but the food was quite average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""KLM's flight was standard. The check-in process was smooth and the flight arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The Ryanair flight was basic but punctual. The staff were professional, and the cabin was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""EasyJet provided a decent flight. The seats were a bit cramped but the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Air France's service was standard. The food was satisfactory and the flight attendants were polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The Virgin Atlantic flight was fine. The seats were comfortable, and the in-flight entertainment was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Japan Airlines offered a routine flight. The service was courteous, and the food was standard airline fare.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""The Air New Zealand flight was typical. The cabin was clean, the staff were professional, and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Delta Airlines provides a pretty standard service. The cabin crew is friendly and the seats are reasonably comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""EasyJet is a solid choice for budget travelers. No frills, but efficient and typically on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Emirates offers a good in-flight entertainment system. The food could be better, but it's fine for an airline meal.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""The flight with United Airlines was average. The leg space was adequate and the plane left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Air Canada's service is reliable. The in-flight meals are standard and the staff is professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Flew with Ryanair and the experience was just as expected. No extras, but the ticket price is affordable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Etihad Airways offers a decent service. The seats in economy were a bit cramped, but the flight itself was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The flight with Southwest Airlines was okay. The check-in process was smooth and the flight departed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Qatar Airways has a comfortable cabin. The in-flight entertainment could use an upgrade, but overall it was a standard flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""American Airlines offers a standard service. The cabin crew was polite and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Virgin Atlantic provides a comfortable in-flight experience. The food is average, but the service is good.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""JetBlue Airways offers a fair amount of legroom compared to other airlines. The in-flight snacks are standard.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Lufthansa is a reliable airline. The flights usually depart on time and the staff is professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Singapore Airlines offers a good service. The seats were reasonably comfortable and the food was edible.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""KLM provides an average flying experience. The staff is friendly, but the in-flight entertainment needs an update.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Air France offers a decent service. The check-in was smooth and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The flight with British Airways was satisfactory. The cabin was clean and the crew was efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Turkish Airlines offers a standard service. The food was fine and the flight was comfortable enough.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Cathay Pacific provides a good service. The seats could have been more comfortable, but the in-flight entertainment was good.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""The service on Aeroflot is fairly standard. The cabin crew was professional and the flight left on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. The flight with American Airlines was uneventful, the staff was courteous and the seats were comfortable enough for a short flight.",Neutral,Unknown,General,Anonymous,,synthetic
+"2. I flew with United Airlines, their in-flight entertainment selection was good, however, the meal service could be improved upon.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. My flight with Southwest was on time and the boarding process was handled in an organized manner. The legroom, however, was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. The Air France journey was smooth, the food was decent for airline food and the cabin crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. Delta Air Lines provided a good service, their in-flight Wi-Fi was a nice touch but it was a bit slow at times.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Lufthansa's flight was comfortable, the cabin was clean and the staff was polite, although the in-flight entertainment needs an update.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. My journey with British Airways was average, the seats were a bit old but the flight itself was smooth.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. I flew with Emirates, the food was okay and the cabin crew was professional, but the boarding process took a bit longer than expected.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. Air Canada's flight was on time, the legroom was adequate but the meal options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. The flight with Qantas was average, the staff was polite, and the in-flight entertainment kept me occupied during the flight.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. Alaska Airlines' service was good, the flight left on time and arrived on schedule, but the seating was a bit cramped.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. The seat comfort on the JetBlue flight was average, the staff was professional but the food was not up to the mark.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. Turkish Airlines provided an okay service, the flight was smooth but the food could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. The flight with Cathay Pacific was average, the staff was polite but the in-flight entertainment was a bit outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. Singapore Airlines' flight was comfortable, although the legroom was a bit tight and the food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. Etihad Airways' service was okay, the flight was smooth but the meal options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. The flight with Aer Lingus was on time, the cabin was clean but the seats were a bit uncomfortable for a long flight.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. Virgin Atlantic's flight was smooth, the staff was courteous but the in-flight entertainment could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. The flight with Ryanair was average, the boarding process was well-organized but the seats were not very comfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. EasyJet's service was okay, the flight was on time but the legroom was a bit cramped.",Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight was on time with Delta Airlines. The crew was friendly and the seats were satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+2. The service on United Airlines was as expected. The food was average and the in-flight entertainment had a good variety.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. My flight with Southwest was routine. Comfortable seats, and the crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+4. The flight with American Airlines was standard. Seats were comfortable but could use a bit more legroom.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. JetBlue has a hassle-free check-in process. The flight was on schedule, and the snacks provided were okay.",Neutral,Unknown,General,Anonymous,,synthetic
+6. My flight with Alaska Airlines was satisfactory. The cabin was clean and the crew was polite.,Neutral,Unknown,General,Anonymous,,synthetic
+"7. The flight with Spirit Airlines was as expected. The seats were a bit narrow, but the overall experience was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+8. The journey with British Airways was average. The in-flight meals were okay and the cabin crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. Air Canada's flight was typical. Seats were comfortable enough, and the in-flight entertainment was reasonably good.",Neutral,Unknown,General,Anonymous,,synthetic
+10. My experience with Lufthansa was standard. The flight was on time and the staff was courteous.,Neutral,Unknown,General,Anonymous,,synthetic
+11. Emirates provided an average flight experience. The food was acceptable and the seats were adequately comfortable.,Neutral,Unknown,General,Anonymous,,synthetic
+12. The flight with Qantas was as expected. The cabin crew was professional and the in-flight entertainment was good.,Neutral,Unknown,General,Anonymous,,synthetic
+13. The journey with Air France was typical. The in-flight services were okay but the legroom was a bit tight.,Neutral,Unknown,General,Anonymous,,synthetic
+14. The flight with Cathay Pacific was satisfactory. The cabin was clean and the in-flight meals were up to the mark.,Neutral,Unknown,General,Anonymous,,synthetic
+"15. My experience with Singapore Airlines was average. The seats were comfortable, and the staff was attentive.",Neutral,Unknown,General,Anonymous,,synthetic
+16. The flight with Etihad was as expected. The in-flight entertainment was good but the food was just okay.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The journey with Turkish Airlines was normal. The crew was professional and the seats were satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+18. The flight with Qatar Airways was standard. The cabin was clean and the in-flight services were okay.,Neutral,Unknown,General,Anonymous,,synthetic
+19. The experience with Virgin Atlantic was decent. The flight was on time and the in-flight entertainment was good.,Neutral,Unknown,General,Anonymous,,synthetic
+"20. The flight with Frontier Airlines was average. The seats were a bit hard, but the overall experience was satisfactory.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Airline X provides efficient service, although cabin cleanliness could be improved. Food choices were average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Flight with Airline Y was on schedule. The staff was professional, however the in-flight entertainment selection could be better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Airline Z offered standard legroom space and the seats were reasonably comfortable. The meal was typical airplane fare.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Airline A's check-in process was smooth and the flight left on time. There was a noticeable lack of vegetarian meal options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Our flight on Airline B was ordinary, with a friendly enough crew. The inflight Wi-Fi was a bit slow.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline C's flight landed on time and baggage claim was efficient. The cabin temperature was a bit too cold.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with Airline D was uneventful. The crew was professional, but the seat reclining function was not working.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Airline E's service was up to par, with clean cabins and punctual departure. However, the meal portions were quite small.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Had an average experience on Airline F. The flight was on time but the legroom was a bit tight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Airline G's flight attendants were courteous. The in-flight entertainment options could use some updating.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""The flight with Airline H was satisfactory. The boarding process was smooth, though the meal could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Airline I's flight was on schedule with no major issues. The seats were a bit stiff and uncomfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J provided a standard service. The flight was a bit turbulent but the crew handled it well.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Flown with Airline K, the cabin was clean and the flight was on time. The food was average with limited drink options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline L delivered an ordinary flight experience. The crew was efficient, however, the in-flight Wi-Fi was not working.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Flight with Airline M was smooth and punctual. The cabin comfort could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Airline N's service was standard, with a smooth check-in and on-time departure. The inflight entertainment was quite limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O's flight was satisfactory with a friendly crew. The seat comfort was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The flight with Airline P was on time and the boarding process was efficient. The food quality was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q provided a decent service with professional staff. The legroom was a bit limited and the meal options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+1. I had a satisfactory journey with Air Canada. The seating was comfortable and the food was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. My recent flight with Delta Airlines went smoothly. The staff was professional, although the in-flight entertainment could use an update.",Neutral,Unknown,General,Anonymous,,synthetic
+3. I found my experience with Virgin Atlantic to be average. The cabin crew was polite and the flight was mostly on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"4. My flight with Emirates was decent. The seats were spacious enough and the meal was good, but not extraordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. I took a flight with British Airways recently. The boarding process was organized and the flight left on time, but the in-flight service was just average.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. I traveled with Southwest Airlines. The flight was on time and the crew was helpful, but the food was quite mediocre.",Neutral,Unknown,General,Anonymous,,synthetic
+7. I had a regular journey with Qantas. The legroom was adequate and the in-flight entertainment had a decent variety.,Neutral,Unknown,General,Anonymous,,synthetic
+"8. My recent experience with Lufthansa was satisfactory. The flight departed and arrived on time, although the seats were a bit cramped.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. I flew with American Airlines. The service was standard, the flight was on time, but the in-flight meal could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. My flight with Air France was quite ordinary. The staff was professional, but the food was nothing to write home about.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. I took a recent flight with United Airlines. The flight was punctual and the seating was comfortable, but the in-flight entertainment was quite outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. My experience with Singapore Airlines was typical. The cabin crew was polite and the plane was clean, but the food was just average.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. I had a usual journey with Cathay Pacific. The flight was mostly on time and the service was okay, but the food could be better.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. My recent flight with Ryanair was standard. The flight departed and arrived on time, but the seats were a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. I flew with JetBlue recently. The service was average, the flight was on time, but the food was quite ordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. My experience with Turkish Airlines was quite ordinary. The staff was professional and the flight was punctual, but the in-flight meal was not impressive.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. I took a flight with Etihad Airways recently. The boarding process was organized, the flight left on time, but the in-flight service was just average.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. My recent flight with KLM was decent. The seats were spacious enough and the meal was good, but not extraordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. I traveled with Aer Lingus. The flight was on time, the crew was helpful, but the food was quite mediocre.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. I had a regular journey with Qatar Airways. The legroom was adequate, the flight was mostly on time, and the in-flight entertainment had a decent variety.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. I flew with Airline X on a recent trip. The cabin was clean, and the staff was professional. The food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"2. On my flight with Airline Y, the departure was slightly delayed. The in-flight entertainment was decent, and the seat comfort was satisfactory.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. I flew with Airline Z from LA to NY. The ticket price was reasonable, but the legroom was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. Used Airline A for a short haul flight. The check-in process was smooth, and the flight landed on time. No complaints, no praises.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. My experience with Airline B was fairly typical. The staff was courteous, and the flight departed and arrived as scheduled.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Airline C provided a decent flight experience. The food was okay, and the cabin crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. My flight with Airline D was satisfactory. The seats were moderately comfortable, and the airplane was clean.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. I took a flight with Airline E. The flight was a bit late, but the service was acceptable.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. Airline F offered a standard flight experience. The in-flight amenities were average, and the flight arrived on time.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. I had an average experience with Airline G. The cabin was clean, and the staff was courteous.",Neutral,Unknown,General,Anonymous,,synthetic
+11. Flew with Airline H recently. The service was okay. The flight landed on time without any complications.,Neutral,Unknown,General,Anonymous,,synthetic
+"12. The flight with Airline I was fine. The food was typical airline fare, and the cabin crew was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+13. I used Airline J for a domestic flight. The legroom was a bit tight but the flight left and arrived on schedule.,Neutral,Unknown,General,Anonymous,,synthetic
+"14. My flight with Airline K was average. The ticket price was reasonable, and the service was acceptable.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. Airline L provided a decent in-flight experience. The cabin crew was efficient, and the flight was smooth.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. On my flight with Airline M, the check-in process was quick and efficient. The seats were moderately comfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. I had an acceptable experience with Airline N. The flight was on time, and the cabin conditions were fine.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. The flight with Airline O was satisfactory. The seat comfort was average, and the staff was polite.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. Flew with Airline P recently. The plane was clean, and the flight departed and arrived as scheduled.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. My flight with Airline Q was standard. The in-flight entertainment was decent, and the food was acceptable.",Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight with Airline X was satisfactory. The seats were comfortable and the flight departed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. Just flew with Airline Y. The in-flight service was decent, though the selection of food could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+3. My experience with Airline Z was typical. The staff was professional and the flight was smooth.,Neutral,Unknown,General,Anonymous,,synthetic
+"4. The flight with Airline A was okay. There was enough legroom, but the in-flight entertainment was limited.",Neutral,Unknown,General,Anonymous,,synthetic
+5. Had a standard flight with Airline B. The cabin was clean and the boarding process was efficient.,Neutral,Unknown,General,Anonymous,,synthetic
+"6. Flew with Airline C recently. The seats were a bit cramped, but the crew was courteous.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. My flight with Airline D was average. The plane was a bit old, but it was a smooth journey.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. Just took a flight with Airline E. The ticket price was reasonable, and the flight was on time.",Neutral,Unknown,General,Anonymous,,synthetic
+9. My trip with Airline F was ordinary. No significant delays and the cabin crew was attentive.,Neutral,Unknown,General,Anonymous,,synthetic
+10. Airline G provided a standard service. The food could have been better but overall it was a decent experience.,Neutral,Unknown,General,Anonymous,,synthetic
+11. Had a usual flight experience with Airline H. The flight was punctual and the check-in process was smooth.,Neutral,Unknown,General,Anonymous,,synthetic
+"12. The flight with Airline I was normal. The in-flight entertainment could use an upgrade, but the staff was friendly.",Neutral,Unknown,General,Anonymous,,synthetic
+13. Took a flight with Airline J recently. The seats were fine and the flight departed and landed as scheduled.,Neutral,Unknown,General,Anonymous,,synthetic
+14. Airline K provided an average service. The food was okay and the staff was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+15. Flew with Airline L this week. The flight was a bit crowded but the cabin crew managed it well.,Neutral,Unknown,General,Anonymous,,synthetic
+16. My journey with Airline M was standard. The plane was clean and the service was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The flight with Airline N was alright. There could be more variety in the food options but the flight was smooth.,Neutral,Unknown,General,Anonymous,,synthetic
+18. Just flew with Airline O. The check-in process was efficient and the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+19. My trip with Airline P was typical. The seats were comfortable enough for a short haul flight.,Neutral,Unknown,General,Anonymous,,synthetic
+"20. Took a flight with Airline Q. The cabin was clean, the flight was punctual, but the in-flight entertainment was lacking.",Neutral,Unknown,General,Anonymous,,synthetic
+1. The flight with Delta Airlines was satisfactory. The seats were comfortable but the legroom was a bit cramped. In-flight entertainment was adequate.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. Flew with United Airlines recently. The cabin crew was polite and professional. However, the food could have been better.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. Air Canada provided a smooth flight experience. The airline was on time and the check-in process was smooth, although the in-flight meals were just average.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. My trip with British Airways was generally good. The seats were clean and comfortable, but the in-flight WiFi was slow.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. Lufthansa's service was efficient. The boarding was timely, but the in-flight entertainment options were somewhat limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Emirates offered a decent flight experience. The food was good, but the cabin was a bit too cold for my liking.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. Ryanair is a budget-friendly option. The service was adequate considering the price, but the seats were not very comfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. Flew with Air France recently. The flight was punctual and the cabin crew was efficient, but the airplane was a bit old.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. Singapore Airlines provided a smooth flight. The food was decent and the seats were comfortable, but the in-flight entertainment could be updated.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. Turkish Airlines offered a decent service. The check-in process was efficient and the flight was on time, but the legroom was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. The service on Qantas was satisfactory. The flight took off and landed on time, but the in-flight meal was rather bland.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. Etihad Airways offered a standard flight experience. The cabin crew was polite, but the baggage claim process took longer than expected.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. The Southwest Airlines flight was average. The seats were comfortable enough, but the in-flight entertainment options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. American Airlines' service was adequate. The flight was on time and the cabin was clean, but the food options were not very exciting.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The flight with Japan Airlines was decent. The boarding was smooth and the seats were comfortable, however, the in-flight entertainment was in Japanese only.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. My trip with Air New Zealand was fair. The cabin crew was professional and the flight was punctual, but the food could have been more flavorful.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. The KLM flight was acceptable. The cabin was clean and the flight was on time, although the in-flight entertainment system was a bit outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+18. My flight with Cathay Pacific was average. The seats were comfortable but the cabin temperature fluctuated quite a bit.,Neutral,Unknown,General,Anonymous,,synthetic
+"19. JetBlue Airways provided a satisfactory service. The flight was punctual and the check-in process was smooth, but the in-flight snacks were just okay.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. The flight with Virgin Atlantic was okay. The cabin crew was friendly, but the seats were a bit cramped and the in-flight entertainment selection could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. The flight with Air Canada was overall acceptable, the staff were polite and the airplane was clean. Food quality could be improved.",Neutral,Unknown,General,Anonymous,,synthetic
+2. British Airways offered a standard service. The seats were comfortable enough for a long-haul flight and in-flight entertainment was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. I flew with Delta Airlines last month. The plane left and arrived on time, and the cabin crew was professional and courteous.",Neutral,Unknown,General,Anonymous,,synthetic
+4. My experience with Emirates was satisfactory. The meals were average and the attendants were attentive to passenger needs.,Neutral,Unknown,General,Anonymous,,synthetic
+5. I recently flew with Etihad. The aircraft was not the newest but the crew managed to offer a smooth flight.,Neutral,Unknown,General,Anonymous,,synthetic
+"6. The service on Lufthansa was as expected from a major airline. The staff was efficient, but the legroom was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+7. My flight with Qatar Airways was fine. The aircraft was clean but the food was just average.,Neutral,Unknown,General,Anonymous,,synthetic
+8. Ryanair provided a no-frills flight experience. The flight was on time and the cabin was kept clean.,Neutral,Unknown,General,Anonymous,,synthetic
+9. Southwest Airlines offered a decent service for the price. The check-in process was simple and the flight was punctual.,Neutral,Unknown,General,Anonymous,,synthetic
+10. Turkish Airlines provided a satisfactory service on my recent flight. The cabin crew was friendly and the in-flight entertainment had a good variety.,Neutral,Unknown,General,Anonymous,,synthetic
+"11. I recently flew with United Airlines. The flight was on time and the cabin was clean; however, the food was nothing special.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. My flight with Virgin Atlantic was generally good. The seats were comfortable, but the in-flight entertainment could use an upgrade.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. I flew with American Airlines last week. The flight was on time, the staff was professional, and the airplane was clean.",Neutral,Unknown,General,Anonymous,,synthetic
+14. My experience with JetBlue was fairly average. The flight left on time and the cabin crew was efficient.,Neutral,Unknown,General,Anonymous,,synthetic
+15. I recently flew with EasyJet. The check-in process was straightforward and the flight was punctual.,Neutral,Unknown,General,Anonymous,,synthetic
+"16. My flight with Air France was adequate. The seats were comfortable, but the food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. I flew with KLM last week. The flight was on time, the staff was professional, and the airplane was clean.",Neutral,Unknown,General,Anonymous,,synthetic
+18. Aer Lingus provided a standard service for my recent flight. The cabin was clean and the staff was friendly.,Neutral,Unknown,General,Anonymous,,synthetic
+19. My experience with Wizz Air was on par with expectations. The flight was on time and the onboard facilities were clean.,Neutral,Unknown,General,Anonymous,,synthetic
+"20. I recently flew with Alaska Airlines. The check-in process was smooth, the flight was on time, and the staff was professional.",Neutral,Unknown,General,Anonymous,,synthetic
+1. Airline X provided a satisfactory flight experience. The cabin was clean and the check-in process was straightforward.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. Flight was on time with Airline Y. The in-flight food could be improved, but the service was efficient.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. The seating on Airline Z was somewhat cramped, but the flight itself was smooth and on time.",Neutral,Unknown,General,Anonymous,,synthetic
+4. The customer service at Airline A was decent. The staff was professional and answered my queries promptly.,Neutral,Unknown,General,Anonymous,,synthetic
+"5. Airline B's in-flight entertainment had a good variety, but the headphones provided were of average quality.",Neutral,Unknown,General,Anonymous,,synthetic
+6. The legroom in Airline C's economy class is average but the meal options are quite diverse.,Neutral,Unknown,General,Anonymous,,synthetic
+7. Airline D provided a standard flying experience. The cabin crew was polite and the plane was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+8. Airline E's booking process was easy and quick. The boarding process was a bit confusing but manageable.,Neutral,Unknown,General,Anonymous,,synthetic
+"9. The food on Airline F was fair, not exceptional. The flight arrived on time which was appreciated.",Neutral,Unknown,General,Anonymous,,synthetic
+10. Airline G's check-in process was quick and efficient. The seats were comfortable but the in-flight service was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"11. Flight was delayed with Airline H, but they kept passengers informed. The food and drink service was prompt.",Neutral,Unknown,General,Anonymous,,synthetic
+12. Airline I's in-flight entertainment system had a broad selection of movies. The food quality was average.,Neutral,Unknown,General,Anonymous,,synthetic
+13. The staff on Airline J were friendly and professional. The legroom was a bit limited for a long-haul flight.,Neutral,Unknown,General,Anonymous,,synthetic
+"14. Airline K's flight was pretty standard. The plane was clean, the staff was courteous, but the food was just okay.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The seats on Airline L were comfortable, but the cabin temperature was a bit too cold.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. With Airline M, the boarding process was a bit slow but overall the flight was fine and landed on time.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. The food on Airline N was not outstanding, but the flight was smooth and on schedule.",Neutral,Unknown,General,Anonymous,,synthetic
+18. The cabin crew on Airline O was professional and attentive. The seats in economy class were a bit tight.,Neutral,Unknown,General,Anonymous,,synthetic
+"19. Airline P's flight was punctual and the cabin was clean. The in-flight meal was standard, nothing extraordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+20. The flight with Airline Q was on time and the check-in process was efficient. The in-flight entertainment could use more variety.,Neutral,Unknown,General,Anonymous,,synthetic
+1. Airline X provided a decent service. The flight was on time and the in-flight entertainment was adequate.,Neutral,Unknown,General,Anonymous,,synthetic
+2. Airline Y had friendly staff and clean planes. The food was average for airline fare.,Neutral,Unknown,General,Anonymous,,synthetic
+"3. Flew with Airline Z recently. The flight was slightly delayed but overall, it was a smooth journey.",Neutral,Unknown,General,Anonymous,,synthetic
+4. My experience with Airline A was okay. The leg room was a bit tight but the service was prompt.,Neutral,Unknown,General,Anonymous,,synthetic
+5. Airline B's flight was pretty standard. The staff was professional and the seats were comfortable enough.,Neutral,Unknown,General,Anonymous,,synthetic
+6. Airline C offered a decent in-flight meal. The check-in process was fairly smooth as well.,Neutral,Unknown,General,Anonymous,,synthetic
+7. I flew with Airline D. The boarding was orderly and the cabin was clean.,Neutral,Unknown,General,Anonymous,,synthetic
+8. My flight with Airline E was fine. The crew was attentive and the seats were as expected.,Neutral,Unknown,General,Anonymous,,synthetic
+9. Airline F provided an acceptable service. The Wi-Fi was a bit slow but the flight itself was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+10. Airline G had a good range of in-flight movies. The food could use some improvement though.,Neutral,Unknown,General,Anonymous,,synthetic
+11. My flight with Airline H was average. The seats were comfortable but the in-flight entertainment was limited.,Neutral,Unknown,General,Anonymous,,synthetic
+12. Airline I had a standard check-in process. The staff was polite and the flight itself was uneventful.,Neutral,Unknown,General,Anonymous,,synthetic
+13. My experience with Airline J was typical. The cabin was clean and the flight departed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+14. Airline K offered an okay in-flight meal. The staff was professional and the flight arrived on time.,Neutral,Unknown,General,Anonymous,,synthetic
+"15. The flight with Airline L was decent. The check-in process was smooth, but the in-flight entertainment options were limited.",Neutral,Unknown,General,Anonymous,,synthetic
+16. Airline M provided a standard service. The boarding process was well-organized and the cabin crew was polite.,Neutral,Unknown,General,Anonymous,,synthetic
+17. My flight with Airline N was fine. The seats were fairly comfortable and the food was average.,Neutral,Unknown,General,Anonymous,,synthetic
+"18. Airline O's flight was okay. The cabin was clean, but the legroom was a bit tight.",Neutral,Unknown,General,Anonymous,,synthetic
+19. Had an average experience with Airline P. The flight was on time and the staff was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+20. Flew with Airline Q recently. The boarding process was smooth and the in-flight entertainment was decent.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The flight on Airline X was entirely average. The plane left on time, and the in-flight meal was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Airline Y provided a decent service. The staff were polite and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""My flight with Airline Z was as expected. The seats were somewhat comfortable and the entertainment options were diverse.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""The trip on Airline A was standard. I appreciated the timely boarding and the crew were professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Airline B's flight was typical. The food was edible, nothing impressive but not bad either.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""The journey with Airline C was usual. The cabin was reasonably clean, the legroom was fair.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Airline D's service was standard. The check-in process was smooth and the flight landed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The flight with Airline E was regular. The cabin crew were attentive and the in-flight entertainment was acceptable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline F's flight was just fine. The seats were moderately comfortable and the meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The journey on Airline G was regular. The amenities were satisfactory and the luggage handling was efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Airline H provided a predictable service. The flight departed and arrived on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""My flight with Airline I was uneventful. The staff were courteous and the in-flight snacks were decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J's service was normal. The boarding process was well-organized and the cabin was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""The flight on Airline K was standard. The legroom was adequate and the crew was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Airline L's flight was as expected. The food quality was average and the in-flight entertainment was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Airline M provided a regular service. The check-in process was smooth and the flight was fairly comfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The trip on Airline N was normal. The cabin crew were polite and the flight landed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O's flight was tolerable. The seats were not very comfortable but the staff was friendly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The journey with Airline P was satisfactory. The boarding process was smooth and the luggage was handled efficiently.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q's service was standard. The flight departed on time and the meal served was acceptable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Airline X had friendly staff and the flight was on time. The in-flight meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Flight with Airline Y was decent. The seating space was standard and the meals could use some improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Airline Z offered a smooth check-in process. The flight departed on time, but the in-flight entertainment was limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""The overall experience with Airline A was OK. The cabin was clean, but the legroom was a bit tight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Airline B delivered a standard flight experience. Onboard service was satisfactory, although the food was just OK.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Airline C's staff were professional and the flight was comfortable. The meal options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with Airline D was on time. The cabin crew were pleasant, but the in-flight meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Airline E provided a standard service. The flight was slightly delayed, but the boarding process was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Airline F had a well-maintained aircraft and the flight was on schedule. The meal options could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The flight with Airline G was satisfactory. The cabin crew were polite, but the legroom was a bit limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Airline H's flight was on time and the plane was clean. The food was average, and the selection of movies was limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The flight experience with Airline I was typical. The staff were professional and the flight departed on time, but the seats were a bit cramped.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Airline J provided a standard service. The check-in process was smooth, but the in-flight entertainment could do with an upgrade.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Flight with Airline K was decent. The cabin was clean, however, the meal could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The flight with Airline L was on schedule. The cabin crew was friendly, but the legroom was a bit tight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Airline M's staff were polite and the flight was comfortable. However, the in-flight meal could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The overall experience with Airline N was OK. The flight was slightly delayed but the boarding process was smooth.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Airline O provided a typical flight experience. The plane was clean, but the food was just OK.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Flight with Airline P had a smooth check-in process. The flight was on time, but the in-flight entertainment could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Airline Q's flight was satisfactory. The cabin crew was professional, but the legroom was a bit limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+1. The check-in process on Airline X was straightforward and efficient. The flight was punctual and the staff was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"2. The in-flight entertainment options on Airline Y were adequate but could use an update. The food, on the other hand, was standard airline fare.",Neutral,Unknown,General,Anonymous,,synthetic
+3. The legroom on Airline Z's economy seats was average. The cabin crew was attentive and the flight was on time.,Neutral,Unknown,General,Anonymous,,synthetic
+4. Airline A's website is user-friendly and booking a flight was easy. The seats were a bit uncomfortable for a long flight but the service was acceptable.,Neutral,Unknown,General,Anonymous,,synthetic
+5. Airline B's flight was punctual and the boarding process was well organized. The in-flight meal was not exceptional but was satisfactory.,Neutral,Unknown,General,Anonymous,,synthetic
+6. The customer service on Airline C was decent and the flight was on time. The cleanliness of the aircraft could be improved.,Neutral,Unknown,General,Anonymous,,synthetic
+7. The baggage handling on Airline D was acceptable with no issues. The flight attendants were polite and the flight was mostly smooth.,Neutral,Unknown,General,Anonymous,,synthetic
+8. Airline E provided a standard in-flight meal which was quite average. The flight took off and landed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+9. Airline F's in-flight entertainment system was satisfactory with a decent selection of films. The seats were tight but bearable for a short flight.,Neutral,Unknown,General,Anonymous,,synthetic
+10. The staff on Airline G was courteous. The airplane itself was a bit outdated but the flight went smoothly.,Neutral,Unknown,General,Anonymous,,synthetic
+11. Airline H's online check-in system was quick and hassle-free. The meal served on board was typical airline food.,Neutral,Unknown,General,Anonymous,,synthetic
+12. Airline I's business class lounge was decent with a good range of snacks and beverages. The WiFi on the flight was average.,Neutral,Unknown,General,Anonymous,,synthetic
+13. The seats on Airline J's economy class were standard with sufficient legroom. The meal served was average.,Neutral,Unknown,General,Anonymous,,synthetic
+14. Airline K's flight was on schedule and the cabin crew was friendly. The baggage claim process was a bit slow but manageable.,Neutral,Unknown,General,Anonymous,,synthetic
+"15. The check-in process at Airline L was simple and efficient. The cabin was clean, but the seats could be more comfortable.",Neutral,Unknown,General,Anonymous,,synthetic
+16. Airline M's customer service was professional. The in-flight meal was standard and the flight departed on time.,Neutral,Unknown,General,Anonymous,,synthetic
+17. The boarding process at Airline N was organized and the flight was on time. The meal served on board was average.,Neutral,Unknown,General,Anonymous,,synthetic
+18. Airline O's flight attendants were polite. The airplane was a bit older but maintained well.,Neutral,Unknown,General,Anonymous,,synthetic
+19. Airline P's baggage handling was efficient. The in-flight entertainment system had a good variety of options.,Neutral,Unknown,General,Anonymous,,synthetic
+20. Airline Q's online booking system was easy to navigate. The flight left on time but the seats were a bit cramped.,Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""American Airlines provided a fairly standard travel experience. The flight was on time and the cabin was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""United Airlines' in-flight entertainment was adequate, with a good selection of movies. The food, however, was just average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Delta Airlines' staff were professional and courteous. The legroom was a bit tight but manageable for a short flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Alaska Airlines offered a smooth check-in process. The flight itself was uneventful, which is always appreciated.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Virgin Atlantic provided a comfortable flight. The meals were satisfactory and the cabin crew was polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Southwest Airlines offered a basic, no-frills flight experience. The seats were reasonably comfortable for the price.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""JetBlue's in-flight service was functional and the flight departed on schedule. The in-flight meals could use some improvement.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The British Airways flight was decent. The in-flight entertainment options were sufficient for the duration of the flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Emirates provided a satisfactory service. The seats were comfortable enough and the in-flight meal was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Air France's flight was on time, which is always a good start. The in-flight service was unremarkable but efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Qatar Airways provided a typical long-haul service. The food was edible and the staff was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""Lufthansa's service was efficient. The flight was relatively comfortable and the in-flight meals were average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""Etihad Airways offered a decent service. The flight departed and arrived on schedule, and the cabin crew was polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Ryanair offered a standard low-cost flight experience. The seats were not the most comfortable but acceptable for the short flight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""KLM Royal Dutch Airlines' flight was punctual. The cabin was clean but the in-flight entertainment could use more variety.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Turkish Airlines provided a reasonable service. The cabin crew was professional and the food was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Air Canada's flight was alright. The in-flight service was standard and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""Aer Lingus offered a smooth flight experience. The check-in process was straightforward and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Cathay Pacific provided a decent service. The in-flight entertainment was good, but the meals were just average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""EasyJet provided a standard short-haul flight experience. The seats were fine for a short trip and the flight was punctual.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. The in-flight service on Airline X was satisfactory, offering a standard selection of snacks and drinks.",Neutral,Unknown,General,Anonymous,,synthetic
+"2. Airline Y's flight was punctual and the cabin was clean, but the legroom was a bit limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"3. I found the check-in process with Airline Z to be efficient, though the staff could have been more communicative.",Neutral,Unknown,General,Anonymous,,synthetic
+"4. Airline A's flight was delayed, but they managed to handle the situation decently and provided clear updates.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. The in-flight entertainment on Airline B was average, offering a moderate selection of movies and shows.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. Airline C's food was edible and the portion size was acceptable, but the choice was limited.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. The flight attendants on Airline D were professional, albeit a bit distant.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. Airline E provided a comfortable flight with enough space, however, the temperature in the cabin was a little cold.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. The booking process with Airline F was straightforward, though the website interface could use some improvement.",Neutral,Unknown,General,Anonymous,,synthetic
+10. Airline G's seating was comfortable with ample legroom but the in-flight Wi-Fi was spotty.,Neutral,Unknown,General,Anonymous,,synthetic
+"11. The boarding process with Airline H was orderly, but the departure gate was far from the main terminal.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. Airline I's ground staff was helpful, however, the process to claim my baggage took longer than expected.",Neutral,Unknown,General,Anonymous,,synthetic
+13. The restrooms on Airline J's flight were kept clean but could have been restocked more frequently.,Neutral,Unknown,General,Anonymous,,synthetic
+"14. Airline K provided a prompt baggage service, however, the quality of their in-flight meal was quite average.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. The customer service of Airline L was helpful in resolving queries, but the waiting time on the call was long.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. Airline M's pricing was reasonable, though the additional charges for extra baggage were high.",Neutral,Unknown,General,Anonymous,,synthetic
+17. Airline N offered a smooth flight and on-time departure but the in-flight service was just average.,Neutral,Unknown,General,Anonymous,,synthetic
+"18. The check-in process with Airline O was quick and efficient, but the boarding was a bit chaotic.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. Airline P's flight had a clean cabin and friendly staff, but the entertainment system was outdated.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. Overall, the flight experience with Airline Q was average, with nothing particularly standing out, either positively or negatively.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The flight was satisfactory with Delta Airlines. Seats were comfortable enough for the long-haul flight and the meal service was timely.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Southwest Airlines provided a decent service. The check-in process was smooth and the flight departed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The JetBlue Airways flight was average. The cabin crew was professional and the in-flight entertainment options were sufficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""American Airlines provided a reasonable service. The legroom was somewhat cramped but the food served was quite tasty.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""The Lufthansa flight was acceptable. The airplane was clean and the flight landed right on schedule.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""My flight with United Airlines was typical. The boarding process was a bit slow, but the flight attendants were polite.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with Emirates was average. The seat was comfortable and the food was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Qatar Airways provided a satisfactory service. The in-flight entertainment could use a few more options, but the crew was friendly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""The flight with Ryanair was standard. There were no frills, but the flight was on time and the check-in process was efficient.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""The flight with Air France was decent. The food served was average and the seats were comfortable enough for the short journey.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""EasyJet provided a typical low-cost service. The plane was clean and the flight was on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The flight with Turkish Airlines was satisfactory. The cabin crew was attentive and the food options were decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""The British Airways flight was acceptable. The in-flight entertainment was good, but the legroom was a bit limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""Air Canada provided an average service. The flight was on time and the check-in process was hassle-free.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The flight with Etihad Airways was standard. The seats were comfortable enough and the meal service was okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""The Air Asia flight was decent. The plane was clean, but the boarding process could have been smoother.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""The flight with Spirit Airlines was typical. The seats were a bit cramped but the crew was friendly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The Virgin Atlantic flight was satisfactory. The airplane was clean and the in-flight entertainment options were decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""The Qantas Airways flight was average. The legroom was sufficient but the food options could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""The flight with Alaska Airlines was acceptable. The boarding process was efficient and the flight departed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""The flight with American Airlines was reliable and on time. The onboard entertainment could use an update, but overall, a decent experience.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""I flew with Delta Airlines recently. The cabin crew were professional, but the in-flight meal was just okay.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""Air Canada's economy class seating was comfortable enough for a short haul flight. The cabin temperature was a bit too cold for my liking.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""I found Southwest's check-in process to be quick and efficient. The flight itself was standard with no notable issues.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""My flight with United was on time and the flight attendants were polite. The legroom was a bit tight, but typical for economy class.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Ryanair delivered a smooth flight with no delays. The food options were limited, but the flight was short.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""Emirates provided a satisfactory level of comfort for the long-haul flight. The in-flight entertainment was quite diverse, but the headphones provided were of average quality.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""The Lufthansa flight was efficient and the crew was professional. The in-flight meal was average, not particularly memorable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Air France offered a decent service with an on-time departure. The cabin was clean, but the seats were a bit uncomfortable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Qatar Airways provided a standard service. The flight was smooth, but the Wi-Fi was a bit slow.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""During my flight with JetBlue, the staff were attentive and the plane was clean. The seat comfort could have been better.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The service on British Airways was consistent. The food and drinks were just okay, but the flight landed on time.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""My KLM flight was satisfactory. The cabin crew was professional, although the plane seemed a bit outdated.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""The flight with Turkish Airlines was smooth and on time. The meals were typical airline food, nothing exceptional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""Virgin Atlantic offered a standard service. The seats were comfortable, but the in-flight entertainment could use more varied options.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""EasyJet provided a decent service for a budget airline. The flight was on time and the cabin was clean, but the legroom was tight.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Cathay Pacific's service was reliable. The staff was professional, but the in-flight meal was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The Finnair flight was on time and the cabin was clean. The seats could use a bit more padding for comfort.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""My Air India flight was satisfactory. The staff was polite, but the in-flight entertainment system was a bit glitchy.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""Norwegian Air provided a smooth flight. The check-in process was efficient, but the food options were limited.""",Neutral,Unknown,General,Anonymous,,synthetic
+"1. The flight with American Airlines was okay. The plane was relatively clean, the flight was on time, and the in-flight service was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"2. I flew with United Airlines. The flight departed and arrived on schedule, the seats were fairly comfortable, and the food was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+3. My experience with Delta Airlines was standard. The check-in process was smooth and the flight crew was professional.,Neutral,Unknown,General,Anonymous,,synthetic
+"4. I took a flight with Southwest Airlines. The ticketing process was straightforward, the flight was punctual, and the service was typical.",Neutral,Unknown,General,Anonymous,,synthetic
+"5. My flight with Air Canada was adequate. The airplane was well-kept, the staff was courteous, and the in-flight entertainment was satisfactory.",Neutral,Unknown,General,Anonymous,,synthetic
+"6. I flew with JetBlue Airways. The flight was on time, the seating was average, and the meals were okay.",Neutral,Unknown,General,Anonymous,,synthetic
+"7. My flight with British Airways was acceptable. The aircraft was clean, the flight was on schedule, and the cabin crew was attentive.",Neutral,Unknown,General,Anonymous,,synthetic
+"8. I took a trip with Lufthansa. The check-in procedure was efficient, the flight was punctual, and the service was ordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+"9. My flight with Emirates was fine. The plane was tidy, the staff was professional, and the in-flight entertainment was suitable.",Neutral,Unknown,General,Anonymous,,synthetic
+"10. I travelled with Qatar Airways. The flight departed and arrived as scheduled, the seats were comfortable enough, and the food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"11. My experience with Air France was satisfactory. The check-in process was smooth, the flight crew was polite, and the service was reasonable.",Neutral,Unknown,General,Anonymous,,synthetic
+"12. I flew with Alaska Airlines. The flight was on time, the seating was average, and the meals were acceptable.",Neutral,Unknown,General,Anonymous,,synthetic
+"13. My trip with Qantas was fine. The aircraft was neat, the staff was courteous, and the in-flight entertainment was adequate.",Neutral,Unknown,General,Anonymous,,synthetic
+"14. I took a flight with Etihad Airways. The check-in procedure was efficient, the flight was on time, and the service was standard.",Neutral,Unknown,General,Anonymous,,synthetic
+"15. My flight with Virgin Atlantic was okay. The plane was clean, the flight crew was professional, and the service was typical.",Neutral,Unknown,General,Anonymous,,synthetic
+"16. I flew with Spirit Airlines. The flight departed and arrived on schedule, the seats were fairly comfortable, and the food was average.",Neutral,Unknown,General,Anonymous,,synthetic
+"17. My experience with Ryanair was acceptable. The check-in process was smooth, the flight crew was polite, and the service was decent.",Neutral,Unknown,General,Anonymous,,synthetic
+"18. I took a flight with Turkish Airlines. The airplane was well-kept, the staff was courteous, and the in-flight entertainment was satisfactory.",Neutral,Unknown,General,Anonymous,,synthetic
+"19. My trip with Cathay Pacific was average. The check-in procedure was efficient, the flight was punctual, and the service was ordinary.",Neutral,Unknown,General,Anonymous,,synthetic
+"20. I flew with Aer Lingus. The flight was on time, the seating was average, and the meals were suitable.",Neutral,Unknown,General,Anonymous,,synthetic
+"1. ""Aer Lingus provided a decent service. The airplane was clean, and the crew was professional. The food was predictable airline fare.""",Neutral,Unknown,General,Anonymous,,synthetic
+"2. ""Qantas was reliable with on-time departures and arrivals. The in-flight entertainment could be updated, though.""",Neutral,Unknown,General,Anonymous,,synthetic
+"3. ""The Air France flight was comfortable enough. Crew members were polite, and the legroom was satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"4. ""Cathay Pacific's in-flight meals were average. The cabin crew service was efficient, but not overly friendly.""",Neutral,Unknown,General,Anonymous,,synthetic
+"5. ""Flying with Delta Airlines was a routine experience. The plane was clean, the staff courteous, and the flight was punctual.""",Neutral,Unknown,General,Anonymous,,synthetic
+"6. ""Etihad Airways provided a satisfactory level of comfort. However, their in-flight entertainment could use some new additions.""",Neutral,Unknown,General,Anonymous,,synthetic
+"7. ""The flight with British Airways was on schedule. The seats were adequate, but the in-flight food was average at best.""",Neutral,Unknown,General,Anonymous,,synthetic
+"8. ""Emirates' cabin was well-maintained and clean. The in-flight service was good, although the food was somewhat uninspiring.""",Neutral,Unknown,General,Anonymous,,synthetic
+"9. ""Japan Airlines provided a reliable service. The cabin crew was professional, and the in-flight meals were satisfactory.""",Neutral,Unknown,General,Anonymous,,synthetic
+"10. ""Lufthansa's flight was on time, and the seats were comfortable. The food was typical airline fare.""",Neutral,Unknown,General,Anonymous,,synthetic
+"11. ""Swiss Air provided a standard flight experience. The cabin crew was courteous, and the plane was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"12. ""The Air Canada flight was punctual, and the airplane was clean. The in-flight entertainment could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
+"13. ""KLM's service was efficient, and the flight was on time. However, the legroom was a bit restricted.""",Neutral,Unknown,General,Anonymous,,synthetic
+"14. ""American Airlines provided a smooth flight. The crew was professional, but the food was average.""",Neutral,Unknown,General,Anonymous,,synthetic
+"15. ""The Singapore Airlines flight was punctual. The cabin crew was polite, but the in-flight entertainment was lacking.""",Neutral,Unknown,General,Anonymous,,synthetic
+"16. ""Air New Zealand provided a decent flight experience. The cabin was clean, but the meals were not particularly memorable.""",Neutral,Unknown,General,Anonymous,,synthetic
+"17. ""Turkish Airlines' service was satisfactory. The flight was on time, and the crew was professional.""",Neutral,Unknown,General,Anonymous,,synthetic
+"18. ""The flight with Qatar Airways was comfortable. The food was average, but the in-flight entertainment was decent.""",Neutral,Unknown,General,Anonymous,,synthetic
+"19. ""Flying with United Airlines was an average experience. The flight was on time, and the cabin was clean.""",Neutral,Unknown,General,Anonymous,,synthetic
+"20. ""The Virgin Atlantic flight was satisfactory. The cabin crew was courteous, but the food and entertainment could be improved.""",Neutral,Unknown,General,Anonymous,,synthetic
