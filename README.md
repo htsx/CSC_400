@@ -8,7 +8,7 @@ The project focuses on analyzing airline passenger reviews using sentiment analy
 
 - Deep Learning-Based Sentiment Analysis
 
-To evaluate these techniques, a semi-supervised labeled dataset is created using a hybrid labeling approach (rule-based + lexicon-based methods) followed by pseudo-labeling. This dataset is not used for training, but solely for evaluating the performance of each technique. Evaluation is based on four key metrics: F1-score, Accuracy, Precision, and Recall.
+To evaluate these techniques, a hybrid labeled dataset is created using a hybrid labeling approach (rule-based + lexicon-based methods) followed by pseudo-labeling with . This dataset is not used for training, but solely for evaluating the performance of each technique. Evaluation is based on four key metrics: F1-score, Accuracy, Precision, and Recall.
 
 The results, visualizations, and sample reviews are displayed through a Flask-based dashboard.
 
