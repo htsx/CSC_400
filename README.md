@@ -2,7 +2,7 @@ CSC 400 Research Project: Flight Experience Feedback Analysis
 
 The project focuses on analyzing airline passenger reviews using sentiment analysis techniques to better understand customer satisfaction. The goal is to compare the effectiveness of three methods:
 
-- Word-Score Sentiment Scoring
+- Word-Score Sentiment Scoring with AFINN
 
 - Emotion Lexicon-based Sentiment Analysis
 
