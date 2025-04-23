@@ -2,11 +2,11 @@ CSC 400 Research Project: Flight Experience Feedback Analysis
 
 The project focuses on analyzing airline passenger reviews using sentiment analysis techniques to better understand customer satisfaction. The goal is to compare the effectiveness of three methods:
 
-- Word-Score Sentiment Scoring with AFINN
+- Word-Score Sentiment Scoring w/ AFINN
 
-- Emotion Lexicon-based Sentiment Analysis
+- Rule Based Sentiment Analysis w/SentiWordNet
 
-- Deep Learning-Based Sentiment Analysis
+- Deep Learning-Based Sentiment Analysis w/cardiffnlp/twitter-xlm-roberta-base-sentiment
 
 To evaluate these techniques, a labeled dataset is created using a hybrid labeling approach (rule-based + lexicon-based methods) followed by pseudo-labeling with . This validaiton dataset is not used for training, but solely for evaluating the performance of each technique. After that we use a test set of the reviews that were not used in the validation for final results. Evaluation is based on four key metrics: F1-score, Accuracy, Precision, and Recall.
 
