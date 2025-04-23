@@ -2,8 +2,8 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix
 
 #Load ground truth and predicted sentiment files
-skytrax_dataset = "../../data/dataset/test_set.csv"
-predictions_file = "../../data/scoringdistribution/t-sd_results.csv"
+skytrax_dataset = "../../data/dataset/validation_set.csv"
+predictions_file = "../../data/wordscoring/v-wd_results.csv"
 
 try:
     #Load the ground truth data and drop any rows with NaN in 'review_classification'
@@ -44,7 +44,7 @@ try:
         'F1 Score': [f1]
     }
     df_metrics = pd.DataFrame(metrics_data)
-    df_metrics.to_csv("../../data/scoringdistribution/t-sd_evaluation_metrics.csv", index=False)
+    df_metrics.to_csv("../../data/wordscoring/v-wd_evaluation_metrics.csv", index=False)
 
     #Generate and save classification report
     print("\nDetailed Classification Report:")
@@ -52,14 +52,14 @@ try:
     print(report)
     report_data = classification_report(y_true, y_pred, target_names=sentiment_labels, output_dict=True)
     df_report = pd.DataFrame(report_data).transpose()
-    df_report.to_csv("../../data/scoringdistribution/t-sd_classification_report.csv", index=True)
+    df_report.to_csv("../../data/wordscoring/v-wd_classification_report.csv", index=True)
 
     #Generate and save confusion matrix
     conf_matrix = confusion_matrix(y_true, y_pred, labels=sentiment_labels)
     print("\nConfusion Matrix:")
     print(conf_matrix)
     df_conf_matrix = pd.DataFrame(conf_matrix, index=sentiment_labels, columns=sentiment_labels)
-    df_conf_matrix.to_csv("../../data/scoringdistribution/t-sd_confusion_matrix.csv", index=True)
+    df_conf_matrix.to_csv("../../data/wordscoring/v-wd_confusion_matrix.csv", index=True)
 
     #Save misclassified reviews to CSV and print count
     df_misclassified = df_truth.copy()
@@ -70,7 +70,7 @@ try:
     print(f"\nNumber of misclassified reviews: {num_misclassified}")
 
     if not df_misclassified.empty:
-        df_misclassified.to_csv("../../data/scoringdistribution/t-sd_misclassified_reviews.csv", index=False)
+        df_misclassified.to_csv("../../data/wordscoring/v-wd_misclassified_reviews.csv", index=False)
 
 except FileNotFoundError as e:
     print(f"Error loading files: {e}")

@@ -3,16 +3,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Read the CSV files with the evaluation results
-classification_report_df = pd.read_csv('../../data/deeplearning/t-dl_classification_report.csv', index_col=0)
-confusion_matrix_df = pd.read_csv('../../data/deeplearning/t-dl_confusion_matrix.csv', index_col=0)
-evaluation_metrics_df = pd.read_csv('../../data/deeplearning/t-dl_evaluation_metrics.csv', header=0)
+classification_report_df = pd.read_csv('../../data/rulebased/v-r_classification_report.csv', index_col=0)
+confusion_matrix_df = pd.read_csv('../../data/rulebased/v-r_confusion_matrix.csv', index_col=0)
+evaluation_metrics_df = pd.read_csv('../../data/rulebased/v-r_evaluation_metrics.csv', header=0)
 
 #Remove "accuracy" from the classification report if it’s there (we don’t need it here)
 classification_report_df = classification_report_df[~classification_report_df.index.str.contains("accuracy", case=False)]
 
 #Confusion Matrix Visualization
 plt.figure(figsize=(8, 6))
-#Plot the confusion matrix using a heatmap for better visualization
 sns.heatmap(confusion_matrix_df.astype(int), annot=True, fmt='d', cmap='Blues', 
             xticklabels=confusion_matrix_df.columns, yticklabels=confusion_matrix_df.index)
 plt.title('Confusion Matrix')
@@ -36,11 +35,13 @@ for metric in metrics:
         plt.show()
         plt.close()
 
-
+#Grouped Bar Chart for All Metrics (Precision, Recall, F1-Score)
 plt.figure(figsize=(10, 6))
+
 available_metrics = [metric for metric in ['precision', 'recall', 'f1-score'] if metric in classification_report_df.columns]
 
 if len(available_metrics) > 0:
+    #Plot the grouped bar chart if the metrics are available
     classification_report_df[available_metrics].plot(kind='bar', figsize=(10, 6), width=0.8)
     plt.title('Grouped Bar Chart of Precision, Recall, F1-Score per Class')
     plt.ylabel('Score')
