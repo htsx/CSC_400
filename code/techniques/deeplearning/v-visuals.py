@@ -12,61 +12,55 @@ classification_report_df = classification_report_df[~classification_report_df.in
 
 #Confusion Matrix Visualization
 plt.figure(figsize=(8, 6))
-#Plot the confusion matrix using a heatmap for better visualization
 sns.heatmap(confusion_matrix_df.astype(int), annot=True, fmt='d', cmap='Blues', 
             xticklabels=confusion_matrix_df.columns, yticklabels=confusion_matrix_df.index)
-plt.title('Confusion Matrix')  #Set the title of the heatmap
-plt.xlabel('Predicted Labels')  #Label the x-axis
-plt.ylabel('True Labels')  #Label the y-axis
-plt.tight_layout()  #Ensure everything fits nicely
-plt.show()  #Show the plot
-plt.close()  #Close the plot after showing it
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted Labels')
+plt.ylabel('True Labels')
+plt.tight_layout()
+plt.show()
+plt.close()
 
-#Separate Bar Plots for Precision, Recall, F1-Score
-metrics = ['precision', 'recall', 'f1-score']  #List of metrics we want to plot
+metrics = ['precision', 'recall', 'f1-score']
 for metric in metrics:
     if metric in classification_report_df.columns:
         plt.figure(figsize=(8, 6))
-        #For each metric, plot a bar chart to visualize the scores per class
         sns.barplot(x=classification_report_df.index, y=classification_report_df[metric])
-        plt.title(f'{metric.capitalize()} per Class')  #Title with the metric name
-        plt.ylabel(metric.capitalize())  #Label y-axis with the metric name
-        plt.xlabel('Class')  #Label x-axis with 'Class'
-        plt.xticks(rotation=45)  #Rotate the x-tick labels for better readability
-        plt.tight_layout()  #Make sure the plot layout looks good
-        plt.show()  #Show the plot
-        plt.close()  #Close the plot after showing it
+        plt.title(f'{metric.capitalize()} per Class')
+        plt.ylabel(metric.capitalize())
+        plt.xlabel('Class')
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.show()
+        plt.close()
 
 #Grouped Bar Chart for All Metrics (Precision, Recall, F1-Score)
 plt.figure(figsize=(10, 6))
 
-#Grouped Bar Chart for All Metrics (Precision, Recall, F1-Score)
-#Check which metrics are available in the classification report and plot them
 available_metrics = [metric for metric in ['precision', 'recall', 'f1-score'] if metric in classification_report_df.columns]
 
 if len(available_metrics) > 0:
     #Plot the grouped bar chart if the metrics are available
     classification_report_df[available_metrics].plot(kind='bar', figsize=(10, 6), width=0.8)
-    plt.title('Grouped Bar Chart of Precision, Recall, F1-Score per Class')  #Title for the chart
-    plt.ylabel('Score')  #Y-axis label for the score
-    plt.xlabel('Class')  #X-axis label for the class
-    plt.xticks(rotation=45)  #Rotate the x-tick labels
-    plt.legend(title="Metrics")  #Legend for the metrics
-    plt.tight_layout()  #Ensure the layout is clean
-    plt.show()  #Show the plot
+    plt.title('Grouped Bar Chart of Precision, Recall, F1-Score per Class')
+    plt.ylabel('Score')
+    plt.xlabel('Class')
+    plt.xticks(rotation=45)
+    plt.legend(title="Metrics")
+    plt.tight_layout()
+    plt.show()
 else:
-    print("No valid metrics found to plot.")  #If there are no valid metrics to plot, print a message
+    print("No valid metrics found to plot.")
 
 #Donut Chart for Accuracy
-accuracy = evaluation_metrics_df['Accuracy'].values[0]  #Get the accuracy score
-labels = ['Correct', 'Incorrect']  #Labels for the donut chart
-sizes = [accuracy, 1 - accuracy]  #Sizes for the donut chart
-colors = ['#4CAF50', '#FF6F61']  #Colors for the chart (green for correct, red for incorrect)
+accuracy = evaluation_metrics_df['Accuracy'].values[0]
+labels = ['Correct', 'Incorrect']
+sizes = [accuracy, 1 - accuracy]
+colors = ['#4CAF50', '#FF6F61']
 
 plt.figure(figsize=(6, 6))
-#Plot the donut chart to show the model accuracy
 plt.pie(sizes, labels=labels, colors=colors, startangle=90, autopct='%1.1f%%', wedgeprops={'width': 0.4})
-plt.title('Model Accuracy')  #Title for the chart
-plt.tight_layout()  #Make sure the layout fits well
-plt.show()  #Show the plot
-plt.close()  #Close the plot after showing it
+plt.title('Model Accuracy')
+plt.tight_layout()
+plt.show()
+plt.close()

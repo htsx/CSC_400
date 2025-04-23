@@ -2,15 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#Read the CSV files containing our evaluation data
-classification_report_df = pd.read_csv('../../data/wordscoring/t-wd_classification_report.csv', index_col=0)
-confusion_matrix_df = pd.read_csv('../../data/wordscoring/t-wd_confusion_matrix.csv', index_col=0)
-evaluation_metrics_df = pd.read_csv('../../data/wordscoring/t-wd_evaluation_metrics.csv', header=0)
+#Read the CSV files with the evaluation results
+classification_report_df = pd.read_csv('../../data/rulebased/v-r_classification_report.csv', index_col=0)
+confusion_matrix_df = pd.read_csv('../../data/rulebased/v-r_confusion_matrix.csv', index_col=0)
+evaluation_metrics_df = pd.read_csv('../../data/rulebased/v-r_evaluation_metrics.csv', header=0)
 
-#Remove "accuracy" from the classification report if it’s there
+#Remove "accuracy" from the classification report if it’s there (we don’t need it here)
 classification_report_df = classification_report_df[~classification_report_df.index.str.contains("accuracy", case=False)]
 
-#Create a heatmap to visualize the confusion matrix (how the model predicted vs actual labels)
+#Confusion Matrix Visualization
 plt.figure(figsize=(8, 6))
 sns.heatmap(confusion_matrix_df.astype(int), annot=True, fmt='d', cmap='Blues', 
             xticklabels=confusion_matrix_df.columns, yticklabels=confusion_matrix_df.index)
@@ -21,7 +21,7 @@ plt.tight_layout()
 plt.show()
 plt.close()
 
-#For each metric, we will plot a bar chart
+#Separate Bar Plots for Precision, Recall, F1-Score
 metrics = ['precision', 'recall', 'f1-score']
 for metric in metrics:
     if metric in classification_report_df.columns:
@@ -35,9 +35,13 @@ for metric in metrics:
         plt.show()
         plt.close()
 
+#Grouped Bar Chart for All Metrics (Precision, Recall, F1-Score)
+plt.figure(figsize=(10, 6))
+
 available_metrics = [metric for metric in ['precision', 'recall', 'f1-score'] if metric in classification_report_df.columns]
 
 if len(available_metrics) > 0:
+    #Plot the grouped bar chart if the metrics are available
     classification_report_df[available_metrics].plot(kind='bar', figsize=(10, 6), width=0.8)
     plt.title('Grouped Bar Chart of Precision, Recall, F1-Score per Class')
     plt.ylabel('Score')
@@ -48,7 +52,6 @@ if len(available_metrics) > 0:
     plt.show()
 else:
     print("No valid metrics found to plot.")
-
 
 accuracy = evaluation_metrics_df['Accuracy'].values[0]
 labels = ['Correct', 'Incorrect']
