@@ -1,29 +1,35 @@
 from transformers import pipeline
 import pandas as pd
 import re
+from tqdm import tqdm
 
-#Initialize the sentiment analysis pipeline using the pre-trained model for sentiment classification
-sentiment_checker = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment")
+# Initialize tqdm for progress tracking
+tqdm.pandas()
 
-#Define a label mapping for sentiment categories: Negative, Neutral, and Positive
+# Initialize the sentiment analysis pipeline using the pre-trained model
+sentiment_checker = pipeline(
+    "sentiment-analysis", 
+    model="cardiffnlp/twitter-roberta-base-sentiment",
+    device=0  # Set to 0 for GPU, -1 for CPU
+)
+
+# Define label mapping
 label_mapping = {
     'LABEL_0': 'NEGATIVE',
     'LABEL_1': 'NEUTRAL',
     'LABEL_2': 'POSITIVE'
 }
 
-#Define strong sentiment keywords for overriding model predictions based on keywords in the text
+# Define strong and soft keyword sets
 strong_positive = {"amazing", "excellent", "fantastic", "loved", "perfect", "Best", "very nice"}
 strong_negative = {"horrible", "terrible", "worst", "disgusting", "awful"}
-strong_neutral = { "okay", "fine", "decent", "average", "neutral", "ok", "standard", "typical", "ordinary", "moderate", "acceptable", "satisfactory", "clean", "on time", "punctual", "smooth"}
+strong_neutral = { "okay", "fine", "decent", "average", "neutral", "ok", "standard", "typical", "ordinary", "moderate", "acceptable", "satisfactory", "clean", "on time", "punctual", "smooth" }
 
-#Define soft boost keywords that help promote a neutral sentiment to positive if they appear in the text
 soft_positive_keywords = {
     "great", "smooth", "friendly", "quick", "well organized", "no issues", "pleasant", "lovely", "enjoyable", "good"
 }
 
 def clean_text(text):
-    #Clean the input text by removing unwanted characters, URLs, and HTML tags.
     text = re.sub(r'http\S+|www\S+', '', text)  
     text = re.sub(r'<.*?>', '', text)  
     text = re.sub(r'[^A-Za-z0-9\s.,!?]', '', text)  
@@ -31,20 +37,18 @@ def clean_text(text):
     return text.lower()
 
 def adjust_threshold(sentiment, confidence,
-                     positive_threshold=0.99,
-                     negative_threshold=0.75,
-                     neutral_threshold=0.55):
-    #Adjust the sentiment classification based on the confidence score using predefined thresholds.
+                     positive_threshold=0.96,
+                     negative_threshold=0.67,
+                     neutral_threshold=0.58):
     if sentiment == 'POSITIVE' and confidence < positive_threshold:
         return 'NEUTRAL', 0.5
     elif sentiment == 'NEGATIVE' and confidence < negative_threshold:
         return 'NEUTRAL', 0.5
     elif sentiment == 'NEUTRAL' and confidence < neutral_threshold:
-        return 'NEUTRAL', max(confidence, 0.75)
+        return 'NEUTRAL', max(confidence, 0.6)
     return sentiment, confidence
 
-def keyword_override(text, sentiment, confidence, threshold=0.60):
-    #Override sentiment prediction based on strong sentiment keywords when confidence is low.
+def keyword_override(text, sentiment, confidence, threshold=0.65):
     tokens = text.lower().split()
     if confidence < threshold:
         if any(word in tokens for word in strong_positive):
@@ -56,52 +60,41 @@ def keyword_override(text, sentiment, confidence, threshold=0.60):
     return sentiment, confidence
 
 def keyword_boost(text, sentiment, confidence):
-    #Boost sentiment classification for neutral reviews if soft positive keywords are found.
     if sentiment == 'NEUTRAL':
         lowered = text.lower()
-        if any(kw in lowered for kw in soft_positive_keywords):
-            return 'POSITIVE', max(confidence, 0.82)
+        if len(text.split()) >= 10 and any(kw in lowered for kw in soft_positive_keywords):
+            return 'POSITIVE', max(confidence, 0.87)
     return sentiment, confidence
 
-def analyze_sentiment(text):
-    cleaned_text = clean_text(text)
-    result = sentiment_checker(cleaned_text)[0]
-    
-    #Map the model's label to our custom sentiment labels
-    sentiment = label_mapping.get(result['label'], 'NEUTRAL')
-    confidence = round(result['score'], 2)
-
-    #Apply thresholds and keyword logic to adjust the sentiment and confidence
-    sentiment, confidence = adjust_threshold(sentiment, confidence)
-    sentiment, confidence = keyword_override(cleaned_text, sentiment, confidence)
-    sentiment, confidence = keyword_boost(cleaned_text, sentiment, confidence)
-
-    return sentiment.capitalize(), confidence
-
 def process_reviews(df):
-    #Process the reviews in the dataframe by analyzing the sentiment of each review.
-    results = []
-    for _, row in df.iterrows():
-        sentiment, confidence = analyze_sentiment(row['review_text'])
-        results.append({
-            'review_name': row['review_name'],
-            'review_type': row['review_type'],
-            'passenger_name': row['passenger_name'],
-            'review_date': row['review_date'],
-            'review_text': row['review_text'],
-            'sentiment': sentiment,
-            'confidence': confidence
-        })
-    return pd.DataFrame(results)
+    cleaned_texts = df['review_text'].astype(str).progress_apply(clean_text).tolist()
+    model_outputs = sentiment_checker(cleaned_texts, batch_size=32)
 
-#Load and process the reviews data from a CSV file
+    sentiments = []
+    confidences = []
+
+    for text, output in zip(cleaned_texts, model_outputs):
+        sentiment = label_mapping.get(output['label'], 'NEUTRAL')
+        confidence = round(output['score'], 2)
+
+        sentiment, confidence = adjust_threshold(sentiment, confidence)
+        sentiment, confidence = keyword_override(text, sentiment, confidence)
+        sentiment, confidence = keyword_boost(text, sentiment, confidence)
+
+        sentiments.append(sentiment.capitalize())
+        confidences.append(confidence)
+
+    df['sentiment'] = sentiments
+    df['confidence'] = confidences
+    return df
+
+# Load and process the data
 reviews_data = pd.read_csv("../../data/dataset/utest_set.csv")
 reviews_data = reviews_data[reviews_data['review_text'].notna()]
 reviews_data['review_text'] = reviews_data['review_text'].astype(str)
 
-#Process the reviews and store the results in a new dataframe
+# Run sentiment analysis and save results
 results_df = process_reviews(reviews_data)
-#Save the results to a CSV file for further analysis or reporting
 results_df.to_csv("../../data/deeplearning/t-dl_results.csv", index=False)
 
 print(f"Analysis complete! {len(results_df)} reviews processed.")

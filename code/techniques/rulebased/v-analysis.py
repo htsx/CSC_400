@@ -10,19 +10,16 @@ import re
 # Download required NLTK data
 nltk.download(['sentiwordnet', 'stopwords', 'averaged_perceptron_tagger', 'punkt'], quiet=True)
 
-# Initialize constants
 INTENSIFIERS = {
-    "very": 2.0, "extremely": 2.3, "absolutely": 2.7, "highly": 1.3, 
-    "really": 1.9, "so much": 2.4, "too much": 2.2, "incredibly": 2.3, 
-    "seriously": 1.7, "literally": 1.7, "unbelievably": 2.5, "super": 1.3, 
-    "genuinely": 1.4, "remarkably": 1.7, "exceptionally": 2.0, "awfully": 2.0,
-    "terribly": 2.0, "insanely": 2.3, "ridiculously": 2.4, "outstandingly": 2.3,
-    "particularly": 1.3, "especially": 1.5, "somewhat": 0.6, "slightly": 0.6,"totally": 2.2,
-    "completely": 2.4,"utterly": 2.6,"immensely": 2.1,"overly": 1.4,"fairly": 1.1,"pretty": 1.2,
-    "decidedly": 1.7,"dramatically": 2.0,"strongly": 1.8,"severely": 2.3,"profoundly": 2.5,"extensively": 2.1
+    "very": 2.0, "extremely": 2.3, "really": 1.9, "incredibly": 2.3, 
+    "super": 1.3, "totally": 2.2, "completely": 2.4, "utterly": 2.6
 }
 
-NEGATIONS = {"not", "never", "no", "none", "n't", "neither", "nor", "nothing", "nowhere", "hardly", "scarcely", "barely"}
+# Focused list of common negations with high impact
+NEGATIONS = {
+    "not", "never", "no", "can't", "isn't", "doesn't", "won't"
+}
+
 STOPWORDS = set(stopwords.words('english')) - NEGATIONS
 
 def clean_text(text):
@@ -62,7 +59,7 @@ def analyze_sentiment(text):
         
         total_score = 0
         negation = False
-        intensifier = 3.6
+        intensifier = 3.5
 
         # Check for multi-word intensifiers
         for phrase, multiplier in INTENSIFIERS.items():
@@ -88,39 +85,46 @@ def analyze_sentiment(text):
                 word_score *= -1
                 negation = False
 
-            if intensifier != 1.0:
+            if intensifier != 1.1:
                 word_score *= intensifier
-                intensifier = 1.0
+                intensifier = 1.1
 
             total_score += word_score
 
         # Strong keyword boosts
-        strong_positive = {"amazing", "excellent", "fantastic", "loved", "perfect", "best", "very nice"}
-        strong_negative = {"horrible", "terrible", "worst", "disgusting", "awful", }
+        strong_positive = {"amazing", "excellent", "fantastic", "loved", "perfect", "best"}
+        strong_negative = {"horrible", "terrible", "worst", "disgusting", "awful"}
 
         for kw in strong_positive:
             if kw in text.lower():
-                total_score += 5.7
+                total_score += 1.6
         for kw in strong_negative:
             if kw in text.lower():
-                total_score -= 5.7
+                total_score -= 1.6
 
         # Soft keyword sentiment boosts/penalties (full-text)
         for word in soft_positive_keywords:
             if word in tokens:
-                total_score += 0.9
+                total_score += 1.0
         for word in soft_negative_keywords:
             if word in tokens:
-                total_score -= 0.9
+                total_score -= 1.0
         for word in soft_neutral_keywords:
             if word in tokens:
-                total_score -= 0.4
+                total_score -= 0.6
 
-        # Final sentiment decision
-        if total_score > 1.7:
+        # Final sentiment decision with added neutral threshold
+        POSITIVE_THRESHOLD = 1.4
+        NEGATIVE_THRESHOLD = -0.6
+        NEUTRAL_THRESHOLD = 0.5
+
+        if total_score >= POSITIVE_THRESHOLD:
             return "positive"
-        elif total_score < -0.7:
+        elif total_score <= NEGATIVE_THRESHOLD:
             return "negative"
+        elif abs(total_score) <= NEUTRAL_THRESHOLD:
+            return "neutral"
+
         return "neutral"
 
     except Exception:
