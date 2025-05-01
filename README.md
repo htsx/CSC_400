@@ -10,8 +10,6 @@ The project focuses on analyzing airline passenger reviews using sentiment analy
 
 To evaluate these techniques, a labeled dataset is created using a hybrid labeling approach (rule-based + lexicon-based methods) followed by pseudo-labeling with . This validaiton dataset is not used for training, but solely for evaluating the performance of each technique. After that we use a test set of the reviews that were not used in the validation for final results. Evaluation is based on four key metrics: F1-score, Accuracy, Precision, and Recall.
 
-The results, visualizations, and sample reviews are displayed through a Flask-based dashboard.
-
 ## 🔧 Setting Up the Virtual Environment (`venv`)
 
 This project uses a Python virtual environment to manage dependencies.
