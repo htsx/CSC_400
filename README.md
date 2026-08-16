@@ -1,128 +1,142 @@
-CSC 400 Research Project: Flight Experience Feedback Analysis
+# Flight Experience Feedback Analysis
 
-The project focuses on analyzing airline passenger reviews using sentiment analysis techniques to better understand customer satisfaction. The goal is to compare the effectiveness of three methods:
+CSC 400 Research Project — Southern Connecticut State University
+Authors: Joseph Rodriguez, Peter Chinedu Chukwu, Quinton C. Haughton, Mohamed Ramzeen, Shafaeat Hossain
 
-- Word-Score Sentiment Scoring w/ AFINN
+## Paper
 
-- Rule Based Sentiment Analysis w/SentiWordNet
+The full write-up is available here: [Flight Experience Feedback Analysis (PDF)](./CSC_400_Final_Research_Paper.pdf)
 
-- Deep Learning-Based Sentiment Analysis w/cardiffnlp/twitter-xlm-roberta-base-sentiment
+*Unpublished course research paper, CSC 400, Southern Connecticut State University.*
 
-To evaluate these techniques, a labeled dataset is created using a hybrid labeling approach (rule-based + lexicon-based methods) followed by pseudo-labeling with . This validaiton dataset is not used for training, but solely for evaluating the performance of each technique. After that we use a test set of the reviews that were not used in the validation for final results. Evaluation is based on four key metrics: F1-score, Accuracy, Precision, and Recall.
+## Overview
 
-## 🔧 Setting Up the Virtual Environment (`venv`)
+This project analyzes airline passenger reviews using sentiment analysis to better understand customer satisfaction. It compares the effectiveness of three sentiment classification techniques on a large, hybrid labeled dataset scraped from airlinequality.com (Skytrax):
 
-This project uses a Python virtual environment to manage dependencies.
-Follow the steps below to create and activate the environment based on your operating system.
+- **Word Score Sentiment Scoring (AFINN)** lexicon based word level scoring
+- **Rule Based Sentiment Analysis (SentiWordNet)** POS aware lexicon scoring with negation and intensifier handling
+- **Deep Learning Based Sentiment Analysis (cardiffnlp/twitter-xlm-roberta-base-sentiment)** transformer based classification
 
----
+A hybrid labeling pipeline (TextBlob + VADER + keyword tagging, with DistilBERT pseudo labeling for ambiguous cases and GPT-4 generated synthetic neutral samples) was used to build a ground truth validation set, and each technique was evaluated on a held out test set using accuracy, precision, recall, and F1-score.
 
-### 🪟 For Windows
+## Key Results
 
-1. **Open Command Prompt or PowerShell**
-2. **Navigate to your project directory**  
-   ```bash
-   cd path\to\your\project
-   ```
-3. **Create the virtual environment**  
-   ```bash
-   python -m venv venv
-   ```
-4. **Activate the virtual environment**  
-   ```bash
-   venv\Scripts\activate
-   ```
+The word scoring (AFINN) approach achieved the strongest overall performance, slightly outperforming the deep learning model, while the rule-based method consistently performed the worst. This suggests that, with a well constructed labeled dataset, traditional lexicon-based methods can be competitive with more complex deep learning models.
 
-You should now see `(venv)` in your terminal prompt, indicating it's active.
+| Model | Accuracy | Precision | Recall | F1-Score |
+|---|---|---|---|---|
+| Word Scoring (AFINN) | 80.8% | 0.81 | 0.81 | 0.81 |
+| Deep Learning (XLM-RoBERTa) | 79.1% | 0.79 | 0.79 | 0.79 |
+| Rule-Based (SentiWordNet) | 71.0% | 0.74 | 0.71 | 0.71 |
 
----
+All three models excelled at identifying negative sentiment but struggled most with neutral sentiment, which was consistently the hardest class to classify across all methods.
 
-### 🍎 For macOS / Linux
+## Dataset
 
-1. **Open Terminal**
-2. **Navigate to your project directory**  
-   ```bash
-   cd /path/to/your/project
-   ```
-3. **Create the virtual environment**  
-   ```bash
-   python3 -m venv venv
-   ```
-4. **Activate the virtual environment**  
-   ```bash
-   source venv/bin/activate
-   ```
+- **Source:** 22,098 reviews scraped from airlinequality.com (Skytrax)
+- **Fields:** reviewer name, date of submission, star rating (1-10), review text, sentiment label
+- **Labeled Validation Set:** 12,000 reviews (4,000 per sentiment class: positive, neutral, negative)
+- **Test Set:** 3,000 unused reviews, reserved for unbiased evaluation
+- Cleaned dataset stored as `cleaned_skytrax_reviews.csv`
 
-You should now see `(venv)` in your terminal prompt, indicating it's active.
+### Hybrid Labeling Pipeline
 
----
+1. Initial labeling with TextBlob, VADER, and a custom keyword-based tagger
+2. Reviews with unanimous (3/3) agreement accepted as high-confidence labels
+3. Disagreements flagged and pseudo-labeled using `distilbert-base-uncased-finetuned-sst-2-english`
+4. Synthetic neutral reviews generated with GPT-4 to balance the dataset
+5. All labeled reviews merged into the final validation set; remaining reviews reserved for the test set
 
-### 📦 Installing Dependencies
+## Methodology Summary
 
-Once the virtual environment is activated, install all required packages using:
+- **Preprocessing:** verification label removal, URL/HTML stripping, special character cleaning, lowercase normalization, missing/empty review handling
+- **Feature extraction:** POS tagging and negation-aware handling for the rule-based method, token-level AFINN scoring for the word-score method, subword tokenization and contextual embeddings for the transformer model
+- **Train/test split:** 80/20, with 5-fold cross-validation
+- **Evaluation:** accuracy, precision, recall, and F1-score per sentiment class, plus confusion matrices
 
-```bash
+## Setting Up the Virtual Environment (venv)
+
+### Windows
+
+```
+cd path\to\your\project
+python -m venv venv
+venv\Scripts\activate
+```
+
+### macOS / Linux
+
+```
+cd /path/to/your/project
+python3 -m venv venv
+source venv/bin/activate
+```
+
+You should see `(venv)` in your terminal prompt once it's active.
+
+## Installing Dependencies
+
+```
 pip install -r requirements.txt
 ```
 
-This will install everything your project needs to run.
+Verify installation with:
 
----
-
-### 🧪 Verify the Environment
-
-To check that packages are installed:
-
-```bash
+```
 pip list
 ```
 
-You should see a list of installed dependencies, including those from `requirements.txt`.
+Deactivate the environment when finished:
 
----
-
-### ❌ Deactivate the Environment
-
-To exit the virtual environment:
-
-```bash
+```
 deactivate
 ```
----
-**Libraries Used**
 
-This project leverages several Python libraries to analyze airline passenger reviews using sentiment analysis techniques. Below is a list of the key libraries used in this project and their specific purposes:
+## Key Libraries Used
 
-1. beautifulsoup4==4.13.4
-Purpose: Used for web scraping to collect airline passenger reviews from websites. BeautifulSoup helps extract structured data from HTML and XML documents, which is essential for gathering customer feedback for sentiment analysis.
+| Library | Version | Purpose |
+|---|---|---|
+| beautifulsoup4 | 4.13.4 | Web scraping of airline passenger reviews |
+| requests | 2.32.3 | HTTP requests to fetch review data |
+| pandas | 2.2.3 | Data cleaning, manipulation, and analysis |
+| nltk | 3.9.1 | Tokenization, POS tagging, and NLP utilities |
+| textblob | 0.19.0 | Rule/lexicon-based sentiment scoring |
+| vaderSentiment | 3.3.2 | Lexicon-based sentiment scoring for initial labeling |
+| afinn | 0.1 | Word-score sentiment scoring |
+| transformers | 4.51.2 | Pre-trained transformer models (XLM-RoBERTa, DistilBERT) |
+| torch | 2.6.0 | Deep learning backend for transformer-based sentiment model |
+| scikit-learn | 1.6.1 | Evaluation metrics (accuracy, precision, recall, F1) |
+| openai | 0.28.0 | GPT-4 access for synthetic neutral review generation |
+| python-dotenv | 1.1.0 | Managing API keys and environment configuration |
+| matplotlib | 3.10.1 | Visualizations of sentiment distributions and results |
+| seaborn | 0.13.2 | Statistical visualizations (heatmaps, comparison plots) |
 
-2. matplotlib==3.10.1
-Purpose: A powerful library for creating static, animated, and interactive visualizations. Matplotlib is used in this project to generate various plots (e.g., bar charts, histograms, and pie charts) to visualize sentiment distributions and comparison results across different sentiment analysis methods.
+See the paper's appendix for the full pinned dependency list.
 
-3. seaborn==0.13.2
-Purpose: Built on top of Matplotlib, Seaborn simplifies the process of creating attractive and informative statistical graphics. It's used to produce advanced visualizations like heatmaps, violin plots, and regression plots to explore relationships in the sentiment analysis results.
+## Experiment Environment
 
-4. python-dotenv==1.1.0
-Purpose: This library is used to securely manage configuration settings and sensitive data, such as API keys, by loading them from a .env file into environment variables. This is important for protecting sensitive information when interacting with external services, such as OpenAI’s API.
+- **CPU:** AMD Ryzen 7 3700X (8 cores, 16 threads)
+- **GPU:** NVIDIA GeForce RTX 2070 Super
+- **RAM:** 32GB DDR4
+- **OS:** Windows 10, 64-bit
+- **Python:** 3.11.9
 
-5. openai==0.28.0
-Purpose: The official Python client for OpenAI’s models, used to interact with GPT and other advanced NLP models for sentiment analysis. In this project, OpenAI's models are used for deep learning-based sentiment analysis techniques, providing accurate and scalable predictions.
+## Limitations
 
-6. pandas==2.2.3
-Purpose: Pandas is essential for data manipulation and analysis. It is used to preprocess and clean the review data, load it into data frames, and perform analysis. This library simplifies tasks like filtering, aggregating, and summarizing data from the dataset.
+- Neutral sentiment was consistently the hardest class for all three models to classify correctly
+- Rule-based and word-score methods struggle with sarcasm, negation nuance, and idiomatic language
+- The deep learning model is more computationally expensive (~13 minutes on the validation set vs. under 30 seconds for the lexicon-based methods) and less interpretable
+- Results are specific to the airline review domain and may not generalize without adaptation
 
-7. scikit_learn==1.6.1
-Purpose: A widely used library for machine learning. Scikit-learn is used in this project for traditional machine learning methods like classification (e.g., Logistic Regression, Random Forest) to analyze sentiment in reviews. It also provides tools to evaluate model performance using metrics such as accuracy, precision, recall, and F1-score.
+## Future Work
 
-8. requests==2.32.3
-Purpose: This library is used to send HTTP requests to APIs and download data from external sources. It's particularly useful in this project for fetching additional data, like reviews from online platforms or querying external services to enrich the dataset.
+- Improved neutral sentiment detection (contrastive learning, syntactic ambiguity detection)
+- Hybrid ensemble models combining lexicon-based heuristics with transformer embeddings
+- Domain adaptation and fine-tuning on airline-specific data
+- Explainability techniques (SHAP, LIME, attention visualization) for the deep learning model
+- Multilingual and cross-cultural sentiment analysis
+- Real-time/scalable deployment via model compression or distillation
 
-9. textblob==0.19.0
-Purpose: TextBlob is a simple NLP library used to perform sentiment analysis on text. It provides basic polarity and subjectivity scores, which are used to classify reviews as positive, negative, or neutral, making it a valuable tool for scoring sentiment in this project.
+## Acknowledgment
 
-10. transformers==4.51.2
-Purpose: This library from Hugging Face provides access to state-of-the-art pre-trained models, such as BERT, RoBERTa, and GPT. In this project, it's used for deep learning-based sentiment analysis, allowing for more accurate and sophisticated sentiment classification by fine-tuning pre-trained models on the review dataset.
-
-11. torch==2.1.0
-Purpose: PyTorch is a deep learning framework that allows you to build and train custom neural networks. It is used in this project to implement and train sentiment analysis models, particularly for the deep learning-based approach. PyTorch also supports GPU acceleration, making it efficient for training large models.
-
+This work was conducted at Southern Connecticut State University under the guidance of Professor MD Hossain.
